@@ -1,6 +1,7 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.data.StopAreaResponce
+import fr.docjyJ.tisseoLib.data.StopAreaResponse
+import fr.docjyJ.tisseoLib.data.StopPointResponce
 import fr.docjyJ.tisseoLib.utils.TisseoException
 
 
@@ -52,20 +53,20 @@ class StopAreaRequest internal constructor(apiKey: String) : Request(apiKey,"sto
 
 
     @Throws(TisseoException::class)
-    override fun execute(): StopAreaResponce? {
+    fun execute(): StopAreaResponse? {
         val sb = StringBuilder()
         sb.append(parameterBuilder("network",network))
         sb.append(parameterBuilder("srid",srid))
         sb.append(parameterBuilder("bbox",bbox))
-        sb.append(parameterBuilder("displayLines",convert(displayLines)))
-        sb.append(parameterBuilder("displayCoordXY",convert(displayCoordXY)))
+        sb.append(parameterBuilder("displayLines",displayLines))
+        sb.append(parameterBuilder("displayCoordXY",displayCoordXY))
         sb.append(parameterBuilder("lineId",lineId))
         sb.append(parameterBuilder("terminusId",terminusId))
         sb.append(parameterBuilder("timeframe",timeframe))
         sb.append(parameterBuilder("ignoreUnservedStops",ignoreUnservedStops))
-        sb.append(parameterBuilder("displayArrivalOnlyLines",convert(displayArrivalOnlyLines)))
-        sb.append(parameterBuilder("displayStopPoints",convert(displayStopPoints)))
-        return GSON.fromJson(getRequest(sb.toString()), StopAreaResponce::class.java)
+        sb.append(parameterBuilder("displayArrivalOnlyLines",displayArrivalOnlyLines))
+        sb.append(parameterBuilder("displayStopPoints",displayStopPoints))
+        return GSON.fromJson(getRequest(sb.toString()), StopAreaResponse::class.java)
     }
 
 }

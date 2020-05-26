@@ -1,7 +1,7 @@
 package fr.docjyJ.tisseoLib.request
 
-import com.google.gson.Gson
-import fr.docjyJ.tisseoLib.data.StopAreaResponce
+import com.google.gson.GsonBuilder
+import fr.docjyJ.tisseoLib.utils.BooleanTypeAdapter
 import fr.docjyJ.tisseoLib.utils.TisseoException
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -10,10 +10,7 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 abstract class Request internal constructor(private val apiKey: String, private val serviceName: String) {
-    protected val GSON = Gson()
-
-    @Throws(TisseoException::class)
-    abstract fun execute(): StopAreaResponce?
+    protected val GSON = GsonBuilder().registerTypeAdapter(Boolean::class.java, BooleanTypeAdapter()).create()
 
     @Throws(TisseoException::class)
     protected fun getRequest(parameter:String?): InputStreamReader {
@@ -27,7 +24,10 @@ abstract class Request internal constructor(private val apiKey: String, private 
     protected fun parameterBuilder(key:String,value:String?):String?{
         return if(value == null) "" else "$key=${URLEncoder.encode(value, StandardCharsets.UTF_8.toString())}&"
     }
-    protected fun convert(bool:Boolean?): String? {
-        return if(bool == true) {"1"} else {if (bool == false) {"0"} else {null}}
+    protected fun parameterBuilder(key:String,value:Boolean?):String?{
+        return parameterBuilder(key,if(value == true) {"1"} else {if (value == false) {"0"} else {null}})
+    }
+    protected fun parameterBuilder(key:String,value:Int?):String?{
+        return parameterBuilder(key,value?.toString())
     }
 }

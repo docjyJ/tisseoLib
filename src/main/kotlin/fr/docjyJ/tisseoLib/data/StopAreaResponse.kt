@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.data
 
-data class StopAreaResponce(
+data class StopAreaResponse(
     val expirationDate:String,
     val stopAreas:StopAreas
 )
