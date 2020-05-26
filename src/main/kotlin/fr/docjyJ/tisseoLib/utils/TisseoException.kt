@@ -6,7 +6,7 @@ import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
 
-class TisseoException(connection: HttpURLConnection) : Exception(GsonBuilder().setPrettyPrinting().create().toJson(TisseoError(connection.url, connection.responseCode, connection.responseMessage)))
+class TisseoException(connection: HttpURLConnection) : Exception(GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(TisseoError(connection.url, connection.responseCode, connection.responseMessage)))
 {
     val tisseoError = TisseoError(connection.url, connection.responseCode, connection.responseMessage)
     data class TisseoError(
