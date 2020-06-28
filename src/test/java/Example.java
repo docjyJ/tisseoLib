@@ -1,10 +1,7 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import fr.docjyJ.tisseoLib.Tisseo;
-import fr.docjyJ.tisseoLib.model.LinesResponse;
-import fr.docjyJ.tisseoLib.model.NetworksResponse;
-import fr.docjyJ.tisseoLib.model.StopAreaResponse;
-import fr.docjyJ.tisseoLib.model.StopPointResponce;
+import fr.docjyJ.tisseoLib.model.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
 
 import java.io.FileWriter;
@@ -62,7 +59,12 @@ public class Example {
 
         //TODO JOURNEYS
 
-        //TODO MESSAGES
+        //messages
+        try {
+            MessagesResponse response = tisseo.messages()
+                    .execute();
+            GSON.toJson(response, new FileWriter("messages.json"));
+        } catch (TisseoException e) { e.printStackTrace(); }
 
         //TODO SERVICE_DENSITY
     }

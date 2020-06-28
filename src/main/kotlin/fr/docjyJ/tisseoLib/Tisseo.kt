@@ -3,23 +3,15 @@ package fr.docjyJ.tisseoLib
 import fr.docjyJ.tisseoLib.request.*
 
 class Tisseo(private val apiKey : String) {
-    fun stopArea(): StopAreaRequest {
-        return StopAreaRequest(apiKey)
-    }
+    fun stopArea() = StopAreaRequest(apiKey)
 
-    fun stopPoint(): StopPointRequest {
-        return StopPointRequest(apiKey)
-    }
+    fun stopPoint() = StopPointRequest(apiKey)
 
     //TODO PLACES
 
-    fun networks(): NetworksRequest {
-        return NetworksRequest(apiKey)
-    }
+    fun networks() = NetworksRequest(apiKey)
 
-    fun lines(): LinesRequest {
-        return LinesRequest(apiKey)
-    }
+    fun lines() = LinesRequest(apiKey)
 
     //TODO STOPS_SCHEDULES
 
@@ -27,7 +19,7 @@ class Tisseo(private val apiKey : String) {
 
     //TODO JOURNEYS
 
-    //TODO MESSAGES
+    fun messages() = MessagesRequest(apiKey)
 
     //TODO SERVICE_DENSITY
 

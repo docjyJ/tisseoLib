@@ -3,11 +3,13 @@ package fr.docjyJ.tisseoLib.request
 import com.google.gson.GsonBuilder
 import fr.docjyJ.tisseoLib.utils.BooleanTypeAdapter
 import fr.docjyJ.tisseoLib.utils.TisseoException
+import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
+
 
 abstract class Request protected constructor(private val apiKey: String, private val serviceName: String) {
     private val GSON = GsonBuilder().registerTypeAdapter(Boolean::class.java, BooleanTypeAdapter()).create()
@@ -31,5 +33,19 @@ abstract class Request protected constructor(private val apiKey: String, private
     }
     protected fun addParameter(key:String,value:Int?){
         addParameter(key,value?.toString())
+    }
+
+    @Throws(TisseoException::class)
+    protected fun getRequest():String {
+        val connection: HttpURLConnection = URL("https://api.tisseo.fr/v1/$serviceName.json?${stringBuilder}key=$apiKey").openConnection() as HttpURLConnection
+        val responseCode: Int = connection.responseCode
+        if (responseCode == HttpURLConnection.HTTP_OK)
+            return StringBuffer().apply {
+                BufferedReader(InputStreamReader(connection.inputStream)).readLines().forEach {
+                    append(it)
+                }
+            }.toString()
+        else
+            throw TisseoException(connection)
     }
 }
