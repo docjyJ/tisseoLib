@@ -1,4 +1,4 @@
-package fr.docjyJ.tisseoLib.data
+package fr.docjyJ.tisseoLib.model
 
 data class Networks (
         val name:String,

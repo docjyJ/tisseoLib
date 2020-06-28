@@ -1,13 +1,12 @@
 package fr.docjyJ.tisseoLib
 
-import fr.docjyJ.tisseoLib.request.NetworksRequest
-import fr.docjyJ.tisseoLib.request.StopAreaRequest
-import fr.docjyJ.tisseoLib.request.StopPointRequest
+import fr.docjyJ.tisseoLib.request.*
 
 class Tisseo(private val apiKey : String) {
     fun stopArea(): StopAreaRequest {
         return StopAreaRequest(apiKey)
     }
+
     fun stopPoint(): StopPointRequest {
         return StopPointRequest(apiKey)
     }
@@ -18,7 +17,9 @@ class Tisseo(private val apiKey : String) {
         return NetworksRequest(apiKey)
     }
 
-    //TODO LINES
+    fun lines(): LinesRequest {
+        return LinesRequest(apiKey)
+    }
 
     //TODO STOPS_SCHEDULES
 

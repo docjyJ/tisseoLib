@@ -1,9 +1,10 @@
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import fr.docjyJ.tisseoLib.Tisseo;
-import fr.docjyJ.tisseoLib.data.NetworksResponse;
-import fr.docjyJ.tisseoLib.data.StopAreaResponse;
-import fr.docjyJ.tisseoLib.data.StopPointResponce;
+import fr.docjyJ.tisseoLib.model.LinesResponse;
+import fr.docjyJ.tisseoLib.model.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.StopAreaResponse;
+import fr.docjyJ.tisseoLib.model.StopPointResponce;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
 
 import java.io.FileWriter;
@@ -46,7 +47,14 @@ public class Example {
             GSON.toJson(response, new FileWriter("networks.json"));
         } catch (TisseoException e) { e.printStackTrace(); }
 
-        //TODO LINES
+        //lines
+        try {
+            LinesResponse response = tisseo.lines()
+                    .setLineId("11821949021892003")
+                    .setDisplayTerminus(true)
+                    .execute();
+            GSON.toJson(response, new FileWriter("lines.json"));
+        } catch (TisseoException e) { e.printStackTrace(); }
 
         //TODO STOPS_SCHEDULES
 
