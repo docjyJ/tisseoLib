@@ -1,56 +1,49 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.model.LinesResponse
+import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 
+/**
+ * The class builder to do a Line request.
+ *
+ * @property network The network propriety.
+ * @property lineId The lineId propriety.
+ * @property shortName The shortName propriety.
+ * @property displayTerminus The displayTerminus propriety.
+ * @property displayMessages The displayMessages propriety.
+ * @property displayOnlyDisrupted The displayOnlyDisrupted propriety.
+ * @property displayGeometry The displayGeometry propriety.
+ * @property contentFormat The contentFormat propriety.
+ */
 
-class LinesRequest internal constructor(apiKey: String) : Request(apiKey,"lines"){
-
+@Suppress("MemberVisibilityCanBePrivate")
+class LinesRequest(private val apiKey: String) {
     var network:String? = null
-        private set
-    fun setNetwork(network: String) = apply { this.network = network }
-
     var lineId:String? = null
-        private set
-    fun setLineId(lineId: String) = apply { this.lineId = lineId }
-
     var shortName:String? = null
-        private set
-    fun setShortName(shortName: String) = apply { this.shortName = shortName }
-
     var displayTerminus:Boolean? = null
-        private set
-    fun setDisplayTerminus(displayTerminus: Boolean) = apply { this.displayTerminus = displayTerminus }
-
     var displayMessages:Boolean? = null
-        private set
-    fun setDisplayMessages(displayMessages: Boolean) = apply { this.displayMessages = displayMessages }
-
     var displayOnlyDisrupted:Boolean? = null
-        private set
-    fun setDisplayOnlyDisrupted(displayOnlyDisrupted: Boolean) = apply { this.displayOnlyDisrupted = displayOnlyDisrupted }
-
     var displayGeometry:Boolean? = null
-        private set
-    fun setDisplayGeometry(displayGeometry: Boolean) = apply { this.displayGeometry = displayGeometry }
-
     var contentFormat:String? = null
-        private set
-    fun setContentFormat(contentFormat: String) = apply { this.contentFormat = contentFormat }
 
-
+    /**
+     * Execute the request.
+     * @return Response of request in LinesResponse object.
+     * @throws  TisseoException
+     */
     @Throws(TisseoException::class)
-    fun execute(): LinesResponse? {
-        addParameter("network",network)
-        addParameter("lineId",lineId)
-        addParameter("shortName",shortName)
-        addParameter("displayTerminus",displayTerminus)
-        addParameter("displayMessages",displayMessages)
-        addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
-        addParameter("displayGeometry",displayGeometry)
-        addParameter("contentFormat",contentFormat)
-        return getRequest(LinesResponse::class.java)
-
-    }
-
+    fun execute() = RequestBuilder()
+        .apply {
+            addParameter("network",network)
+            addParameter("lineId",lineId)
+            addParameter("shortName",shortName)
+            addParameter("displayTerminus",displayTerminus)
+            addParameter("displayMessages",displayMessages)
+            addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
+            addParameter("displayGeometry",displayGeometry)
+            addParameter("contentFormat",contentFormat)
+        }
+        .execute(apiKey, "lines", LinesResponse::class.java)
 }

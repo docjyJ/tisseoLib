@@ -1,32 +1,34 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.model.LinesResponse
 import fr.docjyJ.tisseoLib.model.MessagesResponse
+import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 
+/**
+ * The class builder to do a Message request.
+ *
+ * @property network The network propriety.
+ * @property contentFormat The contentFormat propriety.
+ * @property displayImportantOnly The displayImportantOnly propriety.
+ */
 
-class MessagesRequest internal constructor(apiKey: String) : Request(apiKey,"messages"){
-
+@Suppress("MemberVisibilityCanBePrivate")
+class MessagesRequest(private val apiKey: String){
     var network:String? = null
-        private set
-    fun setNetwork(network: String) = apply { this.network = network }
-
     var contentFormat:String? = null
-        private set
-    fun setContentFormat(contentFormat: String) = apply { this.contentFormat = contentFormat }
-
     var displayImportantOnly:Boolean? = null
-        private set
-    fun setDisplayImportantOnly(displayImportantOnly: Boolean) = apply { this.displayImportantOnly = displayImportantOnly }
 
-
+    /**
+     * Execute the request.
+     * @return Response of request in MessagesResponse object.
+     * @throws  TisseoException
+     */
     @Throws(TisseoException::class)
-    fun execute(): MessagesResponse {
-        addParameter("network",network)
-        addParameter("contentFormat",contentFormat)
-        addParameter("displayImportantOnly",displayImportantOnly)
-        return getRequest(MessagesResponse::class.java)
-
-    }
-
+    fun execute() = RequestBuilder()
+        .apply {
+            addParameter("network",network)
+            addParameter("contentFormat",contentFormat)
+            addParameter("displayImportantOnly",displayImportantOnly)
+        }
+        .execute(apiKey,"messages", MessagesResponse::class.java)
 }
