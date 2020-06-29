@@ -34,7 +34,7 @@ compileTestKotlin {
 
 dokka {
     outputFormat = 'javadoc'
-    outputDirectory = ".javadoc"
+    outputDirectory = "doc"
     configuration {
         jdkVersion = 8
         noStdlibLink = false
