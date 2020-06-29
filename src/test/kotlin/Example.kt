@@ -1,4 +1,5 @@
 import fr.docjyJ.tisseoLib.request.*
+import java.text.SimpleDateFormat
 
 private const val API_KEY = "null-api-key" // Insert your api key
 
@@ -30,7 +31,12 @@ fun lines() = LinesRequest(API_KEY)
     }
     .execute() //Execute request
 
-//TODO STOPS_SCHEDULES
+fun stopSchedules()= StopSchedulesRequest(API_KEY)
+    .apply { //set parameters
+        stopsList = "1970324837184892,3377699720882831"
+        datetime = SimpleDateFormat("dd/MM/yyyy").parse("01/07/2020")
+    }
+    .execute() //Execute request
 
 //TODO ROLLING_STOCKS
 

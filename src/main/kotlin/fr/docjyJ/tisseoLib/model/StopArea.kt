@@ -7,5 +7,7 @@ data class StopArea(
         val name:String,
         val stops:List<StopPoint>?,
         val x:Double?,
-        val y:Double?
+        val y:Double?,
+        val cityId:String?,
+        val schedules:List<Schedule>?
 )

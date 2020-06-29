@@ -1,5 +1,7 @@
 package fr.docjyJ.tisseoLib.model
 
+import javax.swing.LayoutStyle
+
 data class Line(
     val bgXmlColor:String,
     val color:String,
@@ -10,6 +12,7 @@ data class Line(
     val network:String,
     val reservationMandatory:Boolean,
     val shortName:String,
-    val terminus:List<Terminus>?,
-    val transportMode:TransportMode
+    val terminus:List<StopPoint>?,
+    val transportMode:TransportMode?,
+    val style: String?
 )

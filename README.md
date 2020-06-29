@@ -9,14 +9,15 @@ L'API tisséo est sous lisence ODbL. [Plus d'information](https://data.toulouse-
 Vous êtes résponsable des requête éffectuer.
 
 ## Usage
-Télécharger la dernière vertion. [(1.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/1.0-alpha)
+Télécharger la dernière vertion. [(2.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/2.0-alpha)
 
-Seul les resource suivante sont pris en charge : (les autre sont à venir)
+Seul les resource suivante sont pris en charge : *(les autres sont à venir)*
 - stop_area
 - stop_points
 - networks
 - lines
 - messages
+- stops_schedules *(dans la prochaine vertion)*
 
 Se référer à la documentation fournis par tisséo pour les resource, les parrametres et les réponses possible, ansi que pour la façon d'obtenir une cléf.
 

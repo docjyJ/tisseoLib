@@ -2,6 +2,9 @@ import fr.docjyJ.tisseoLib.model.*;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
 
@@ -17,7 +20,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopPointResponce stoppoint() throws TisseoException {
+    public StopPointResponce stopPoint() throws TisseoException {
         //Create request Object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
@@ -53,7 +56,17 @@ public class Example {
         return request.execute();
     }
 
-    //TODO STOPS_SCHEDULES
+    public StopSchedulesResponse stopSchedules() throws ParseException, TisseoException {
+        //Create request Object
+        StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
+
+        //set parameters
+        request.setStopsList("1970324837184892,3377699720882831");
+        request.setDatetime(new SimpleDateFormat("dd/MM/yyyy").parse("01/07/2020"));
+
+        //Execute request
+        return request.execute();
+    }
 
     //TODO ROLLING_STOCKS
 
