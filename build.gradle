@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'fr.docjyJ.tisseoLib'
-version '1.2'
+version '3.0-alpha'
 
 jar {
     manifest {
