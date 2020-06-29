@@ -5,15 +5,16 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
 import java.lang.reflect.Type
+import java.text.SimpleDateFormat
+import java.util.*
 
 
-internal class BooleanTypeAdapter : JsonDeserializer<Boolean> {
+internal class DateTypeAdapter : JsonDeserializer<Date> {
     @Throws(JsonParseException::class)
     override fun deserialize(
             json: JsonElement, typeOfT: Type?,
             context: JsonDeserializationContext?
-    ): Boolean {
-        val code = json.asInt
-        return (if (code == 0) false else if (code == 1) true else null)!!
+    ): Date {
+        return SimpleDateFormat("yyyy-MM-dd HH:mm").parse(json.asString)!!
     }
 }

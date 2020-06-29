@@ -1,7 +1,9 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.model.JourneysResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
+import java.util.*
 
 /**
  * The class builder to do a Journeys request.
@@ -37,8 +39,8 @@ class JourneysRequest(private val apiKey: String){
     var arrivalPlaceXY:String? = null
     var srid:String? = null
     var networkList:String? = null
-    var firstDepartureDatetime:String? = null
-    var lastDepartureDatetime:String? = null
+    var firstDepartureDatetime:Date? = null
+    var lastDepartureDatetime:Date? = null
     var maxTransferDuration:String? = null
     var maxTransferNumber:String? = null
     var roadMode:String? = null
@@ -47,13 +49,13 @@ class JourneysRequest(private val apiKey: String){
     var startRoadMode:String? = null
     var startRoadMaxDistance:String? = null
     var rollingStockList:String? = null
-    var number:String? = null
+    var number:Int? = null
     var displayResultTable:Boolean? = null
     var displayWording:Boolean? = null
     var displayMessages:Boolean? = null
     var maxApproachDistance:String? = null
 
-    private fun buildParams() = RequestBuilder(apiKey, "jouneys").apply {
+    private fun buildParams() = RequestBuilder(apiKey, "journeys").apply {
         addParameter("departurePlace",departurePlace)
         addParameter("departurePlaceXY",departurePlaceXY)
         addParameter("arrivalPlace",arrivalPlace)
@@ -77,9 +79,6 @@ class JourneysRequest(private val apiKey: String){
         addParameter("maxApproachDistance",maxApproachDistance)
     }
 
-    /*
-    //TODO faire les models
-
     /**
      * Execute the request.
      * @return Response of request in JourneysResponse object.
@@ -87,7 +86,6 @@ class JourneysRequest(private val apiKey: String){
      */
     @Throws(TisseoException::class)
     fun execute() = buildParams().execute(JourneysResponse::class.java)
-     */
 
     /**
      * Execute the request.

@@ -30,7 +30,11 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
     }
     @Throws(TisseoException::class)
     internal fun <T> execute(classOfT: Class<T>):T {
-        return GsonBuilder().registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter()).create().fromJson(execute(), classOfT)
+        return GsonBuilder()
+                .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
+                .registerTypeAdapter(Date::class.java,DateTypeAdapter())
+                .create()
+                .fromJson(execute(), classOfT)
     }
 
     internal fun addParameter(key: String, value: String?){
