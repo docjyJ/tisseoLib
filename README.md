@@ -22,23 +22,36 @@ Se référer à la documentation fournis par tisséo pour les resource, les parr
 
 [https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/)
 
-## Exemple
+## Example
+
+### JAVA
 
 ```java
 //Creation de l'objet
-Tisseo tisseo = new Tisseo("[Votre clef]");
+public StopAreaResponse stopArea() throws TisseoException {
+    //Create request Object
+    StopAreaRequest request = new StopAreaRequest(API_KEY);
 
-try {
- //Création de la requête
- StopAreaResponse response = tisseo.stopArea()
-  .setLineId("11821949021892003")
-  .setDisplayCoordXY(true)
-  .execute();
+    //set parameters
+    request.setLineId("11821949021892003");
+    request.setDisplayCoordXY(true);
 
- System.out.println(response.toString());
-}
-catch (TisseoException e) {
- e.printStackTrace(); 
+    //Execute request
+    return request.execute();
 }
 ```
 Pllus d'exemple [ici](src/test/java/Example.java)
+
+### KOTLIN
+
+```kotlin
+//Creation de l'objet
+fun stopArea() = StopAreaRequest(API_KEY)
+    .apply { //set parameters
+        lineId = "11821949021892003"
+        displayCoordXY = true
+    }
+    .execute() //Execute request
+}
+```
+Pllus d'exemple [ici](src/test/kotlin/Example.kt)
