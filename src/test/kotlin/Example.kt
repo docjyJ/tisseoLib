@@ -1,8 +1,5 @@
-import fr.docjyJ.tisseoLib.model.JourneysResponse
 import fr.docjyJ.tisseoLib.request.*
-import fr.docjyJ.tisseoLib.utils.TisseoException
-import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
 
 private const val API_KEY = "null-api-key" // Insert your api key
 

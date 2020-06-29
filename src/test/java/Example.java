@@ -1,10 +1,6 @@
 import fr.docjyJ.tisseoLib.model.*;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
-
-import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Example {
@@ -58,7 +54,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopSchedulesResponse stopSchedules() throws ParseException, TisseoException {
+    public StopSchedulesResponse stopSchedules() throws TisseoException {
         //Create request object
         StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
 
