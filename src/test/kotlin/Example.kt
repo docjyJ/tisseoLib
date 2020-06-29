@@ -3,15 +3,15 @@ import java.text.SimpleDateFormat
 
 private const val API_KEY = "null-api-key" // Insert your api key
 
-fun stopArea() = StopAreaRequest(API_KEY)
-    .apply { //set parameters
+fun stopArea() = StopAreaRequest(API_KEY) //Create request object
+    .apply { //Set parameters
         lineId = "11821949021892003"
         displayCoordXY = true
     }
     .execute() //Execute request
 
-fun stopPoint() = StopPointRequest(API_KEY)
-    .apply { //set parameters
+fun stopPoint() = StopPointRequest(API_KEY) //Create request object
+    .apply { //Set parameters
         lineId = "11821949021892003"
         displayCoordXY = true
         displayDestinations = true
@@ -21,18 +21,18 @@ fun stopPoint() = StopPointRequest(API_KEY)
 
 //TODO PLACES
 
-fun networks() = NetworksRequest(API_KEY)
+fun networks() = NetworksRequest(API_KEY) //Create request object
     .execute() //Execute request
 
 fun lines() = LinesRequest(API_KEY)
-    .apply { //set parameters
+    .apply { //Set parameters
         lineId = "11821949021892003"
         displayTerminus = true
     }
     .execute() //Execute request
 
-fun stopSchedules()= StopSchedulesRequest(API_KEY)
-    .apply { //set parameters
+fun stopSchedules()= StopSchedulesRequest(API_KEY) //Create request object
+    .apply { //Set parameters
         stopsList = "1970324837184892,3377699720882831"
         datetime = SimpleDateFormat("dd/MM/yyyy").parse("01/07/2020")
     }
@@ -42,7 +42,7 @@ fun stopSchedules()= StopSchedulesRequest(API_KEY)
 
 //TODO JOURNEYS
 
-fun messages() = MessagesRequest(API_KEY)
+fun messages() = MessagesRequest(API_KEY) //Create request object
     .execute() //Execute request
 
 //TODO SERVICE_DENSITY

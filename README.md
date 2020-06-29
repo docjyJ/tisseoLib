@@ -1,25 +1,26 @@
-# Tisséo API Librairie
-Bibliothèque pour simplifier les appels à l'API Tisséo en Java.
+# Tisséo API Library
+Library to simplify calls to the Tisséo API in Java.
 
-## Information
-Ni créér, ni cautionner par Tisséo 
+## Information before usage
+This library is neither created nor approved by Tisséo.
 
-L'API tisséo est sous lisence ODbL. [Plus d'information](https://data.toulouse-metropole.fr/page/licence/)
+The Tisséo API is licensed under ODbL. [More information (french)](https://data.toulouse-metropole.fr/page/licence/)
 
-Vous êtes résponsable des requête éffectuer.
+You are responsible for requests made with this library.
 
 ## Usage
-Télécharger la dernière vertion. [(2.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/2.0-alpha)
+Download the latest version. [(2.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/2.0-alpha)
 
-Seul les resource suivante sont pris en charge : *(les autres sont à venir)*
+Only the following resources are supported: *(others are coming)*
 - stop_area
 - stop_points
 - networks
 - lines
 - messages
-- stops_schedules *(dans la prochaine vertion)*
+- stops_schedules *(in the next version)*
+- jouneys *(in the next version)*
 
-Se référer à la documentation fournis par tisséo pour les resource, les parrametres et les réponses possible, ansi que pour la façon d'obtenir une cléf.
+Refer to the documentation provided by Tisséo (French and English) for resources, parameters, possible responses, as well as how to obtain a key.
 
 [https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/)
 
@@ -28,12 +29,11 @@ Se référer à la documentation fournis par tisséo pour les resource, les parr
 ### JAVA
 
 ```java
-//Creation de l'objet
 public StopAreaResponse stopArea() throws TisseoException {
-    //Create request Object
+    //Create request object
     StopAreaRequest request = new StopAreaRequest(API_KEY);
 
-    //set parameters
+    //Set parameters
     request.setLineId("11821949021892003");
     request.setDisplayCoordXY(true);
 
@@ -41,18 +41,16 @@ public StopAreaResponse stopArea() throws TisseoException {
     return request.execute();
 }
 ```
-Pllus d'exemple [ici](src/test/java/Example.java)
+More example [here](src/test/java/Example.java)
 
 ### KOTLIN
 
 ```kotlin
-//Creation de l'objet
-fun stopArea() = StopAreaRequest(API_KEY)
-    .apply { //set parameters
+fun stopArea() = StopAreaRequest(API_KEY) //Create request object
+    .apply { //Set parameters
         lineId = "11821949021892003"
         displayCoordXY = true
     }
     .execute() //Execute request
-}
 ```
-Pllus d'exemple [ici](src/test/kotlin/Example.kt)
+More example [here](src/test/kotlin/Example.kt)

@@ -9,10 +9,10 @@ public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
 
     public StopAreaResponse stopArea() throws TisseoException {
-        //Create request Object
+        //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
 
-        //set parameters
+        //Set parameters
         request.setLineId("11821949021892003");
         request.setDisplayCoordXY(true);
 
@@ -21,10 +21,10 @@ public class Example {
     }
 
     public StopPointResponce stopPoint() throws TisseoException {
-        //Create request Object
+        //Create request object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
-        //set parameters
+        //Set parameters
         request.setLineId("11821949021892003");
         request.setDisplayCoordXY(true);
         request.setDisplayDestinations(true);
@@ -37,7 +37,7 @@ public class Example {
     //TODO PLACES
 
     public NetworksResponse networks() throws TisseoException {
-        //Create request Object
+        //Create request object
         NetworksRequest request = new NetworksRequest(API_KEY);
 
         //Execute request
@@ -45,10 +45,10 @@ public class Example {
     }
 
     public LinesResponse lines() throws TisseoException {
-        //Create request Object
+        //Create request object
         LinesRequest request = new LinesRequest(API_KEY);
 
-        //set parameters
+        //Set parameters
         request.setLineId("11821949021892003");
         request.setDisplayTerminus(true);
 
@@ -57,10 +57,10 @@ public class Example {
     }
 
     public StopSchedulesResponse stopSchedules() throws ParseException, TisseoException {
-        //Create request Object
+        //Create request object
         StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
 
-        //set parameters
+        //Set parameters
         request.setStopsList("1970324837184892,3377699720882831");
         request.setDatetime(new SimpleDateFormat("dd/MM/yyyy").parse("01/07/2020"));
 
@@ -73,7 +73,7 @@ public class Example {
     //TODO JOURNEYS
 
     public MessagesResponse messages() throws TisseoException {
-        //Create request Object
+        //Create request object
         MessagesRequest request = new MessagesRequest(API_KEY);
 
         //Execute request
