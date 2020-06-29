@@ -7,6 +7,8 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 internal class RequestBuilder() {
@@ -25,14 +27,21 @@ internal class RequestBuilder() {
         else
             throw TisseoException(connection)
     }
-    internal fun addParameter(key:String,value:String?){
-        stringBuilder.append(if(value == null) "" else "$key=${URLEncoder.encode(value, StandardCharsets.UTF_8.toString())}&")
+    internal fun addParameter(key: String, value: String?){
+        if(value != null)
+            stringBuilder.append("$key=${URLEncoder.encode(value, StandardCharsets.UTF_8.toString())}&")
     }
-    internal fun addParameter(key:String,value:Boolean?){
-        addParameter(key,if(value == true) {"1"} else {if (value == false) {"0"} else {null}})
+    internal fun addParameter(key: String, value: Boolean?){
+        if(value != null)
+            addParameter(key, if(value == true) "1" else "0")
     }
-    internal fun addParameter(key:String,value:Int?){
-        addParameter(key,value?.toString())
+    internal fun addParameter(key: String, value: Int?){
+        if(value != null)
+            addParameter(key, value.toString())
+    }
+    internal fun addParameter(key: String, value: Date?) {
+        if(value != null)
+            addParameter(key, SimpleDateFormat("yyyy-MM-dd HH:mm").format(value))
     }
 
     @Throws(TisseoException::class)
@@ -48,4 +57,6 @@ internal class RequestBuilder() {
         else
             throw TisseoException(connection)
     }
+
+
 }

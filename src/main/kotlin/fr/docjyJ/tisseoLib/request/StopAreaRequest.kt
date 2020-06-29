@@ -13,6 +13,7 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  * @property displayLines The displayLines propriety.
  * @property displayCoordXY The displayCoordXY propriety.
  * @property lineId The lineId propriety.
+ * @property terminusId The terminusId propriety.
  * @property timeframe The timeframe propriety.
  * @property ignoreUnservedStops The ignoreUnservedStops propriety.
  * @property displayArrivalOnlyLines The displayArrivalOnlyLines propriety.

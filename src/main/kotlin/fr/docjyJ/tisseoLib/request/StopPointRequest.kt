@@ -10,6 +10,7 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  * @property network the network propriety.
  * @property srid the content srid propriety.
  * @property bbox the content bbox propriety.
+ * @property number the content number propriety.
  * @property sortByDistance the sort by distance propriety.
  * @property displayDestinations the display destinations propriety.
  * @property displayLines the content display lines propriety.
@@ -22,7 +23,6 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
 
 @Suppress("MemberVisibilityCanBePrivate")
 class StopPointRequest internal constructor(private val apiKey: String){
-
     var network:String? = null
     var srid:String? = null
     var bbox:String? = null
@@ -48,8 +48,8 @@ class StopPointRequest internal constructor(private val apiKey: String){
             addParameter("srid",srid)
             addParameter("bbox",bbox)
             addParameter("number", number)
-            addParameter("displayDestinations",displayDestinations)
             addParameter("sortByDistance",sortByDistance)
+            addParameter("displayDestinations",displayDestinations)
             addParameter("displayLines",displayLines)
             addParameter("displayCoordXY",displayCoordXY)
             addParameter("lineId",lineId)
