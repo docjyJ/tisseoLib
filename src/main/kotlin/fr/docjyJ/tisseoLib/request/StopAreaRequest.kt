@@ -34,26 +34,34 @@ class StopAreaRequest(private val apiKey: String){
     var displayArrivalOnlyLines:Boolean? = null
     var displayStopPoints:Boolean? = null
 
+    private fun buildParams() = RequestBuilder(apiKey, "stop_areas").apply {
+        addParameter("network",network)
+        addParameter("srid",srid)
+        addParameter("bbox",bbox)
+        addParameter("displayLines",displayLines)
+        addParameter("displayCoordXY",displayCoordXY)
+        addParameter("lineId",lineId)
+        addParameter("terminusId",terminusId)
+        addParameter("timeframe",timeframe)
+        addParameter("ignoreUnservedStops",ignoreUnservedStops)
+        addParameter("displayArrivalOnlyLines",displayArrivalOnlyLines)
+        addParameter("displayStopPoints",displayStopPoints)
+    }
+
     /**
      * Execute the request.
      * @return Response of request in StopAreaResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = RequestBuilder()
-        .apply {
-            addParameter("network",network)
-            addParameter("srid",srid)
-            addParameter("bbox",bbox)
-            addParameter("displayLines",displayLines)
-            addParameter("displayCoordXY",displayCoordXY)
-            addParameter("lineId",lineId)
-            addParameter("terminusId",terminusId)
-            addParameter("timeframe",timeframe)
-            addParameter("ignoreUnservedStops",ignoreUnservedStops)
-            addParameter("displayArrivalOnlyLines",displayArrivalOnlyLines)
-            addParameter("displayStopPoints",displayStopPoints)
-        }
-        .execute(apiKey,"stop_areas", StopAreaResponse::class.java)
+    fun execute() = buildParams().execute(StopAreaResponse::class.java)
+
+    /**
+     * Execute the request.
+     * @return Response of request in String object.
+     * @throws  TisseoException
+     */
+    @Throws(TisseoException::class)
+    fun executeAsString() = buildParams().execute()
 
 }

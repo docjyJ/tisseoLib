@@ -28,22 +28,31 @@ class LinesRequest(private val apiKey: String) {
     var displayGeometry:Boolean? = null
     var contentFormat:String? = null
 
+    private fun buildParams() = RequestBuilder(apiKey, "lines").apply {
+        addParameter("network",network)
+        addParameter("lineId",lineId)
+        addParameter("shortName",shortName)
+        addParameter("displayTerminus",displayTerminus)
+        addParameter("displayMessages",displayMessages)
+        addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
+        addParameter("displayGeometry",displayGeometry)
+        addParameter("contentFormat",contentFormat)
+    }
+
     /**
      * Execute the request.
      * @return Response of request in LinesResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = RequestBuilder()
-        .apply {
-            addParameter("network",network)
-            addParameter("lineId",lineId)
-            addParameter("shortName",shortName)
-            addParameter("displayTerminus",displayTerminus)
-            addParameter("displayMessages",displayMessages)
-            addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
-            addParameter("displayGeometry",displayGeometry)
-            addParameter("contentFormat",contentFormat)
-        }
-        .execute(apiKey, "lines", LinesResponse::class.java)
+    fun execute() = buildParams().execute(LinesResponse::class.java)
+
+    /**
+     * Execute the request.
+     * @return Response of request in String object.
+     * @throws  TisseoException
+     */
+    @Throws(TisseoException::class)
+    fun executeAsString() = buildParams().execute()
+
 }

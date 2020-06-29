@@ -18,17 +18,26 @@ class MessagesRequest(private val apiKey: String){
     var contentFormat:String? = null
     var displayImportantOnly:Boolean? = null
 
+    private fun buildParams() = RequestBuilder(apiKey, "messages").apply {
+        addParameter("network",network)
+        addParameter("contentFormat",contentFormat)
+        addParameter("displayImportantOnly",displayImportantOnly)
+    }
+
     /**
      * Execute the request.
      * @return Response of request in MessagesResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = RequestBuilder()
-        .apply {
-            addParameter("network",network)
-            addParameter("contentFormat",contentFormat)
-            addParameter("displayImportantOnly",displayImportantOnly)
-        }
-        .execute(apiKey,"messages", MessagesResponse::class.java)
+    fun execute() = buildParams().execute(MessagesResponse::class.java)
+
+    /**
+     * Execute the request.
+     * @return Response of request in String object.
+     * @throws  TisseoException
+     */
+    @Throws(TisseoException::class)
+    fun executeAsString() = buildParams().execute()
+
 }

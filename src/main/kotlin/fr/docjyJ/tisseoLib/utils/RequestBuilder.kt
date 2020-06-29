@@ -1,6 +1,7 @@
 package fr.docjyJ.tisseoLib.utils
 
 import com.google.gson.GsonBuilder
+import fr.docjyJ.tisseoLib.model.LinesResponse
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -11,22 +12,27 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-internal class RequestBuilder() {
-    private val GSON = GsonBuilder().registerTypeAdapter(Boolean::class.java,
-        BooleanTypeAdapter()
-    ).create()
-
+internal class RequestBuilder( private val apiKey: String, private val serviceName: String) {
     private val stringBuilder = StringBuilder()
 
     @Throws(TisseoException::class)
-    internal fun <T> execute(apiKey: String, serviceName: String, classOfT: Class<T>):T {
+    internal fun execute():String {
         val connection: HttpURLConnection = URL("https://api.tisseo.fr/v1/$serviceName.json?${stringBuilder}key=$apiKey").openConnection() as HttpURLConnection
         val responseCode: Int = connection.responseCode
         if (responseCode == HttpURLConnection.HTTP_OK)
-            return GSON.fromJson(InputStreamReader(connection.inputStream), classOfT)
+            return StringBuffer().apply {
+                BufferedReader(InputStreamReader(connection.inputStream)).readLines().forEach {
+                    append(it)
+                }
+            }.toString()
         else
             throw TisseoException(connection)
     }
+    @Throws(TisseoException::class)
+    internal fun <T> execute(classOfT: Class<T>):T {
+        return GsonBuilder().registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter()).create().fromJson(execute(), classOfT)
+    }
+
     internal fun addParameter(key: String, value: String?){
         if(value != null)
             stringBuilder.append("$key=${URLEncoder.encode(value, StandardCharsets.UTF_8.toString())}&")
@@ -43,20 +49,5 @@ internal class RequestBuilder() {
         if(value != null)
             addParameter(key, SimpleDateFormat("yyyy-MM-dd HH:mm").format(value))
     }
-
-    @Throws(TisseoException::class)
-    internal fun execute(apiKey: String, serviceName: String):String {
-        val connection: HttpURLConnection = URL("https://api.tisseo.fr/v1/$serviceName.json?${stringBuilder}key=$apiKey").openConnection() as HttpURLConnection
-        val responseCode: Int = connection.responseCode
-        if (responseCode == HttpURLConnection.HTTP_OK)
-            return StringBuffer().apply {
-                BufferedReader(InputStreamReader(connection.inputStream)).readLines().forEach {
-                    append(it)
-                }
-            }.toString()
-        else
-            throw TisseoException(connection)
-    }
-
 
 }

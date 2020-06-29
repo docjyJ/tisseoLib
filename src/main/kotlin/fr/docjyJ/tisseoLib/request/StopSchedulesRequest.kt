@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.model.StopAreaResponse
 import fr.docjyJ.tisseoLib.model.StopSchedulesResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
@@ -38,27 +37,35 @@ class StopSchedulesRequest(private val apiKey: String){
     var maxDays:Int? = null
     var firstAndLastOfDay:Boolean? = null
 
+    private fun buildParams() = RequestBuilder(apiKey, "stops_schedules").apply {
+        addParameter("operatorCode",operatorCode)
+        addParameter("stopPointId",stopPointId)
+        addParameter("stopAreaId",stopAreaId)
+        addParameter("stopsList",stopsList)
+        addParameter("network",network)
+        addParameter("number",number)
+        addParameter("lineId",lineId)
+        addParameter("displayRealTime",displayRealTime)
+        addParameter("timetableByArea",timetableByArea)
+        addParameter("datetime",datetime)
+        addParameter("maxDays",maxDays)
+        addParameter("firstAndLastOfDay",firstAndLastOfDay)
+    }
+
     /**
      * Execute the request.
      * @return Response of request in StopSchedulesResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = RequestBuilder()
-        .apply {
-            addParameter("operatorCode",operatorCode)
-            addParameter("stopPointId",stopPointId)
-            addParameter("stopAreaId",stopAreaId)
-            addParameter("stopsList",stopsList)
-            addParameter("network",network)
-            addParameter("number",number)
-            addParameter("lineId",lineId)
-            addParameter("displayRealTime",displayRealTime)
-            addParameter("timetableByArea",timetableByArea)
-            addParameter("datetime",datetime)
-            addParameter("maxDays",maxDays)
-            addParameter("firstAndLastOfDay",firstAndLastOfDay)
-        }
-        .execute(apiKey,"stops_schedules", StopSchedulesResponse::class.java)
+    fun execute() = buildParams().execute(StopSchedulesResponse::class.java)
+
+    /**
+     * Execute the request.
+     * @return Response of request in String object.
+     * @throws  TisseoException
+     */
+    @Throws(TisseoException::class)
+    fun executeAsString() = buildParams().execute()
 
 }

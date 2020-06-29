@@ -36,28 +36,35 @@ class StopPointRequest internal constructor(private val apiKey: String){
     var timeframe:String? = null
     var displayStopsWithoutDeparture:Boolean? = null
 
+    private fun buildParams() = RequestBuilder(apiKey, "stop_points").apply {
+        addParameter("network",network)
+        addParameter("srid",srid)
+        addParameter("bbox",bbox)
+        addParameter("number", number)
+        addParameter("sortByDistance",sortByDistance)
+        addParameter("displayDestinations",displayDestinations)
+        addParameter("displayLines",displayLines)
+        addParameter("displayCoordXY",displayCoordXY)
+        addParameter("lineId",lineId)
+        addParameter("stopAreaId",stopAreaId)
+        addParameter("timeframe",timeframe)
+        addParameter("displayStopsWithoutDeparture",displayStopsWithoutDeparture)
+    }
+
     /**
      * Execute the request.
      * @return Response of request in StopPointResponce object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = RequestBuilder()
-        .apply {
-            addParameter("network",network)
-            addParameter("srid",srid)
-            addParameter("bbox",bbox)
-            addParameter("number", number)
-            addParameter("sortByDistance",sortByDistance)
-            addParameter("displayDestinations",displayDestinations)
-            addParameter("displayLines",displayLines)
-            addParameter("displayCoordXY",displayCoordXY)
-            addParameter("lineId",lineId)
-            addParameter("stopAreaId",stopAreaId)
-            addParameter("timeframe",timeframe)
-            addParameter("displayStopsWithoutDeparture",displayStopsWithoutDeparture)
-        }
-        .execute(apiKey,"stop_points", StopPointResponce::class.java)
+    fun execute() = buildParams().execute(StopPointResponce::class.java)
 
+    /**
+     * Execute the request.
+     * @return Response of request in String object.
+     * @throws  TisseoException
+     */
+    @Throws(TisseoException::class)
+    fun executeAsString() = buildParams().execute()
 
 }
