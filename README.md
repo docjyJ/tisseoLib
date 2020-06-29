@@ -9,7 +9,7 @@ The Tisséo API is licensed under ODbL. [More information (french)](https://data
 You are responsible for requests made with this library.
 
 ## Usage
-Download the latest version. [(2.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/2.0-alpha)
+Download the latest version. [(3.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/3.0-alpha)
 
 Only the following resources are supported: *(others are coming)*
 - stop_area
@@ -17,8 +17,8 @@ Only the following resources are supported: *(others are coming)*
 - networks
 - lines
 - messages
-- stops_schedules *(in the next version)*
-- jouneys *(in the next version)*
+- stops_schedules
+- journeys
 
 Refer to the documentation provided by Tisséo (French and English) for resources, parameters, possible responses, as well as how to obtain a key.
 
