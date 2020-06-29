@@ -2,8 +2,10 @@ import fr.docjyJ.tisseoLib.model.*;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
@@ -62,7 +64,7 @@ public class Example {
 
         //Set parameters
         request.setStopsList("1970324837184892,3377699720882831");
-        request.setDatetime(new SimpleDateFormat("dd/MM/yyyy").parse("01/07/2020"));
+        request.setDatetime(new Date());
 
         //Execute request
         return request.execute();
@@ -70,7 +72,19 @@ public class Example {
 
     //TODO ROLLING_STOCKS
 
-    //TODO JOURNEYS
+    public JourneysResponse journeys() throws TisseoException {
+        //Create request Object
+        JourneysRequest request = new JourneysRequest(API_KEY);
+
+        //set parameters
+        request.setDeparturePlace("basso cambo");
+        request.setArrivalPlace("françois verdier");
+        request.setFirstDepartureDatetime(new Date());
+
+        //Execute request
+        return request.execute();
+
+    }
 
     public MessagesResponse messages() throws TisseoException {
         //Create request object
