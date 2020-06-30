@@ -20,7 +20,7 @@ Only the following resources are supported: *(others are coming)*
 - stops_schedules
 - journeys
 
-##Documentation
+## Documentation
 See the Library documentation [here](-tisseo-lib/index.md)
 
 Refer to the documentation provided by Tisséo (French and English) for resources, parameters, responses and as well as how to obtain a key.
