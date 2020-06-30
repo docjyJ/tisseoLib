@@ -8,27 +8,30 @@ import java.time.LocalDateTime
 /**
  * The class builder to do a Journeys request.
  *
- * @property departurePlace The departurePlace propriety.
- * @property departurePlaceXY The departurePlaceXY propriety.
- * @property arrivalPlace The arrivalPlace propriety.
+ * @constructor Create new request builder with no parameters.
+ *
+ * @property departurePlace Departure address or stop name
+ * @property departurePlaceXY Departure coordinates
+ * @property arrivalPlace Arrival address or stop name
  * @property arrivalPlaceXY The arrivalPlaceXY propriety.
- * @property srid The srid propriety.
- * @property networkList The networkList propriety.
- * @property firstDepartureDatetime The firstDepartureDatetime propriety.
- * @property lastDepartureDatetime The lastDepartureDatetime propriety.
- * @property maxTransferDuration The maxTransferDuration propriety.
- * @property maxTransferNumber The maxTransferNumber propriety.
- * @property roadMode The roadMode propriety.
- * @property roadSpeed The roadSpeed propriety.
- * @property roadMaxDistance The roadMaxDistance propriety.
- * @property startRoadMode The startRoadMode propriety.
- * @property startRoadMaxDistance The startRoadMaxDistance propriety.
- * @property rollingStockList The rollingStockList propriety.
- * @property number The number propriety.
- * @property displayResultTable The displayResultTable propriety.
- * @property displayWording The displayWording propriety.
- * @property displayMessages The displayMessages propriety.
- * @property maxApproachDistance The maxApproachDistance propriety.
+ * @property srid spatial reference number projection [see](https://en.wikipedia.org/wiki/SRID)
+ * @property networkList Network Transport operators number
+ * @property firstDepartureDatetime First date time of departure
+ * @property lastDepartureDatetime Last date time of departure
+ * @property maxTransferDuration Is the maximum travel time
+ * @property maxTransferNumber Specifies the maximum number of matches to use
+ * @property roadMode Specifies the mode in which the portions are made of any path "Transit" at the beginning (unless a "startRoadMode" different is specified) or at the end of the journey
+ * @property roadSpeed Velocity (meter by seconds) of selected roadMode
+ * @property roadMaxDistance Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the begining and the end of the journey
+ * @property startRoadMode Conveyance with which to perform the portion of the road path at the beginning of the journey
+ * @property startRoadSpeed Speed (meter by seconds) of selected roadMode
+ * @property startRoadMaxDistance Maximum distance for departure road section
+ * @property rollingStockList Rolling Stock List (Bus, Metro, Tram, ...) to take into account in the calculation
+ * @property number Max number of results
+ * @property displayResultTable Add routes summary in table form
+ * @property displayWording Returns human description for each section of the course
+ * @property displayMessages Returns in extra id, service disruption messages
+ * @property maxApproachDistance Maximum walking distance
  */
 
 @Suppress("MemberVisibilityCanBePrivate")
@@ -44,9 +47,10 @@ class JourneysRequest(private val apiKey: String){
     var maxTransferDuration:String? = null
     var maxTransferNumber:String? = null
     var roadMode:String? = null
-    var roadSpeed:String? = null
+    var roadSpeed:Float? = null
     var roadMaxDistance:String? = null
     var startRoadMode:String? = null
+    val startRoadSpeed:Float? = null
     var startRoadMaxDistance:String? = null
     var rollingStockList:String? = null
     var number:Int? = null
@@ -70,6 +74,7 @@ class JourneysRequest(private val apiKey: String){
         addParameter("roadSpeed",roadSpeed)
         addParameter("roadMaxDistance",roadMaxDistance)
         addParameter("startRoadMode",startRoadMode)
+        addParameter("startRoadSpeed", startRoadSpeed)
         addParameter("startRoadMaxDistance",startRoadMaxDistance)
         addParameter("rollingStockList",rollingStockList)
         addParameter("number",number)

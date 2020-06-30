@@ -20,7 +20,9 @@ Only the following resources are supported: *(others are coming)*
 - stops_schedules
 - journeys
 
-Refer to the documentation provided by Tisséo (French and English) for resources, parameters, possible responses, as well as how to obtain a key.
+See the Library documentation [here](-tisseo-lib\index.md)
+
+Refer to the documentation provided by Tisséo (French and English) for resources, parameters, responses and as well as how to obtain a key.
 
 [https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/)
 

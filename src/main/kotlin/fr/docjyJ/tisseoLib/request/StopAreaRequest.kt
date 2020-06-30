@@ -7,17 +7,19 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
 /**
  * The class builder to do a Stop Area request.
  *
- * @property network The network propriety.
- * @property srid The srid propriety.
- * @property bbox The bbox propriety.
- * @property displayLines The displayLines propriety.
- * @property displayCoordXY The displayCoordXY propriety.
- * @property lineId The lineId propriety.
- * @property terminusId The terminusId propriety.
- * @property timeframe The timeframe propriety.
- * @property ignoreUnservedStops The ignoreUnservedStops propriety.
- * @property displayArrivalOnlyLines The displayArrivalOnlyLines propriety.
- * @property displayStopPoints The displayStopPoints propriety.
+ * @constructor Create new request builder with no parameters.
+ *
+ * @property network Transport operator
+ * @property srid spatial reference number projection [see](https://en.wikipedia.org/wiki/SRID)
+ * @property bbox Filters stops included in bounding box
+ * @property displayLines Adds lines of each stop
+ * @property displayCoordXY Adds centroid coordonate lines of each stop
+ * @property lineId Filters stops by line
+ * @property terminusId Filters on stop areas arriving and departing from this terminal only
+ * @property timeframe Number of days to calculate which lines pass through a given point
+ * @property ignoreUnservedStops Ignore unserved stop in the given timeframe
+ * @property displayArrivalOnlyLines Filters only lines which arrive to stops (and which do not start from) No effect displayLines is 0
+ * @property displayStopPoints Display stop point of stop areas
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

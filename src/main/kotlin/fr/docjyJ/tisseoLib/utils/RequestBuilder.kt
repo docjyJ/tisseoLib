@@ -50,6 +50,10 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
         if(value != null)
             addParameter(key, value.toString())
     }
+    internal fun addParameter(key: String, value: Float?){
+        if(value != null)
+            addParameter(key, value.toString())
+    }
     internal fun addParameter(key: String, value: LocalDateTime?) {
         if(value != null)
             addParameter(key, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(value))

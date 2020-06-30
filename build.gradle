@@ -4,7 +4,7 @@ plugins {
     id 'org.jetbrains.dokka' version '0.10.1'
 }
 
-group 'fr.docjyJ.tisseoLib'
+group 'fr.docjyj.tisseoLib'
 version '1.2'
 
 jar {
@@ -33,14 +33,9 @@ compileTestKotlin {
 }
 
 dokka {
-    outputFormat = 'javadoc'
-    outputDirectory = "doc"
+    outputFormat = 'gfm'
+    outputDirectory = "./"
     configuration {
-        jdkVersion = 8
-        noStdlibLink = false
-        noJdkLink = false
-        targets = ["JVM"]
-        platform = "JVM"
         sourceLink {
             path = "src/main/kotlin"
             url = "https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin"

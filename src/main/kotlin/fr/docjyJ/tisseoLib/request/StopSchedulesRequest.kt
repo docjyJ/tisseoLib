@@ -8,18 +8,20 @@ import java.time.LocalDateTime
 /**
  * The class builder to do a Stop Schedules request.
  *
- * @property operatorCode The operatorCode propriety.
- * @property stopPointId The stopPointId propriety.
- * @property stopAreaId The stopAreaId propriety.
- * @property stopsList The stopsList propriety.
- * @property network The network propriety.
- * @property number The number propriety.
- * @property lineId The lineId propriety.
- * @property displayRealTime The displayRealTime propriety.
- * @property timetableByArea The timetableByArea propriety.
- * @property datetime The datetime propriety.
- * @property maxDays The maxDays propriety.
- * @property firstAndLastOfDay The firstAndLastOfDay propriety.
+ * @constructor Create new request builder with no parameters.
+ *
+ * @property operatorCode Operator code (id used by transport operator)
+ * @property stopPointId Is the number of physical stop point
+ * @property stopAreaId Is the number of logical stop point (zone)
+ * @property stopsList A list of stop areas or stop points (or both) separated by commas. Allows you to filter them in each argument by business line or direction.
+ * @property network Transport operator
+ * @property number Max returned results number
+ * @property lineId Filters schedules of a specific line
+ * @property displayRealTime Allows specify « theoritical » or « real time » passages time
+ * @property timetableByArea Groups the results by stop areas then couples (line, destination) ordered by time of next departure
+ * @property datetime Date and time at which we request the schedules
+ * @property maxDays number of days used to get “number” departures
+ * @property firstAndLastOfDay Will return only first and last departure of the day
  */
 
 @Suppress("MemberVisibilityCanBePrivate")
