@@ -1,0 +1,5 @@
+[TisseoLib](../../index.md) / [fr.docjyJ.tisseoLib.model.journey](../index.md) / [ChunkStop](index.md) / [&lt;init&gt;](./-init-.md)
+
+# &lt;init&gt;
+
+`ChunkStop(arrival_id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, connectionPlace: `[`ChunkPlace`](../-chunk-place/index.md)`, departure_id: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, firstTime: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, lastTime: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, latitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, longitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, name: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, text: `[`Text`](../-text/index.md)`?)`
