@@ -1,4 +1,4 @@
-# Tisséo API Library
+# Tisséo API Library [![download_3.0-alpha](https://img.shields.io/badge/download-3.0--alpha-yellow?style=flat-square&logo=java)](https://github.com/docjyJ/TisseoLib/releases/tag/v3.0-alpha)
 Library to simplify calls to the Tisséo API in Java.
 
 ## Information before usage
