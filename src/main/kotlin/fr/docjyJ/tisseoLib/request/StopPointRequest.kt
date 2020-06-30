@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.model.StopPointResponce
+import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 
@@ -57,7 +57,7 @@ class StopPointRequest internal constructor(private val apiKey: String){
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    fun execute() = buildParams().execute(StopPointResponce::class.java)
+    fun execute() = buildParams().execute(StopPointResponse::class.java)
 
     /**
      * Execute the request.

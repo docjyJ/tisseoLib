@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.model.StopSchedulesResponse
+import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 import java.util.*

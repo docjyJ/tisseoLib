@@ -1,6 +1,6 @@
-import fr.docjyJ.tisseoLib.model.*;
 import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
+import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
 import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
 import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;

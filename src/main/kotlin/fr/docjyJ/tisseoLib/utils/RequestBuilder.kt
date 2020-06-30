@@ -1,7 +1,6 @@
 package fr.docjyJ.tisseoLib.utils
 
 import com.google.gson.GsonBuilder
-import fr.docjyJ.tisseoLib.model.LinesResponse
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -9,6 +8,7 @@ import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.text.SimpleDateFormat
+import java.time.Duration
 import java.util.*
 
 
@@ -33,6 +33,7 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
         return GsonBuilder()
                 .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
                 .registerTypeAdapter(Date::class.java,DateTypeAdapter())
+                .registerTypeAdapter(Duration::class.java,DurationTypeAdapter())
                 .create()
                 .fromJson(execute(), classOfT)
     }

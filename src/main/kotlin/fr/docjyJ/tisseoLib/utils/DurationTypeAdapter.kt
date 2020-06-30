@@ -5,15 +5,16 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
 import java.lang.reflect.Type
+import java.time.Duration
+import java.time.LocalTime
 
 
-internal class BooleanTypeAdapter : JsonDeserializer<Boolean> {
+internal class DurationTypeAdapter : JsonDeserializer<Duration> {
     @Throws(JsonParseException::class)
     override fun deserialize(
             json: JsonElement, typeOfT: Type?,
             context: JsonDeserializationContext?
-    ): Boolean {
-        val code = json.asString
-        return (if (code == "0" || code == "no") false else if (code == "1" || code == "yes") true else null)!!
+    ): Duration {
+        return Duration.between(LocalTime.MIN, LocalTime.parse(json.asString))
     }
 }
