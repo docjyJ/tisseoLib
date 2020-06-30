@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.message
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class MessagesResponse (
-        val expirationDate: Date,
+        val expirationDate: LocalDateTime,
         val messages: List<Messages>
 )

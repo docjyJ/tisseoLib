@@ -3,7 +3,7 @@ package fr.docjyJ.tisseoLib.request
 import fr.docjyJ.tisseoLib.model.journey.JourneysResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
-import java.util.*
+import java.time.LocalDateTime
 
 /**
  * The class builder to do a Journeys request.
@@ -39,8 +39,8 @@ class JourneysRequest(private val apiKey: String){
     var arrivalPlaceXY:String? = null
     var srid:String? = null
     var networkList:String? = null
-    var firstDepartureDatetime:Date? = null
-    var lastDepartureDatetime:Date? = null
+    var firstDepartureDatetime:LocalDateTime? = null
+    var lastDepartureDatetime:LocalDateTime? = null
     var maxTransferDuration:String? = null
     var maxTransferNumber:String? = null
     var roadMode:String? = null

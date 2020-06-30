@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.stopPoint
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class StopPointResponse (
-        val expirationDate: Date,
+        val expirationDate: LocalDateTime,
         val physicalStops: StopPoints
 )

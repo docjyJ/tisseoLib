@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.netwotk
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class NetworksResponse(
-        val expirationDate: Date,
+        val expirationDate: LocalDateTime,
         val networks: List<Networks>
 )

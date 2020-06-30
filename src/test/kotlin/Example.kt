@@ -1,5 +1,5 @@
 import fr.docjyJ.tisseoLib.request.*
-import java.util.Date
+import java.time.LocalDateTime
 
 private const val API_KEY = "null-api-key" // Insert your api key
 
@@ -34,7 +34,7 @@ fun lines() = LinesRequest(API_KEY)
 fun stopSchedules()= StopSchedulesRequest(API_KEY) //Create request object
     .apply { //Set parameters
         stopsList = "1970324837184892,3377699720882831"
-        datetime = Date()
+        datetime = LocalDateTime.now()
     }
     .execute() //Execute request
 
@@ -46,7 +46,7 @@ fun journeys() = JourneysRequest(API_KEY)//Create request Object
         .apply { //set parameters
             departurePlace = "basso cambo "
             arrivalPlace = "françois verdier toulouse"
-            firstDepartureDatetime = Date()
+            firstDepartureDatetime = LocalDateTime.now()
         }
         .execute() //Execute request
 

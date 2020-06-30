@@ -7,9 +7,9 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
-import java.text.SimpleDateFormat
 import java.time.Duration
-import java.util.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 internal class RequestBuilder( private val apiKey: String, private val serviceName: String) {
@@ -32,7 +32,7 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
     internal fun <T> execute(classOfT: Class<T>):T {
         return GsonBuilder()
                 .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
-                .registerTypeAdapter(Date::class.java,DateTypeAdapter())
+                .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeTypeAdapter())
                 .registerTypeAdapter(Duration::class.java,DurationTypeAdapter())
                 .create()
                 .fromJson(execute(), classOfT)
@@ -50,9 +50,9 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
         if(value != null)
             addParameter(key, value.toString())
     }
-    internal fun addParameter(key: String, value: Date?) {
+    internal fun addParameter(key: String, value: LocalDateTime?) {
         if(value != null)
-            addParameter(key, SimpleDateFormat("yyyy-MM-dd HH:mm").format(value))
+            addParameter(key, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(value))
     }
 
 }

@@ -5,22 +5,22 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
 import java.lang.reflect.Type
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.DateTimeParseException
 
 
-internal class DateTypeAdapter : JsonDeserializer<Date> {
+internal class LocalDateTimeTypeAdapter : JsonDeserializer<LocalDateTime> {
     @Throws(JsonParseException::class)
     override fun deserialize(
             json: JsonElement, typeOfT: Type?,
             context: JsonDeserializationContext?
-    ): Date {
+    ): LocalDateTime {
         val code = json.asString
         return try {
-            SimpleDateFormat("yyyy-MM-dd HH:mm").parse(code)!!
-        } catch (e: ParseException){
-            SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(code)!!
+            LocalDateTime.parse(code, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
+        } catch (e: DateTimeParseException){
+            LocalDateTime.parse(code, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
         }
     }
 }

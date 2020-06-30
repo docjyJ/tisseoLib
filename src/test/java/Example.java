@@ -7,7 +7,7 @@ import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
@@ -66,7 +66,7 @@ public class Example {
 
         //Set parameters
         request.setStopsList("1970324837184892,3377699720882831");
-        request.setDatetime(new Date());
+        request.setDatetime(LocalDateTime.now());
 
         //Execute request
         return request.execute();
@@ -81,7 +81,7 @@ public class Example {
         //set parameters
         request.setDeparturePlace("basso cambo ");
         request.setArrivalPlace("françois verdier toulouse");
-        request.setFirstDepartureDatetime(new Date());
+        request.setFirstDepartureDatetime(LocalDateTime.now());
 
         //Execute request
         return request.execute();

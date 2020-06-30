@@ -3,7 +3,7 @@ package fr.docjyJ.tisseoLib.request
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
-import java.util.*
+import java.time.LocalDateTime
 
 /**
  * The class builder to do a Stop Schedules request.
@@ -33,7 +33,7 @@ class StopSchedulesRequest(private val apiKey: String){
     var lineId:String? = null
     var displayRealTime:Boolean? = null
     var timetableByArea:Boolean? = null
-    var datetime:Date? = null
+    var datetime:LocalDateTime? = null
     var maxDays:Int? = null
     var firstAndLastOfDay:Boolean? = null
 

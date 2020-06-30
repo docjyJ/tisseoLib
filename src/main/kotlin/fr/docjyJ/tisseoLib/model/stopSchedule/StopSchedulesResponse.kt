@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.stopSchedule
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class StopSchedulesResponse (
-    val expirationDate: Date,
-    val departures: Departures
+        val expirationDate: LocalDateTime,
+        val departures: Departures
 )

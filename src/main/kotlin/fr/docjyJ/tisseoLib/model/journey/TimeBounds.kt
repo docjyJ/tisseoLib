@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.journey
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class TimeBounds (
-        val maxDepartureHour: Date,
-        val minArrivalHour: Date
+        val maxDepartureHour: LocalDateTime,
+        val minArrivalHour: LocalDateTime
 )

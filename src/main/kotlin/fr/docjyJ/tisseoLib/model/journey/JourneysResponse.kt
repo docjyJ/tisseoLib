@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.journey
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class JourneysResponse(
-    val expirationDate: Date,
-    val routePlannerResult: RoutePlannerResult
+        val expirationDate: LocalDateTime,
+        val routePlannerResult: RoutePlannerResult
 )

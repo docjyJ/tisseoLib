@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.model.line
 
-import java.util.Date
+import java.time.LocalDateTime
 
 data class LinesResponse (
-        val expirationDate: Date,
+        val expirationDate: LocalDateTime,
         val lines: Lines
 )
