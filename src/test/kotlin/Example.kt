@@ -44,8 +44,8 @@ fun stopSchedules()= StopSchedulesRequest(API_KEY) //Create request object
 
 fun journeys() = JourneysRequest(API_KEY)//Create request Object
         .apply { //set parameters
-            departurePlace = "basso cambo"
-            arrivalPlace = "françois verdier"
+            departurePlace = "basso cambo "
+            arrivalPlace = "françois verdier toulouse"
             firstDepartureDatetime = Date()
         }
         .execute() //Execute request

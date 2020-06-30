@@ -1,4 +1,10 @@
 import fr.docjyJ.tisseoLib.model.*;
+import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
+import fr.docjyJ.tisseoLib.model.line.LinesResponse;
+import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
+import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
+import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.utils.TisseoException;
 import java.util.Date;
@@ -18,7 +24,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopPointResponce stopPoint() throws TisseoException {
+    public StopPointResponse stopPoint() throws TisseoException {
         //Create request object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
@@ -73,8 +79,8 @@ public class Example {
         JourneysRequest request = new JourneysRequest(API_KEY);
 
         //set parameters
-        request.setDeparturePlace("basso cambo");
-        request.setArrivalPlace("françois verdier");
+        request.setDeparturePlace("basso cambo ");
+        request.setArrivalPlace("françois verdier toulouse");
         request.setFirstDepartureDatetime(new Date());
 
         //Execute request
