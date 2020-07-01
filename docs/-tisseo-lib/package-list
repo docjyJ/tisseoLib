@@ -1,5 +1,5 @@
-$dokka.format:gfm
-$dokka.linkExtension:md
+$dokka.format:html
+$dokka.linkExtension:html
 
 fr.docjyJ.tisseoLib.model.journey
 fr.docjyJ.tisseoLib.model.line

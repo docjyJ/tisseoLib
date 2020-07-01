@@ -1,0 +1,229 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>JourneysRequest - TisseoLib</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">TisseoLib</a>&nbsp;/&nbsp;<a href="../index.html">fr.docjyJ.tisseoLib.request</a>&nbsp;/&nbsp;<a href="./index.html">JourneysRequest</a><br/>
+<br/>
+<h1>JourneysRequest</h1>
+<code><span class="keyword">class </span><span class="identifier">JourneysRequest</span></code> <a href="https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L38">(source)</a>
+<p>The class builder to do a Journeys request.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create new request builder with no parameters.</p>
+<code><span class="identifier">JourneysRequest</span><span class="symbol">(</span><span class="identifier" id="fr.docjyJ.tisseoLib.request.JourneysRequest$<init>(kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="arrival-place.html">arrivalPlace</a></h4>
+</td>
+<td>
+<p>Arrival address or stop name</p>
+<code><span class="keyword">var </span><span class="identifier">arrivalPlace</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="arrival-place-x-y.html">arrivalPlaceXY</a></h4>
+</td>
+<td>
+<p>The arrivalPlaceXY propriety.</p>
+<code><span class="keyword">var </span><span class="identifier">arrivalPlaceXY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="departure-place.html">departurePlace</a></h4>
+</td>
+<td>
+<p>Departure address or stop name</p>
+<code><span class="keyword">var </span><span class="identifier">departurePlace</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="departure-place-x-y.html">departurePlaceXY</a></h4>
+</td>
+<td>
+<p>Departure coordinates</p>
+<code><span class="keyword">var </span><span class="identifier">departurePlaceXY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-messages.html">displayMessages</a></h4>
+</td>
+<td>
+<p>Returns in extra id, service disruption messages</p>
+<code><span class="keyword">var </span><span class="identifier">displayMessages</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-result-table.html">displayResultTable</a></h4>
+</td>
+<td>
+<p>Add routes summary in table form</p>
+<code><span class="keyword">var </span><span class="identifier">displayResultTable</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-wording.html">displayWording</a></h4>
+</td>
+<td>
+<p>Returns human description for each section of the course</p>
+<code><span class="keyword">var </span><span class="identifier">displayWording</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="first-departure-datetime.html">firstDepartureDatetime</a></h4>
+</td>
+<td>
+<p>First date time of departure</p>
+<code><span class="keyword">var </span><span class="identifier">firstDepartureDatetime</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="last-departure-datetime.html">lastDepartureDatetime</a></h4>
+</td>
+<td>
+<p>Last date time of departure</p>
+<code><span class="keyword">var </span><span class="identifier">lastDepartureDatetime</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-approach-distance.html">maxApproachDistance</a></h4>
+</td>
+<td>
+<p>Maximum walking distance</p>
+<code><span class="keyword">var </span><span class="identifier">maxApproachDistance</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-transfer-duration.html">maxTransferDuration</a></h4>
+</td>
+<td>
+<p>Is the maximum travel time</p>
+<code><span class="keyword">var </span><span class="identifier">maxTransferDuration</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-transfer-number.html">maxTransferNumber</a></h4>
+</td>
+<td>
+<p>Specifies the maximum number of matches to use</p>
+<code><span class="keyword">var </span><span class="identifier">maxTransferNumber</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network-list.html">networkList</a></h4>
+</td>
+<td>
+<p>Network Transport operators number</p>
+<code><span class="keyword">var </span><span class="identifier">networkList</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="number.html">number</a></h4>
+</td>
+<td>
+<p>Max number of results</p>
+<code><span class="keyword">var </span><span class="identifier">number</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="road-max-distance.html">roadMaxDistance</a></h4>
+</td>
+<td>
+<p>Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the begining and the end of the journey</p>
+<code><span class="keyword">var </span><span class="identifier">roadMaxDistance</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="road-mode.html">roadMode</a></h4>
+</td>
+<td>
+<p>Specifies the mode in which the portions are made of any path "Transit" at the beginning (unless a "startRoadMode" different is specified) or at the end of the journey</p>
+<code><span class="keyword">var </span><span class="identifier">roadMode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="road-speed.html">roadSpeed</a></h4>
+</td>
+<td>
+<p>Velocity (meter by seconds) of selected roadMode</p>
+<code><span class="keyword">var </span><span class="identifier">roadSpeed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rolling-stock-list.html">rollingStockList</a></h4>
+</td>
+<td>
+<p>Rolling Stock List (Bus, Metro, Tram, ...) to take into account in the calculation</p>
+<code><span class="keyword">var </span><span class="identifier">rollingStockList</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="srid.html">srid</a></h4>
+</td>
+<td>
+<p>spatial reference number projection <a href="https://en.wikipedia.org/wiki/SRID">see</a></p>
+<code><span class="keyword">var </span><span class="identifier">srid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-road-max-distance.html">startRoadMaxDistance</a></h4>
+</td>
+<td>
+<p>Maximum distance for departure road section</p>
+<code><span class="keyword">var </span><span class="identifier">startRoadMaxDistance</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-road-mode.html">startRoadMode</a></h4>
+</td>
+<td>
+<p>Conveyance with which to perform the portion of the road path at the beginning of the journey</p>
+<code><span class="keyword">var </span><span class="identifier">startRoadMode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-road-speed.html">startRoadSpeed</a></h4>
+</td>
+<td>
+<p>Speed (meter by seconds) of selected roadMode</p>
+<code><span class="keyword">val </span><span class="identifier">startRoadSpeed</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../fr.docjy-j.tisseo-lib.model.journey/-journeys-response/index.html"><span class="identifier">JourneysResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute-as-string.html">executeAsString</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">executeAsString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

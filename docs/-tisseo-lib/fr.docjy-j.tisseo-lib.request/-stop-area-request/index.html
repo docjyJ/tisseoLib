@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StopAreaRequest - TisseoLib</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">TisseoLib</a>&nbsp;/&nbsp;<a href="../index.html">fr.docjyJ.tisseoLib.request</a>&nbsp;/&nbsp;<a href="./index.html">StopAreaRequest</a><br/>
+<br/>
+<h1>StopAreaRequest</h1>
+<code><span class="keyword">class </span><span class="identifier">StopAreaRequest</span></code> <a href="https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L26">(source)</a>
+<p>The class builder to do a Stop Area request.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create new request builder with no parameters.</p>
+<code><span class="identifier">StopAreaRequest</span><span class="symbol">(</span><span class="identifier" id="fr.docjyJ.tisseoLib.request.StopAreaRequest$<init>(kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="bbox.html">bbox</a></h4>
+</td>
+<td>
+<p>Filters stops included in bounding box</p>
+<code><span class="keyword">var </span><span class="identifier">bbox</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-arrival-only-lines.html">displayArrivalOnlyLines</a></h4>
+</td>
+<td>
+<p>Filters only lines which arrive to stops (and which do not start from) No effect displayLines is 0</p>
+<code><span class="keyword">var </span><span class="identifier">displayArrivalOnlyLines</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-coord-x-y.html">displayCoordXY</a></h4>
+</td>
+<td>
+<p>Adds centroid coordonate lines of each stop</p>
+<code><span class="keyword">var </span><span class="identifier">displayCoordXY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-lines.html">displayLines</a></h4>
+</td>
+<td>
+<p>Adds lines of each stop</p>
+<code><span class="keyword">var </span><span class="identifier">displayLines</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-stop-points.html">displayStopPoints</a></h4>
+</td>
+<td>
+<p>Display stop point of stop areas</p>
+<code><span class="keyword">var </span><span class="identifier">displayStopPoints</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="ignore-unserved-stops.html">ignoreUnservedStops</a></h4>
+</td>
+<td>
+<p>Ignore unserved stop in the given timeframe</p>
+<code><span class="keyword">var </span><span class="identifier">ignoreUnservedStops</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="line-id.html">lineId</a></h4>
+</td>
+<td>
+<p>Filters stops by line</p>
+<code><span class="keyword">var </span><span class="identifier">lineId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network.html">network</a></h4>
+</td>
+<td>
+<p>Transport operator</p>
+<code><span class="keyword">var </span><span class="identifier">network</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="srid.html">srid</a></h4>
+</td>
+<td>
+<p>spatial reference number projection <a href="https://en.wikipedia.org/wiki/SRID">see</a></p>
+<code><span class="keyword">var </span><span class="identifier">srid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="terminus-id.html">terminusId</a></h4>
+</td>
+<td>
+<p>Filters on stop areas arriving and departing from this terminal only</p>
+<code><span class="keyword">var </span><span class="identifier">terminusId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="timeframe.html">timeframe</a></h4>
+</td>
+<td>
+<p>Number of days to calculate which lines pass through a given point</p>
+<code><span class="keyword">var </span><span class="identifier">timeframe</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area-response/index.html"><span class="identifier">StopAreaResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute-as-string.html">executeAsString</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">executeAsString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

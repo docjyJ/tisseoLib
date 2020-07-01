@@ -1,0 +1,149 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>StopSchedulesRequest - TisseoLib</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">TisseoLib</a>&nbsp;/&nbsp;<a href="../index.html">fr.docjyJ.tisseoLib.request</a>&nbsp;/&nbsp;<a href="./index.html">StopSchedulesRequest</a><br/>
+<br/>
+<h1>StopSchedulesRequest</h1>
+<code><span class="keyword">class </span><span class="identifier">StopSchedulesRequest</span></code> <a href="https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L28">(source)</a>
+<p>The class builder to do a Stop Schedules request.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Create new request builder with no parameters.</p>
+<code><span class="identifier">StopSchedulesRequest</span><span class="symbol">(</span><span class="identifier" id="fr.docjyJ.tisseoLib.request.StopSchedulesRequest$<init>(kotlin.String)/apiKey">apiKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="datetime.html">datetime</a></h4>
+</td>
+<td>
+<p>Date and time at which we request the schedules</p>
+<code><span class="keyword">var </span><span class="identifier">datetime</span><span class="symbol">: </span><span class="identifier">LocalDateTime</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="display-real-time.html">displayRealTime</a></h4>
+</td>
+<td>
+<p>Allows specify « theoritical » or « real time » passages time</p>
+<code><span class="keyword">var </span><span class="identifier">displayRealTime</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="first-and-last-of-day.html">firstAndLastOfDay</a></h4>
+</td>
+<td>
+<p>Will return only first and last departure of the day</p>
+<code><span class="keyword">var </span><span class="identifier">firstAndLastOfDay</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="line-id.html">lineId</a></h4>
+</td>
+<td>
+<p>Filters schedules of a specific line</p>
+<code><span class="keyword">var </span><span class="identifier">lineId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-days.html">maxDays</a></h4>
+</td>
+<td>
+<p>number of days used to get “number” departures</p>
+<code><span class="keyword">var </span><span class="identifier">maxDays</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="network.html">network</a></h4>
+</td>
+<td>
+<p>Transport operator</p>
+<code><span class="keyword">var </span><span class="identifier">network</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="number.html">number</a></h4>
+</td>
+<td>
+<p>Max returned results number</p>
+<code><span class="keyword">var </span><span class="identifier">number</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="operator-code.html">operatorCode</a></h4>
+</td>
+<td>
+<p>Operator code (id used by transport operator)</p>
+<code><span class="keyword">var </span><span class="identifier">operatorCode</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop-area-id.html">stopAreaId</a></h4>
+</td>
+<td>
+<p>Is the number of logical stop point (zone)</p>
+<code><span class="keyword">var </span><span class="identifier">stopAreaId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop-point-id.html">stopPointId</a></h4>
+</td>
+<td>
+<p>Is the number of physical stop point</p>
+<code><span class="keyword">var </span><span class="identifier">stopPointId</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stops-list.html">stopsList</a></h4>
+</td>
+<td>
+<p>A list of stop areas or stop points (or both) separated by commas. Allows you to filter them in each argument by business line or direction.</p>
+<code><span class="keyword">var </span><span class="identifier">stopsList</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="timetable-by-area.html">timetableByArea</a></h4>
+</td>
+<td>
+<p>Groups the results by stop areas then couples (line, destination) ordered by time of next departure</p>
+<code><span class="keyword">var </span><span class="identifier">timetableByArea</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="execute.html">execute</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">execute</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-schedules-response/index.html"><span class="identifier">StopSchedulesResponse</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="execute-as-string.html">executeAsString</a></h4>
+</td>
+<td>
+<p>Execute the request.</p>
+<code><span class="keyword">fun </span><span class="identifier">executeAsString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
