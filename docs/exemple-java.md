@@ -1,3 +1,4 @@
+Example.java [(source)](https://github.com/docjyJ/TisseoLib/blob/master/src/test/java/Example.java)
 ```java
 import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
@@ -101,4 +102,3 @@ public class Example {
 }
 
 ```
-[SOURCE](https://github.com/docjyJ/TisseoLib/blob/master/src/test/java/Example.java)

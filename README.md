@@ -44,7 +44,7 @@ public StopAreaResponse stopArea() throws TisseoException {
     return request.execute();
 }
 ```
-More example [here](docs/example-java.md).
+More example [here](docs/exemple-java.md).
 
 ### KOTLIN
 
