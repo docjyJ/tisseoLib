@@ -2,6 +2,10 @@
 
 ## Package fr.docjyJ.tisseoLib.model.stopArea
 
+Data models for the stop area response.
+
+	
+
 ### Types
 
 | Name | Summary |

@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.journey
 
+Data models for the journey response.
+
 ### Types
 
 | Name | Summary |

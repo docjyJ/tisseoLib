@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.utils
 
+Contains exception.
+
 ### Exceptions
 
 | Name | Summary |

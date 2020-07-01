@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.request
 
+Contains all request builders
+
 ### Types
 
 | Name | Summary |

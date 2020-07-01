@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.netwotk
 
+Data models for the netwotk response.
+
 ### Types
 
 | Name | Summary |

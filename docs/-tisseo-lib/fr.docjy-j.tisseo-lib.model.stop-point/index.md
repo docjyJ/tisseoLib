@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.stopPoint
 
+Data models for the stop point response.
+
 ### Types
 
 | Name | Summary |

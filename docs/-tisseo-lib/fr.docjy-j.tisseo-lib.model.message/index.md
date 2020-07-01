@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.message
 
+Data models for the message response.
+
 ### Types
 
 | Name | Summary |

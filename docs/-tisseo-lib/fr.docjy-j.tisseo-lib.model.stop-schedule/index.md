@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.stopSchedule
 
+Data models for the stop schedule response.
+
 ### Types
 
 | Name | Summary |

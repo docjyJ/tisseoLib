@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.line
 
+Data models for the line response.
+
 ### Types
 
 | Name | Summary |
