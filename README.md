@@ -1,17 +1,17 @@
-# Tisséo API Library [![download_3.0-alpha](https://img.shields.io/badge/download-3.0--alpha-yellow?style=flat-square&logo=java)](https://github.com/docjyJ/TisseoLib/releases/tag/v3.0-alpha)
+# Tisséo API Library [![download_latest-release](https://img.shields.io/github/v/release/docjyJ/TisseoLib?label=download&logo=java&style=flat-square)](https://github.com/docjyJ/TisseoLib/releases/latest)
 Library to simplify calls to the Tisséo API in Java.
 
 ## Information before usage
 This library is neither created nor approved by Tisséo.
 
-The Tisséo API is licensed under ODbL. [More information (french)](https://data.toulouse-metropole.fr/page/licence/)
+The Tisséo API is under [ODbL](http://opendatacommons.org/licenses/odbl/1.0/) license. [More information (french)](https://data.toulouse-metropole.fr/page/licence/)
 
 You are responsible for requests made with this library.
 
 ## Usage
-Download the latest version. [(3.0-alpha)](https://github.com/docjyJ/TisseoLib/releases/tag/3.0-alpha)
+Download the [latest version](https://github.com/docjyJ/TisseoLib/releases/latest).
 
-Only the following resources are supported: *(others are coming)*
+Only the following resources are support: *(others are coming)*
 - stop_area
 - stop_points
 - networks
@@ -21,11 +21,11 @@ Only the following resources are supported: *(others are coming)*
 - journeys
 
 ## Documentation
-See the Library documentation [here](-tisseo-lib/index.md)
+See the Library documentation [here](docs/-tisseo-lib/index.md)
 
 Refer to the documentation provided by Tisséo (French and English) for resources, parameters, responses and as well as how to obtain a key.
 
-[https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/)
+[https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/).
 
 ## Example
 
@@ -44,7 +44,7 @@ public StopAreaResponse stopArea() throws TisseoException {
     return request.execute();
 }
 ```
-More example [here](src/test/java/Example.java)
+More example [here](docs/example-java.md).
 
 ### KOTLIN
 
@@ -56,4 +56,4 @@ fun stopArea() = StopAreaRequest(API_KEY) //Create request object
     }
     .execute() //Execute request
 ```
-More example [here](src/test/kotlin/Example.kt)
+More example [here](docs/example-kotlin.md).
