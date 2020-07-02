@@ -8,18 +8,6 @@ The Tisséo API is under [ODbL](http://opendatacommons.org/licenses/odbl/1.0/) l
 
 You are responsible for requests made with this library.
 
-## Usage
-Download the [latest version](https://github.com/docjyJ/TisseoLib/releases/latest).
-
-Only the following resources are support: *(others are coming)*
-- stop_area
-- stop_points
-- networks
-- lines
-- messages
-- stops_schedules
-- journeys
-
 ## Documentation
 See the Library documentation [here](docs/-tisseo-lib/index.md)
 
@@ -27,7 +15,9 @@ Refer to the documentation provided by Tisséo (French and English) for resource
 
 [https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/).
 
-## Example
+## Usage Example
+
+Please note that the response object for the Place resource is not implemented. It is possible to get the response string (via the executeAsString () method) and analyze it afterwards.
 
 ### JAVA
 

@@ -40,7 +40,17 @@ public class Example {
         return request.execute();
     }
 
-    //TODO PLACES
+    public String places() throws TisseoException {
+        //Create request object
+        PlacesRequest request = new PlacesRequest(API_KEY);
+
+        //Set parameters
+        request.setTerm("cav");
+
+        //Execute request
+        return request.executeAsString();
+        //Please note that the response object for the Place resource is not implemented.
+    }
 
     public NetworksResponse networks() throws TisseoException {
         //Create request object
