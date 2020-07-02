@@ -43,15 +43,21 @@ fun stopSchedules()= StopSchedulesRequest(API_KEY) //Create request object
 //TODO ROLLING_STOCKS
 
 fun journeys() = JourneysRequest(API_KEY)//Create request Object
-        .apply { //set parameters
-            departurePlace = "basso cambo "
-            arrivalPlace = "françois verdier toulouse"
-            firstDepartureDatetime = LocalDateTime.now()
-        }
-        .execute() //Execute request
+    .apply { //set parameters
+        departurePlace = "basso cambo "
+        arrivalPlace = "françois verdier toulouse"
+        firstDepartureDatetime = LocalDateTime.now()
+    }
+    .execute() //Execute request
 
 fun messages() = MessagesRequest(API_KEY) //Create request object
     .execute() //Execute request
 
-//TODO SERVICE_DENSITY
+fun serviceDensity() = ServiceDensityRequest(API_KEY) //Create request Object
+    .apply {//set parameters
+        centerXY = "143887.232875 5369123.828587"
+        beginDateTimeSlot = LocalDateTime.now()
+        displayServices = true
+    }
+    .execute() //Execute request
 

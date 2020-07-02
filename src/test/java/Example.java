@@ -2,6 +2,7 @@ import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
 import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
 import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse;
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
 import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
@@ -96,5 +97,16 @@ public class Example {
         return request.execute();
     }
 
-    //TODO SERVICE_DENSITY
+    public ServiceDensityResponse serviceDensity() throws TisseoException {
+        //Create request Object
+        ServiceDensityRequest request = new ServiceDensityRequest(API_KEY);
+
+        //set parameters
+        request.setCenterXY("143887.232875 5369123.828587");
+        request.setBeginDateTimeSlot(LocalDateTime.now());
+        request.setDisplayServices(true);
+
+        //Execute request
+        return request.execute();
+    }
 }

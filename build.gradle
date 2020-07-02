@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'fr.docjyj.tisseoLib'
-version '1.2'
+version '1.2.0'
 
 jar {
     manifest {
@@ -34,8 +34,9 @@ compileTestKotlin {
 
 dokka {
     outputFormat = 'gfm'
-    outputDirectory = "./"
+    outputDirectory = "./docs/"
     configuration {
+        includes = ['packages.md']
         sourceLink {
             path = "src/main/kotlin"
             url = "https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin"

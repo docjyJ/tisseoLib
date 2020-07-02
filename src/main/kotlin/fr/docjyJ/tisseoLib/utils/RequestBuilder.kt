@@ -9,6 +9,7 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.time.Duration
 import java.time.LocalDateTime
+import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 
@@ -31,11 +32,12 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
     @Throws(TisseoException::class)
     internal fun <T> execute(classOfT: Class<T>):T {
         return GsonBuilder()
-                .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
-                .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeTypeAdapter())
-                .registerTypeAdapter(Duration::class.java,DurationTypeAdapter())
-                .create()
-                .fromJson(execute(), classOfT)
+            .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
+            .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeTypeAdapter())
+            .registerTypeAdapter(LocalTime::class.java,LocalTimeTypeAdapter())
+            .registerTypeAdapter(Duration::class.java,DurationTypeAdapter())
+            .create()
+            .fromJson(execute(), classOfT)
     }
 
     internal fun addParameter(key: String, value: String?){
