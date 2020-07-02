@@ -2,6 +2,7 @@ import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
 import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
 import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse;
 import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse;
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
 import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
@@ -73,7 +74,13 @@ public class Example {
         return request.execute();
     }
 
-    //TODO ROLLING_STOCKS
+    public RollingStocksResponse rollingStocks() throws TisseoException {
+        //Create request object
+        RollingStocksRequest request = new RollingStocksRequest(API_KEY);
+
+        //Execute request
+        return request.execute();
+    }
 
     public JourneysResponse journeys() throws TisseoException {
         //Create request Object

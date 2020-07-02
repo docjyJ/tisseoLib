@@ -38,9 +38,8 @@ fun stopSchedules()= StopSchedulesRequest(API_KEY) //Create request object
     }
     .execute() //Execute request
 
-//TODO ROLLING_STOCKS
-
-//TODO ROLLING_STOCKS
+fun rollingStocks() = RollingStocksRequest(API_KEY) //Create request object
+    .execute() //Execute request
 
 fun journeys() = JourneysRequest(API_KEY)//Create request Object
     .apply { //set parameters

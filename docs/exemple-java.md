@@ -63,7 +63,13 @@ public class Example {
         return request.execute();
     }
 
-    //TODO ROLLING_STOCKS
+    public RollingStocksResponse rollingStocks() throws TisseoException {
+        //Create request object
+        RollingStocksRequest request = new RollingStocksRequest(API_KEY);
+
+        //Execute request
+        return request.execute();
+    }
 
     public JourneysResponse journeys() throws TisseoException {
         //Create request Object
