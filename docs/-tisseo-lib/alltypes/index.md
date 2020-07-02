@@ -156,7 +156,31 @@ The class builder to do a Network request.
 
 |
 
+##### [fr.docjyJ.tisseoLib.request.PlacesRequest](../fr.docjy-j.tisseo-lib.request/-places-request/index.md)
+
+The class builder to do a Line request.
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.model.journey.Query](../fr.docjy-j.tisseo-lib.model.journey/-query/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.rollingStock.RollingStock](../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stock/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.request.RollingStocksRequest](../fr.docjy-j.tisseo-lib.request/-rolling-stocks-request/index.md)
+
+The class builder to do a Rolling Stocks request.
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse](../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stocks-response/index.md)
 
 
 |
@@ -167,6 +191,28 @@ The class builder to do a Network request.
 |
 
 ##### [fr.docjyJ.tisseoLib.model.stopSchedule.Schedule](../fr.docjy-j.tisseo-lib.model.stop-schedule/-schedule/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.Service](../fr.docjy-j.tisseo-lib.model.service-density/-service/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.request.ServiceDensityRequest](../fr.docjy-j.tisseo-lib.request/-service-density-request/index.md)
+
+The class builder to do a Service Density request.
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse](../fr.docjy-j.tisseo-lib.model.service-density/-service-density-response/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.Services](../fr.docjy-j.tisseo-lib.model.service-density/-services/index.md)
 
 
 |
@@ -223,6 +269,16 @@ The class builder to do a Stop Schedules request.
 |
 
 ##### [fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse](../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-schedules-response/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.StopsService](../fr.docjy-j.tisseo-lib.model.service-density/-stops-service/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.StopsServices](../fr.docjy-j.tisseo-lib.model.service-density/-stops-services/index.md)
 
 
 |

@@ -4,8 +4,8 @@
 
 `var datetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L38)
 
-Date and time at which we request the schedules
+Date and time at which we request the schedules.
 
 ### Property
 
-`datetime` - Date and time at which we request the schedules
+`datetime` - Date and time at which we request the schedules.

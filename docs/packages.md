@@ -29,6 +29,15 @@ Data models for the netwotk response.
 # Package fr.docjyJ.tisseoLib.model.stopArea
 
 Data models for the stop area response.
+
+# Package fr.docjyJ.tisseoLib.model.rollingStock
+
+Data models for the rolling stock response.
+
+# Package fr.docjyJ.tisseoLib.model.serviceDensity
+
+Data models for the service density response.
+
 	
 # Package fr.docjyJ.tisseoLib.model.stopPoint
 

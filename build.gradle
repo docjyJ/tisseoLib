@@ -36,7 +36,7 @@ dokka {
     outputFormat = 'gfm'
     outputDirectory = "./docs/"
     configuration {
-        includes = ['packages.md']
+        includes = ['./docs/packages.md']
         sourceLink {
             path = "src/main/kotlin"
             url = "https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin"

@@ -2,7 +2,7 @@
 
 # tisseoError
 
-`val tisseoError: TisseoError` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/utils/TisseoException.kt#L17)
+`val tisseoError: TisseoError` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/utils/TisseoException.kt#L15)
 
 An object that contains information about the server error.
 

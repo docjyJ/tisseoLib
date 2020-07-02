@@ -4,8 +4,8 @@
 
 `var departurePlace: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L39)
 
-Departure address or stop name
+Departure address or stop name.
 
 ### Property
 
-`departurePlace` - Departure address or stop name
+`departurePlace` - Departure address or stop name.

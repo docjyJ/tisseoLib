@@ -4,8 +4,6 @@
 
 Data models for the stop area response.
 
-	
-
 ### Types
 
 | Name | Summary |

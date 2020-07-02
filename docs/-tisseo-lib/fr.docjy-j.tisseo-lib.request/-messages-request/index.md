@@ -16,9 +16,9 @@ The class builder to do a Message request.
 
 | Name | Summary |
 |---|---|
-| [contentFormat](content-format.md) | Format message contents`var contentFormat: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-| [displayImportantOnly](display-important-only.md) | Displays only important messages (found on the home page tisseo)`var displayImportantOnly: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
-| [network](network.md) | Transport operator`var network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [contentFormat](content-format.md) | Format message contents.`var contentFormat: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [displayImportantOnly](display-important-only.md) | Displays only important messages. (found on the home page tisseo)`var displayImportantOnly: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
+| [network](network.md) | Transport operator.`var network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 
 ### Functions
 

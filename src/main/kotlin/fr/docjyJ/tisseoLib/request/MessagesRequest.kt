@@ -9,9 +9,9 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  *
  * @constructor Create new request builder with no parameters.
  *
- * @property network Transport operator
- * @property contentFormat Format message contents
- * @property displayImportantOnly Displays only important messages (found on the home page tisseo)
+ * @property network Transport operator.
+ * @property contentFormat Format message contents.
+ * @property displayImportantOnly Displays only important messages. (found on the home page tisseo)
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

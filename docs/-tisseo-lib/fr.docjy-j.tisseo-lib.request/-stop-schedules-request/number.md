@@ -4,8 +4,8 @@
 
 `var number: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L34)
 
-Max returned results number
+Max returned results number.
 
 ### Property
 
-`number` - Max returned results number
+`number` - Max returned results number.

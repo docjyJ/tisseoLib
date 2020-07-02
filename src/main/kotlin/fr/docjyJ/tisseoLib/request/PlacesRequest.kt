@@ -26,7 +26,7 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  * @property displayOnlyCities Returns only object of className “city”.
  * @property lang Choice of language.
  * @property simple Formatting the json output for jquery.
- * @property publicPlaceFilter list of public places to explose.
+ * @property publicPlaceFilter List of public places to explose.
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

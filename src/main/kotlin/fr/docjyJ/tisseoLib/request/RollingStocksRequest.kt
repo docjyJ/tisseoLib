@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.model.line.LinesResponse
 import fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
@@ -9,7 +8,6 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  * The class builder to do a Rolling Stocks request.
  *
  * @constructor Create new request builder with no parameters.
- *
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

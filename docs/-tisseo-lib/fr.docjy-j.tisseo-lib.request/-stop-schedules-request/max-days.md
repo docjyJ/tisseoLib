@@ -4,8 +4,8 @@
 
 `var maxDays: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L39)
 
-number of days used to get “number” departures
+Number of days used to get “number” departures.
 
 ### Property
 
-`maxDays` - number of days used to get “number” departures
+`maxDays` - Number of days used to get “number” departures.

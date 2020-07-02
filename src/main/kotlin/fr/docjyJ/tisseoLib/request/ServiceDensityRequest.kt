@@ -1,7 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse
-import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 import java.time.LocalDateTime
@@ -11,14 +10,14 @@ import java.time.LocalDateTime
  *
  * @constructor Create new request builder with no parameters.
  *
- * @property centerXY Désigne l’adresse ou le lieu d’arrivée ou de départ.
- * @property srid spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
- * @property serviceNumber Nombre de services pour lequel on veut une estimation du rayon.
- * @property beginDateTimeSlot Désigne la date et l’heure de début de la tranche horaire de calcul.
- * @property endDateTimeSlot Désigne la date et l’heure de fin de la tranche horaire de calcul.
- * @property networkList Opérateurs de transport.
- * @property rollingStockList Liste des modes de transport utilisés.
- * @property displayServices Affiche les services trouvés dans la zone parcourue.
+ * @property centerXY Address or place of departure or arrival.
+ * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
+ * @property serviceNumber Number of distinct transport services we want to reach in the time slot .
+ * @property beginDateTimeSlot Begining date and time of time slot.
+ * @property endDateTimeSlot Ending date and time of time slot.
+ * @property networkList Transport operators list.
+ * @property rollingStockList Transport mode list.
+ * @property displayServices Displays the services found in the area covered.
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

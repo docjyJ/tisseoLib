@@ -4,8 +4,8 @@
 
 `var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L29)
 
-spatial reference number projection [see](https://en.wikipedia.org/wiki/SRID)
+Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
 
 ### Property
 
-`srid` - spatial reference number projection [see](https://en.wikipedia.org/wiki/SRID)
+`srid` - Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)

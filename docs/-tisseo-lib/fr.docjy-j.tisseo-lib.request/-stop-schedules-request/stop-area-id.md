@@ -4,8 +4,8 @@
 
 `var stopAreaId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L31)
 
-Is the number of logical stop point (zone)
+Is the number of logical stop point. (zone)
 
 ### Property
 
-`stopAreaId` - Is the number of logical stop point (zone)
+`stopAreaId` - Is the number of logical stop point. (zone)

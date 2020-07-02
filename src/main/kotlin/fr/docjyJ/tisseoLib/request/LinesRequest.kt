@@ -9,14 +9,14 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  *
  * @constructor Create new request builder with no parameters.
  *
- * @property network Transport operator
- * @property lineId Filter on a single line by its ID
- * @property shortName Filter on a single line by line number
- * @property displayTerminus Returns in extra logical stops terminus of each line
- * @property displayMessages geographic coordinates Returns in extra messages of line disturbance (for the lines which are disturbed)
- * @property displayOnlyDisrupted Only returns lines with disturbance (for the lines which are disturbed)
- * @property displayGeometry Return geometries in WKT [see](http://fr.wikipedia.org/wiki/Well-known_text)
- * @property contentFormat Format of message content
+ * @property network Transport operator.
+ * @property lineId Filter on a single line by its ID.
+ * @property shortName Filter on a single line by line number.
+ * @property displayTerminus Returns in extra logical stops terminus of each line.
+ * @property displayMessages Geographic coordinates Returns in extra messages of line disturbance. (for the lines which are disturbed)
+ * @property displayOnlyDisrupted Only returns lines with disturbance. (for the lines which are disturbed)
+ * @property displayGeometry Return geometries in WKT. [see](http://fr.wikipedia.org/wiki/Well-known_text)
+ * @property contentFormat Format of message content.
  */
 
 @Suppress("MemberVisibilityCanBePrivate")

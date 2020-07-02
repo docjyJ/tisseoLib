@@ -4,8 +4,8 @@
 
 `var lineId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L36)
 
-Filters stops by ID line
+Filters stops by ID line.
 
 ### Property
 
-`lineId` - Filters stops by ID line
+`lineId` - Filters stops by ID line.

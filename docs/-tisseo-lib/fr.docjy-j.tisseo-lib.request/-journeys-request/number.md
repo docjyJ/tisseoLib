@@ -4,8 +4,8 @@
 
 `var number: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L56)
 
-Max number of results
+Max number of results.
 
 ### Property
 
-`number` - Max number of results
+`number` - Max number of results.

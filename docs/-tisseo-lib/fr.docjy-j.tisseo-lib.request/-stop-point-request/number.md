@@ -4,8 +4,8 @@
 
 `var number: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L31)
 
-Limit number of results to return
+Limit number of results to return.
 
 ### Property
 
-`number` - Limit number of results to return
+`number` - Limit number of results to return.

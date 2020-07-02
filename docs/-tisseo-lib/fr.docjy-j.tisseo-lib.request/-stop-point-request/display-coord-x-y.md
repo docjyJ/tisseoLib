@@ -4,8 +4,8 @@
 
 `var displayCoordXY: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L35)
 
-Adds coordinates details of each stop (stop and logical stopping post)
+Adds coordinates details of each stop. (stop and logical stopping post)
 
 ### Property
 
-`displayCoordXY` - Adds coordinates details of each stop (stop and logical stopping post)
+`displayCoordXY` - Adds coordinates details of each stop. (stop and logical stopping post)

@@ -4,8 +4,8 @@
 
 `var network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/MessagesRequest.kt#L19)
 
-Transport operator
+Transport operator.
 
 ### Property
 
-`network` - Transport operator
+`network` - Transport operator.

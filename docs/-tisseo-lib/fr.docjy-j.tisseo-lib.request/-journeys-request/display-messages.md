@@ -4,8 +4,8 @@
 
 `var displayMessages: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L59)
 
-Returns in extra id, service disruption messages
+Returns in extra id, service disruption messages.
 
 ### Property
 
-`displayMessages` - Returns in extra id, service disruption messages
+`displayMessages` - Returns in extra id, service disruption messages.

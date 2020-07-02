@@ -9,18 +9,18 @@ import fr.docjyJ.tisseoLib.utils.TisseoException
  *
  * @constructor Create new request builder with no parameters.
  *
- * @property network Transport operator
- * @property srid spatial reference number projection [see](https://en.wikipedia.org/wiki/SRID)
- * @property bbox Filters stops included in bounding box
- * @property number Limit number of results to return
- * @property sortByDistance Sorting results by distance from the center of the bounding box
- * @property displayDestinations Adds line destinations
- * @property displayLines Adds lines serving each stop point
- * @property displayCoordXY Adds coordinates details of each stop (stop and logical stopping post)
- * @property lineId Filters stops by ID line
- * @property stopAreaId Filters only on the id stop zone
+ * @property network Transport operator.
+ * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
+ * @property bbox Filters stops included in bounding box.
+ * @property number Limit number of results to return.
+ * @property sortByDistance Sorting results by distance from the center of the bounding box.
+ * @property displayDestinations Adds line destinations.
+ * @property displayLines Adds lines serving each stop point.
+ * @property displayCoordXY Adds coordinates details of each stop. (stop and logical stopping post)
+ * @property lineId Filters stops by ID line.
+ * @property stopAreaId Filters only on the id stop zone.
  * @property timeframe Number of days covering research, the day time interval is a single day by default.
- * @property displayStopsWithoutDeparture  Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
+ * @property displayStopsWithoutDeparture Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
  */
 
 @Suppress("MemberVisibilityCanBePrivate")
