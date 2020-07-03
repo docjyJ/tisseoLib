@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.model.journey.JourneysResponse
-import fr.docjyJ.tisseoLib.util.RequestBuilder
-import fr.docjyJ.tisseoLib.util.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import java.time.LocalDateTime
 
 /**
@@ -87,16 +87,16 @@ class JourneysRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in JourneysResponse object.
-     * @throws  TisseoException
+     * @throws  TisseoServerException
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(JourneysResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws  TisseoServerException
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
 }

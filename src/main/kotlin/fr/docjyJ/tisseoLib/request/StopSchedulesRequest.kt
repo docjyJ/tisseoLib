@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
-import fr.docjyJ.tisseoLib.util.RequestBuilder
-import fr.docjyJ.tisseoLib.util.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import java.time.LocalDateTime
 
 /**
@@ -39,7 +39,8 @@ class StopSchedulesRequest(private val apiKey: String){
     var maxDays:Int? = null
     var firstAndLastOfDay:Boolean? = null
 
-    private fun buildParams() = RequestBuilder(apiKey, "stops_schedules").apply {
+    private fun buildParams() = RequestBuilder(apiKey, "stops_schedules")
+        .apply {
         addParameter("operatorCode",operatorCode)
         addParameter("stopPointId",stopPointId)
         addParameter("stopAreaId",stopAreaId)
@@ -57,17 +58,19 @@ class StopSchedulesRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in StopSchedulesResponse object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(StopSchedulesResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
 
 }

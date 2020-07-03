@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse
-import fr.docjyJ.tisseoLib.util.RequestBuilder
-import fr.docjyJ.tisseoLib.util.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 
 /**
  * The class builder to do a Stop Area request.
@@ -53,17 +53,19 @@ class StopAreaRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in StopAreaResponse object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(StopAreaResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
 
 }

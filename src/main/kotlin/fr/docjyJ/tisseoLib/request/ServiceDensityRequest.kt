@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse
-import fr.docjyJ.tisseoLib.util.RequestBuilder
-import fr.docjyJ.tisseoLib.util.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import java.time.LocalDateTime
 
 /**
@@ -31,7 +31,10 @@ class ServiceDensityRequest(private val apiKey: String){
     var rollingStockList:String? = null
     var displayServices:Boolean? = null
 
-    private fun buildParams() = RequestBuilder(apiKey, "services_density").apply {
+    private fun buildParams() = RequestBuilder(
+        apiKey,
+        "services_density"
+    ).apply {
         addParameter("centerXY",centerXY)
         addParameter("srid",srid)
         addParameter("serviceNumber",serviceNumber)
@@ -45,17 +48,19 @@ class ServiceDensityRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in ServiceDensityResponse object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(ServiceDensityResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
 
 }
