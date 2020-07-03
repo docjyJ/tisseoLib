@@ -24,10 +24,12 @@ import java.time.format.DateTimeFormatter
 internal class RequestBuilder( private val apiKey: String, private val serviceName: String) {
     private val stringBuilder = StringBuilder()
 
+    internal fun getUrl():String = "https://api.tisseo.fr/v1/$serviceName.json?${stringBuilder}key=$apiKey"
+
     @Throws(TisseoServerException::class, TisseoClientException::class)
     internal fun execute():String {
         try {
-        val connection: HttpURLConnection = URL("https://api.tisseo.fr/v1/$serviceName.json?${stringBuilder}key=$apiKey").openConnection() as HttpURLConnection
+        val connection: HttpURLConnection = URL(getUrl()).openConnection() as HttpURLConnection
         val responseCode: Int = connection.responseCode
             if (responseCode == HttpURLConnection.HTTP_OK)
                 try {

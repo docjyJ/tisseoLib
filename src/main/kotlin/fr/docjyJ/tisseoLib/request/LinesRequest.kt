@@ -59,4 +59,12 @@ class LinesRequest(private val apiKey: String) {
     @Throws(TisseoServerException::class)
     fun executeAsString() = buildParams().execute()
 
+    /**
+     * Show the URL.
+     * @return The URL of request in String object.
+     * @throws TisseoClientException When the library makes a mistake.
+     */
+    @Throws(TisseoClientException::class)
+    fun getUrl() = buildParams().getUrl()
+
 }

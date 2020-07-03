@@ -87,7 +87,8 @@ class JourneysRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in JourneysResponse object.
-     * @throws  TisseoServerException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(JourneysResponse::class.java)
@@ -95,8 +96,17 @@ class JourneysRequest(private val apiKey: String){
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoServerException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
+
+    /**
+     * Show the URL.
+     * @return The URL of request in String object.
+     * @throws TisseoClientException When the library makes a mistake.
+     */
+    @Throws(TisseoClientException::class)
+    fun getUrl() = buildParams().getUrl()
 }
