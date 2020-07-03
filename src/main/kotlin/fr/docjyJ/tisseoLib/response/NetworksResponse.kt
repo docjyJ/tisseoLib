@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 data class NetworksResponse(
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("networks")
     val networks: List<Network>
-)
+) : TisseoResponse

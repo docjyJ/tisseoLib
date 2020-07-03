@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 data class StopAreaResponse(
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("stopAreas")
     val stopAreas: StopAreas
-)
+) : TisseoResponse

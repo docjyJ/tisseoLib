@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 data class RollingStocksResponse(
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("rollingStocks")
     val rollingStocks: List<RollingStock>
-)
+) : TisseoResponse

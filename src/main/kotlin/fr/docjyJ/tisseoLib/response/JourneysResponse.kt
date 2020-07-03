@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 data class JourneysResponse(
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("routePlannerResult")
     val routePlannerResult: RoutePlannerResult
-)
+) : TisseoResponse

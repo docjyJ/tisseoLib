@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 
 data class LinesResponse(
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("lines")
     val lines: Lines
-)
+) : TisseoResponse

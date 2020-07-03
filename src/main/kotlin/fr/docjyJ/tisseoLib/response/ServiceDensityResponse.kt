@@ -9,11 +9,11 @@ data class ServiceDensityResponse(
     @SerializedName("distance")
     val distance: Int,
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("isServiceNumberReached")
     val isServiceNumberReached: Int,
     @SerializedName("serviceNumberReached")
     val serviceNumberReached: Int,
     @SerializedName("stops")
     val stops: List<Stop>
-)
+) : TisseoResponse
