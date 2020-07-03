@@ -1,22 +1,34 @@
 plugins {
     id 'java'
+    //id 'base'
+    id 'maven-publish'
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id 'org.jetbrains.dokka' version '0.10.1'
+    id 'com.jfrog.bintray' version '1.8.5'
 }
 
-group 'fr.docjyj.tisseoLib'
-version '1.2.1'
+def GROUP_ID= 'fr.docjyJ.tisseoLib'
+def ARTIFACT_ID= 'tisseoLib'
 
-jar {
-    manifest {
-        attributes('Implementation-Title': project.name,
-                'Implementation-Version': project.version)
-    }
-}
+def MAVEN_REPOSITORY= 'maven'
+def USER= 'docjyj'
+
+def VERSION_NAME='1.2.1'
+
+def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
+def DESC = 'Library to simplify calls to the Tisséo API in Java / Kotlin.'
+
+
+group GROUP_ID
+version VERSION_NAME
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
     jcenter()
+    maven {
+        url  'https://dl.bintray.com/docjyj/docjyjMaven'
+    }
 }
 
 dependencies {
@@ -43,6 +55,65 @@ dokka {
             path = "src/main/kotlin"
             url = "https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin"
             lineSuffix = "#L"
+        }
+    }
+}
+
+clean { }
+
+bintrayUpload { }
+
+bintray {
+    user = project.property('bintrayUser')
+    key = project.property('bintrayApiKey')
+    publications = ['mavenJava']
+
+    pkg {
+        repo = MAVEN_REPOSITORY
+        name = ARTIFACT_ID
+        userOrg = USER
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'.git'
+        desc = DESC
+        websiteUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID
+        issueTrackerUrl = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'/issues'
+        githubRepo = USER+'/'+ARTIFACT_ID
+
+        version {
+            name = VERSION_NAME
+            vcsTag = 'v'+VERSION_NAME
+            released = new Date()
+            desc = VERSION_DESC
+        }
+    }
+}
+
+
+
+task sourcesJar(type: Jar, dependsOn: project.classes) {
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: project.javadoc) {
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar, javadocJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId project.bintray.pkg.name
+            from components.java
+
+            artifact sourcesJar {
+                classifier = 'sources'
+            }
+            artifact javadocJar {
+                classifier = 'javadoc'
+            }
         }
     }
 }
