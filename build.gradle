@@ -16,7 +16,7 @@ def USER= 'docjyj'
 def VERSION_NAME='1.2.2'
 
 def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
-def DESC = 'Library to simplify calls to the Tisséo API in Java / Kotlin.'
+def DESC = 'Library to simplify calls to the Tisseo API in Java / Kotlin.'
 
 
 group GROUP_ID
