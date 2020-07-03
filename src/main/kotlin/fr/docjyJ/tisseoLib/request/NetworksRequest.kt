@@ -10,7 +10,6 @@ import fr.docjyJ.tisseoLib.response.NetworksResponse
  * @constructor Create new request builder with no parameters.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class NetworksRequest(private val apiKey: String) : TisseoRequest {
     private fun buildParams() = RequestBuilder(apiKey, "networks")
 

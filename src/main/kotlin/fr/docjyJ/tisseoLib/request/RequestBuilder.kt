@@ -1,14 +1,12 @@
 package fr.docjyJ.tisseoLib.request
 
 import com.google.gson.GsonBuilder
-import com.google.gson.JsonSyntaxException
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.typeAdapter.*
 import org.locationtech.jts.geom.Geometry
 import java.awt.Color
 import java.io.BufferedReader
-import java.io.IOException
 import java.io.InputStreamReader
 import java.io.UnsupportedEncodingException
 import java.net.HttpURLConnection

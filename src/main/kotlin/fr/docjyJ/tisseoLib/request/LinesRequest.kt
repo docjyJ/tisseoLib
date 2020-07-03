@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
@@ -19,7 +21,6 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  * @property contentFormat Format of message content.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class LinesRequest(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var lineId:String? = null

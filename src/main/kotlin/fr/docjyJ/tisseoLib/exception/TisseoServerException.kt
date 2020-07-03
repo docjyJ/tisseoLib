@@ -1,6 +1,9 @@
+@file:Suppress("unused", "unused", "unused", "unused", "unused")
+
 package fr.docjyJ.tisseoLib.exception
 
 import com.google.gson.GsonBuilder
+import com.google.gson.annotations.SerializedName
 import java.net.HttpURLConnection
 import java.net.URL
 
@@ -22,10 +25,11 @@ class TisseoServerException internal constructor(connection: HttpURLConnection) 
 
 
     private class TisseoError(connection: HttpURLConnection){
+        @SerializedName("url")
         val url = connection.url ?: "no url"
-
+        @SerializedName("message")
         val responseMessage = connection.responseMessage ?: "no response message"
-
+        @SerializedName("code")
         val responseCode = connection.responseCode
 
         fun toJson() = GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create().toJson(this)!!

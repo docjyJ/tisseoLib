@@ -23,7 +23,6 @@ import fr.docjyJ.tisseoLib.response.StopPointResponse
  * @property displayStopsWithoutDeparture Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class StopPointRequest internal constructor(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var srid:String? = null

@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
@@ -22,7 +24,7 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  * @property displayBestPlace Returns the best result.
  * @property displayOnlyStopAreas Returns only object of className “stop”.
  * @property displayOnlyRoads Returns only object of className “road”.
- * @property displayOnlyAddresses Returns only object of className “adress”.
+ * @property displayOnlyAddresses Returns only object of className “address”.
  * @property displayOnlyPublicPlaces Returns only object of className “public_places”.
  * @property displayOnlyCities Returns only object of className “city”.
  * @property lang Choice of language.
@@ -30,7 +32,6 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  * @property publicPlaceFilter List of public places to explose.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class PlacesRequest(private val apiKey: String) : TisseoRequest {
     var term:String? = null
     var network:String? = null

@@ -17,14 +17,13 @@ import java.time.LocalDateTime
  * @property network Transport operator.
  * @property number Max returned results number.
  * @property lineId Filters schedules of a specific line.
- * @property displayRealTime Allows specify « theoritical » or « real time » passages time.
+ * @property displayRealTime Allows specify « theoretical » or « real time » passages time.
  * @property timetableByArea Groups the results by stop areas then couples (line, destination) ordered by time of next departure.
  * @property datetime Date and time at which we request the schedules.
  * @property maxDays Number of days used to get “number” departures.
  * @property firstAndLastOfDay Will return only first and last departure of the day.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class StopSchedulesRequest(private val apiKey: String) : TisseoRequest {
     var operatorCode:String? = null
     var stopPointId:String? = null

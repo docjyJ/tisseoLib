@@ -10,7 +10,6 @@ import fr.docjyJ.tisseoLib.response.RollingStocksResponse
  * @constructor Create new request builder with no parameters.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class RollingStocksRequest(private val apiKey: String) : TisseoRequest {
 
     private fun buildParams() = RequestBuilder(apiKey, "rolling_stocks")

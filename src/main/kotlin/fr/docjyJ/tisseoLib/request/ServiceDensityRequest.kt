@@ -13,14 +13,13 @@ import java.time.LocalDateTime
  * @property centerXY Address or place of departure or arrival.
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property serviceNumber Number of distinct transport services we want to reach in the time slot .
- * @property beginDateTimeSlot Begining date and time of time slot.
+ * @property beginDateTimeSlot Beginning date and time of time slot.
  * @property endDateTimeSlot Ending date and time of time slot.
  * @property networkList Transport operators list.
  * @property rollingStockList Transport mode list.
  * @property displayServices Displays the services found in the area covered.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class ServiceDensityRequest(private val apiKey: String) : TisseoRequest {
     var centerXY:String? = null
     var srid:String? = null

@@ -13,7 +13,7 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property bbox Filters stops included in bounding box.
  * @property displayLines Adds lines of each stop.
- * @property displayCoordXY Adds centroid coordonate lines of each stop.
+ * @property displayCoordXY Adds centroid coordinate lines of each stop.
  * @property lineId Filters stops by line.
  * @property terminusId Filters on stop areas arriving and departing from this terminal only.
  * @property timeframe Number of days to calculate which lines pass through a given point.
@@ -22,7 +22,6 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  * @property displayStopPoints Display stop point of stop areas.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class StopAreaRequest(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var srid:String? = null

@@ -1,3 +1,5 @@
+@file:Suppress("MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
@@ -22,7 +24,7 @@ import java.time.LocalDateTime
  * @property maxTransferNumber Specifies the maximum number of matches to use.
  * @property roadMode Specifies the mode in which the portions are made of any path "Transit" at the beginning (unless a "startRoadMode" different is specified) or at the end of the journey.
  * @property roadSpeed Velocity (meter by seconds) of selected roadMode.
- * @property roadMaxDistance Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the begining and the end of the journey.
+ * @property roadMaxDistance Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the beginning and the end of the journey.
  * @property startRoadMode Conveyance with which to perform the portion of the road path at the beginning of the journey.
  * @property startRoadSpeed Speed (meter by seconds) of selected roadMode.
  * @property startRoadMaxDistance Maximum distance for departure road section.
@@ -34,7 +36,6 @@ import java.time.LocalDateTime
  * @property maxApproachDistance Maximum walking distance.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
 class JourneysRequest(private val apiKey: String) : TisseoRequest {
     var departurePlace:String? = null
     var departurePlaceXY:String? = null
@@ -50,7 +51,7 @@ class JourneysRequest(private val apiKey: String) : TisseoRequest {
     var roadSpeed:Float? = null
     var roadMaxDistance:String? = null
     var startRoadMode:String? = null
-    val startRoadSpeed:Float? = null
+    var startRoadSpeed:Float? = null
     var startRoadMaxDistance:String? = null
     var rollingStockList:String? = null
     var number:Int? = null
