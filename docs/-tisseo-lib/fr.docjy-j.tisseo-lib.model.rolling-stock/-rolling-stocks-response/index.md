@@ -2,7 +2,7 @@
 
 # RollingStocksResponse
 
-`data class RollingStocksResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/rollingStock/RollingStocksResponse.kt#L5)
+`data class RollingStocksResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/rollingStock/RollingStocksResponse.kt#L7)
 
 ### Constructors
 

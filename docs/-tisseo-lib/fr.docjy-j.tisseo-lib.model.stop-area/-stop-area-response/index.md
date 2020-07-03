@@ -2,7 +2,7 @@
 
 # StopAreaResponse
 
-`data class StopAreaResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopAreaResponse.kt#L5)
+`data class StopAreaResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopAreaResponse.kt#L7)
 
 ### Constructors
 

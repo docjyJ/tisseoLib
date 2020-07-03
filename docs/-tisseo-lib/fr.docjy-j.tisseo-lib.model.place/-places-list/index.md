@@ -8,11 +8,11 @@
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `PlacesList(origin: `[`Origin`](../-origin/index.md)`?, place: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Place`](../-place/index.md)`>)` |
+| [&lt;init&gt;](-init-.md) | `PlacesList(origin: `[`Origin`](../-origin/index.md)`, place: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Place`](../-place/index.md)`>)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [origin](origin.md) | `val origin: `[`Origin`](../-origin/index.md)`?` |
+| [origin](origin.md) | `val origin: `[`Origin`](../-origin/index.md) |
 | [place](place.md) | `val place: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Place`](../-place/index.md)`>` |

@@ -12,6 +12,6 @@ Data models for the service density response.
 |---|---|
 | [Service](-service/index.md) | `data class Service` |
 | [ServiceDensityResponse](-service-density-response/index.md) | `data class ServiceDensityResponse` |
-| [Services](-services/index.md) | `data class Services` |
-| [StopsService](-stops-service/index.md) | `data class StopsService` |
-| [StopsServices](-stops-services/index.md) | `data class StopsServices` |
+| [ServiceX](-service-x/index.md) | `data class ServiceX` |
+| [Stop](-stop/index.md) | `data class Stop` |
+| [StopX](-stop-x/index.md) | `data class StopX` |

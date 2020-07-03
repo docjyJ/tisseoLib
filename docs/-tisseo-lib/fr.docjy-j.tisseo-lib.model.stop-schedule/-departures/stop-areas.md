@@ -2,4 +2,4 @@
 
 # stopAreas
 
-`val stopAreas: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`StopArea`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area/index.md)`>?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Departures.kt#L7)
+`val stopAreas: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`StopArea`](../-stop-area/index.md)`>` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Departures.kt#L8)

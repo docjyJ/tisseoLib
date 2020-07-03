@@ -2,4 +2,4 @@
 
 # expirationDate
 
-`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/JourneysResponse.kt#L6)
+`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/JourneysResponse.kt#L9)

@@ -2,7 +2,7 @@
 
 # JourneysResponse
 
-`data class JourneysResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/JourneysResponse.kt#L5)
+`data class JourneysResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/JourneysResponse.kt#L7)
 
 ### Constructors
 

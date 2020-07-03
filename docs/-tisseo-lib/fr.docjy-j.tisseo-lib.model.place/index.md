@@ -2,6 +2,8 @@
 
 ## Package fr.docjyJ.tisseoLib.model.place
 
+Data models for the place response.
+
 ### Types
 
 | Name | Summary |

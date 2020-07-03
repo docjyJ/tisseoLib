@@ -2,4 +2,4 @@
 
 # stops
 
-`val stops: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`StopPoint`](../../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point/index.md)`>?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopArea.kt#L12)
+`val stops: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`PhysicalStop`](../../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stop/index.md)`>` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopArea.kt#L20)

@@ -10,6 +10,9 @@ Data models for the stop schedule response.
 |---|---|
 | [Departure](-departure/index.md) | `data class Departure` |
 | [Departures](-departures/index.md) | `data class Departures` |
-| [JourneysShudle](-journeys-shudle/index.md) | `data class JourneysShudle` |
+| [Destination](-destination/index.md) | `data class Destination` |
+| [Journey](-journey/index.md) | `data class Journey` |
 | [Schedule](-schedule/index.md) | `data class Schedule` |
+| [Stop](-stop/index.md) | `data class Stop` |
+| [StopArea](-stop-area/index.md) | `data class StopArea` |
 | [StopSchedulesResponse](-stop-schedules-response/index.md) | `data class StopSchedulesResponse` |

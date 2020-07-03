@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`PlacesList(origin: `[`Origin`](../-origin/index.md)`?, place: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Place`](../-place/index.md)`>)`
+`PlacesList(origin: `[`Origin`](../-origin/index.md)`, place: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Place`](../-place/index.md)`>)`

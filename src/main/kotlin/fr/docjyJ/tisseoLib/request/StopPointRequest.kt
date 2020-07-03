@@ -55,7 +55,7 @@ class StopPointRequest internal constructor(private val apiKey: String){
 
     /**
      * Execute the request.
-     * @return Response of request in StopPointResponce object.
+     * @return Response of request in StopPointResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)

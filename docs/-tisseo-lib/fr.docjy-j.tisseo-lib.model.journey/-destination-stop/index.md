@@ -2,7 +2,7 @@
 
 # DestinationStop
 
-`data class DestinationStop` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/DestinationStop.kt#L5)
+`data class DestinationStop` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/DestinationStop.kt#L7)
 
 ### Constructors
 

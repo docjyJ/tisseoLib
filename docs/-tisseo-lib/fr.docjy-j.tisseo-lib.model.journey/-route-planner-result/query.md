@@ -2,4 +2,4 @@
 
 # query
 
-`val query: `[`Query`](../-query/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/RoutePlannerResult.kt#L4)
+`val query: `[`Query`](../-query/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/RoutePlannerResult.kt#L10)

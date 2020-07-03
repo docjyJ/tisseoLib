@@ -16,9 +16,6 @@ Refer to the documentation provided by Tisséo (French and English) for resource
 [https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/](https://data.toulouse-metropole.fr/explore/dataset/api-temps-reel-tisseo/).
 
 ## Usage Example
-
-Please note that the response object for the Place resource is not implemented. It is possible to get the response string (via the executeAsString () method) and analyze it afterwards.
-
 ### JAVA
 
 ```java

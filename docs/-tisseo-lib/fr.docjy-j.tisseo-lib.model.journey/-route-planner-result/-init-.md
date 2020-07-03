@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`RoutePlannerResult(query: `[`Query`](../-query/index.md)`, journeys: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Journeys`](../-journeys/index.md)`>)`
+`RoutePlannerResult(journeys: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Journey`](../-journey/index.md)`>, query: `[`Query`](../-query/index.md)`)`

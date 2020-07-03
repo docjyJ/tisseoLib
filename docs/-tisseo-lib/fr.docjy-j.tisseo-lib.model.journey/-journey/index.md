@@ -8,15 +8,10 @@
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `Journey(arrivalDateTime: LocalDateTime, arrivalText: `[`Text`](../-text/index.md)`?, chunks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Chunk`](../-chunk/index.md)`>, co2_emissions: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, departureDateTime: LocalDateTime, duration: Duration)` |
+| [&lt;init&gt;](-init-.md) | `Journey(journey: `[`JourneyX`](../-journey-x/index.md)`)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [arrivalDateTime](arrival-date-time.md) | `val arrivalDateTime: LocalDateTime` |
-| [arrivalText](arrival-text.md) | `val arrivalText: `[`Text`](../-text/index.md)`?` |
-| [chunks](chunks.md) | `val chunks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Chunk`](../-chunk/index.md)`>` |
-| [co2_emissions](co2_emissions.md) | `val co2_emissions: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html) |
-| [departureDateTime](departure-date-time.md) | `val departureDateTime: LocalDateTime` |
-| [duration](duration.md) | `val duration: Duration` |
+| [journey](journey.md) | `val journey: `[`JourneyX`](../-journey-x/index.md) |

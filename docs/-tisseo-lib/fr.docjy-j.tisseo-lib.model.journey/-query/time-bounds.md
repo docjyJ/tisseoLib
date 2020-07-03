@@ -2,4 +2,4 @@
 
 # timeBounds
 
-`val timeBounds: `[`TimeBounds`](../-time-bounds/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Query.kt#L7)
+`val timeBounds: `[`TimeBounds`](../-time-bounds/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Query.kt#L14)

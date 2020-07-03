@@ -11,5 +11,5 @@ Execute the request.
 `TisseoException` -
 
 **Return**
-Response of request in StopPointResponce object.
+Response of request in StopPointResponse object.
 

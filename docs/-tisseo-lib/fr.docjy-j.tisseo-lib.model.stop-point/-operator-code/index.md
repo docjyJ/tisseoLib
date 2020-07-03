@@ -2,17 +2,16 @@
 
 # OperatorCode
 
-`data class OperatorCode` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCode.kt#L3)
+`data class OperatorCode` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCode.kt#L6)
 
 ### Constructors
 
 | Name | Summary |
 |---|---|
-| [&lt;init&gt;](-init-.md) | `OperatorCode(network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)` |
+| [&lt;init&gt;](-init-.md) | `OperatorCode(operatorCode: `[`OperatorCodeX`](../-operator-code-x/index.md)`)` |
 
 ### Properties
 
 | Name | Summary |
 |---|---|
-| [network](network.md) | `val network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [value](value.md) | `val value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) |
+| [operatorCode](operator-code.md) | `val operatorCode: `[`OperatorCodeX`](../-operator-code-x/index.md) |

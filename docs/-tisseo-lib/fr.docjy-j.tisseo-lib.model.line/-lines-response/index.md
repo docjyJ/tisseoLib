@@ -2,7 +2,7 @@
 
 # LinesResponse
 
-`data class LinesResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/LinesResponse.kt#L5)
+`data class LinesResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/LinesResponse.kt#L7)
 
 ### Constructors
 
