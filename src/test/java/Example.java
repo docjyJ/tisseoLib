@@ -61,7 +61,7 @@ public class Example {
         return request.execute();
     }
 
-    public LinesResponse lines() throws TisseoServerException {
+    public LinesResponse lines() throws TisseoServerException, TisseoClientException {
         //Create request object
         LinesRequest request = new LinesRequest(API_KEY);
 
