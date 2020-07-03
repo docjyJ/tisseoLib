@@ -1,11 +1,12 @@
 package fr.docjyJ.tisseoLib.model.message
 
-data class Message (
-    val content: String,
-    val id: String,
-    val importanceLevel: String,
-    val scope: String,
-    val title: String,
-    val type: String,
-    val url: String
+
+import com.google.gson.annotations.SerializedName
+import fr.docjyJ.tisseoLib.model.line.Line
+
+data class Message(
+        @SerializedName("lines")
+    val lines: List<Line>,
+        @SerializedName("message")
+    val message: MessageX
 )

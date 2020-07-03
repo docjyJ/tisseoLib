@@ -1,5 +1,9 @@
 package fr.docjyJ.tisseoLib.model.line
 
-data class Lines (
-        val line: List<Line>
+
+import com.google.gson.annotations.SerializedName
+
+data class Lines(
+    @SerializedName("line")
+    val line: List<Line>
 )

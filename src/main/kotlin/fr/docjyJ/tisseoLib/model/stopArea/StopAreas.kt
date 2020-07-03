@@ -1,5 +1,9 @@
 package fr.docjyJ.tisseoLib.model.stopArea
 
-data class StopAreas (
+
+import com.google.gson.annotations.SerializedName
+
+data class StopAreas(
+    @SerializedName("stopArea")
     val stopArea: List<StopArea>
 )

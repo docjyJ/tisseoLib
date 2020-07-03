@@ -1,13 +1,10 @@
-package fr.docjyJ.tisseoLib.model.line
+package fr.docjyJ.tisseoLib.model.netwotk
 
 
 import com.google.gson.annotations.SerializedName
 
-data class TransportMode(
-    @SerializedName("article")
-    val article: String,
+data class Network(
     @SerializedName("id")
-
     val id: String,
     @SerializedName("name")
     val name: String

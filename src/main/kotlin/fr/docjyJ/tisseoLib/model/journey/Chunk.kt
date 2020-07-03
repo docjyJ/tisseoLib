@@ -1,6 +1,11 @@
 package fr.docjyJ.tisseoLib.model.journey
 
-data class Chunk (
-        val stop: ChunkStop?,
-        val service: ChunkService?
+
+import com.google.gson.annotations.SerializedName
+
+data class Chunk(
+    @SerializedName("service")
+    val service: Service,
+    @SerializedName("stop")
+    val stop: Stop
 )

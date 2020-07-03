@@ -1,11 +1,10 @@
-package fr.docjyJ.tisseoLib.model.stopArea
+package fr.docjyJ.tisseoLib.model.stopSchedule
 
 
 import com.google.gson.annotations.SerializedName
 import fr.docjyJ.tisseoLib.model.line.Line
-import fr.docjyJ.tisseoLib.model.stopPoint.PhysicalStop
 
-data class StopArea(
+data class Destination(
     @SerializedName("cityId")
     val cityId: String,
     @SerializedName("cityName")
@@ -15,11 +14,5 @@ data class StopArea(
     @SerializedName("line")
     val line: List<Line>,
     @SerializedName("name")
-    val name: String,
-    @SerializedName("stops")
-    val stops: List<PhysicalStop>,
-    @SerializedName("x")
-    val x: Double,
-    @SerializedName("y")
-    val y: Double
+    val name: String
 )
