@@ -2,7 +2,7 @@
 
 # StopSchedulesRequest
 
-`class StopSchedulesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L28)
+`class StopSchedulesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L28)
 
 The class builder to do a Stop Schedules request.
 
@@ -33,6 +33,6 @@ The class builder to do a Stop Schedules request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-schedules-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-schedules-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

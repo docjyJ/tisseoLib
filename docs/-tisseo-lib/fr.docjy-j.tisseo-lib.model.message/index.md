@@ -9,5 +9,4 @@ Data models for the message response.
 | Name | Summary |
 |---|---|
 | [Message](-message/index.md) | `data class Message` |
-| [MessagesResponse](-messages-response/index.md) | `data class MessagesResponse` |
 | [MessageX](-message-x/index.md) | `data class MessageX` |

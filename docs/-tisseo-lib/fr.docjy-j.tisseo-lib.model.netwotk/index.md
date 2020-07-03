@@ -9,4 +9,3 @@ Data models for the netwotk response.
 | Name | Summary |
 |---|---|
 | [Network](-network/index.md) | `data class Network` |
-| [NetworksResponse](-networks-response/index.md) | `data class NetworksResponse` |

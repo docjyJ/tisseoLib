@@ -9,5 +9,4 @@ Data models for the stop area response.
 | Name | Summary |
 |---|---|
 | [StopArea](-stop-area/index.md) | `data class StopArea` |
-| [StopAreaResponse](-stop-area-response/index.md) | `data class StopAreaResponse` |
 | [StopAreas](-stop-areas/index.md) | `data class StopAreas` |

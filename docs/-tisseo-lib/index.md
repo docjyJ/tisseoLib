@@ -25,7 +25,8 @@ for the use of the parameters and the API.
 | [fr.docjyJ.tisseoLib.model.stopArea](fr.docjy-j.tisseo-lib.model.stop-area/index.md) | Data models for the stop area response. |
 | [fr.docjyJ.tisseoLib.model.stopPoint](fr.docjy-j.tisseo-lib.model.stop-point/index.md) | Data models for the stop point response. |
 | [fr.docjyJ.tisseoLib.model.stopSchedule](fr.docjy-j.tisseo-lib.model.stop-schedule/index.md) | Data models for the stop schedule response. |
-| [fr.docjyJ.tisseoLib.request](fr.docjy-j.tisseo-lib.request/index.md) | Contains all request builders |
+| [fr.docjyJ.tisseoLib.request](fr.docjy-j.tisseo-lib.request/index.md) | Contains all request class. |
+| [fr.docjyJ.tisseoLib.response](fr.docjy-j.tisseo-lib.response/index.md) | Contains all response class. |
 
 ### Index
 

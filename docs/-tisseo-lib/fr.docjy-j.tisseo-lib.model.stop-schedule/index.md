@@ -15,4 +15,3 @@ Data models for the stop schedule response.
 | [Schedule](-schedule/index.md) | `data class Schedule` |
 | [Stop](-stop/index.md) | `data class Stop` |
 | [StopArea](-stop-area/index.md) | `data class StopArea` |
-| [StopSchedulesResponse](-stop-schedules-response/index.md) | `data class StopSchedulesResponse` |

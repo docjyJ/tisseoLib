@@ -2,7 +2,7 @@
 
 # execute
 
-`fun execute(): `[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L63)
+`fun execute(): `[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-point-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L63)
 
 Execute the request.
 

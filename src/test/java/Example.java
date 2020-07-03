@@ -1,16 +1,9 @@
 import fr.docjyJ.tisseoLib.exception.TisseoClientException;
-import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
-import fr.docjyJ.tisseoLib.model.line.LinesResponse;
-import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
-import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
-import fr.docjyJ.tisseoLib.model.place.PlacesResponse;
-import fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse;
-import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse;
-import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
-import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
-import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
+
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.exception.TisseoServerException;
+import fr.docjyJ.tisseoLib.response.*;
+
 import java.time.LocalDateTime;
 
 public class Example {

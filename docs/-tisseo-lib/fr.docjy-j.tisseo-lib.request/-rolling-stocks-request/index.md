@@ -2,7 +2,7 @@
 
 # RollingStocksRequest
 
-`class RollingStocksRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/RollingStocksRequest.kt#L14)
+`class RollingStocksRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/RollingStocksRequest.kt#L14)
 
 The class builder to do a Rolling Stocks request.
 
@@ -16,6 +16,6 @@ The class builder to do a Rolling Stocks request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`RollingStocksResponse`](../../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stocks-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`RollingStocksResponse`](../../fr.docjy-j.tisseo-lib.response/-rolling-stocks-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

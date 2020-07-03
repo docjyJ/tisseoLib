@@ -5,6 +5,12 @@ import com.google.gson.annotations.SerializedName
 import fr.docjyJ.tisseoLib.model.serviceDensity.Stop
 import java.time.LocalDateTime
 
+/**
+ * The response class of a service density request.
+ *
+ * @property expirationDate The expiration date of the content.
+ */
+
 data class ServiceDensityResponse(
     @SerializedName("distance")
     val distance: Int,

@@ -3,9 +3,7 @@ package fr.docjyJ.tisseoLib.response
 import java.time.LocalDateTime
 
 /**
- * The class builder to do a Message request.
- *
- * @constructor Create new request builder with no parameters.
+ * The response class of a request.
  *
  * @property expirationDate The expiration date of the content.
  */

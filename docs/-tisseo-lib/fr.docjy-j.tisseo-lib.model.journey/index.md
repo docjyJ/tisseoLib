@@ -12,7 +12,6 @@ Data models for the journey response.
 | [ConnectionPlace](-connection-place/index.md) | `data class ConnectionPlace` |
 | [DestinationStop](-destination-stop/index.md) | `data class DestinationStop` |
 | [Journey](-journey/index.md) | `data class Journey` |
-| [JourneysResponse](-journeys-response/index.md) | `data class JourneysResponse` |
 | [JourneyX](-journey-x/index.md) | `data class JourneyX` |
 | [Places](-places/index.md) | `data class Places` |
 | [Query](-query/index.md) | `data class Query` |
