@@ -1,6 +1,9 @@
 package fr.docjyJ.tisseoLib.util
 
 import com.google.gson.GsonBuilder
+import fr.docjyJ.tisseoLib.typeAdapter.*
+import org.locationtech.jts.geom.Geometry
+import java.awt.Color
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.HttpURLConnection
@@ -32,10 +35,12 @@ internal class RequestBuilder( private val apiKey: String, private val serviceNa
     @Throws(TisseoException::class)
     internal fun <T> execute(classOfT: Class<T>):T {
         return GsonBuilder()
-            .registerTypeAdapter(Boolean::class.java,BooleanTypeAdapter())
-            .registerTypeAdapter(LocalDateTime::class.java,LocalDateTimeTypeAdapter())
-            .registerTypeAdapter(LocalTime::class.java,LocalTimeTypeAdapter())
-            .registerTypeAdapter(Duration::class.java,DurationTypeAdapter())
+            .registerTypeAdapter(Boolean::class.java, BooleanTypeAdapter())
+            .registerTypeAdapter(LocalDateTime::class.java, LocalDateTimeTypeAdapter())
+            .registerTypeAdapter(LocalTime::class.java, LocalTimeTypeAdapter())
+            .registerTypeAdapter(Duration::class.java, DurationTypeAdapter())
+            .registerTypeAdapter(Color::class.java, ColorTypeAdapter())
+            .registerTypeAdapter(Geometry::class.java, GeometryTypeAdapter())
             .create()
             .fromJson(execute(), classOfT)
     }

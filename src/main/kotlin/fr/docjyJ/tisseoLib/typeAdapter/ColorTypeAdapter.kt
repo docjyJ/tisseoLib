@@ -1,19 +1,20 @@
-package fr.docjyJ.tisseoLib.util
+package fr.docjyJ.tisseoLib.typeAdapter
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
+import java.awt.Color
 import java.lang.reflect.Type
 
 
-internal class BooleanTypeAdapter : JsonDeserializer<Boolean> {
+internal class ColorTypeAdapter : JsonDeserializer<Color> {
     @Throws(JsonParseException::class)
     override fun deserialize(
             json: JsonElement, typeOfT: Type?,
             context: JsonDeserializationContext?
-    ): Boolean {
+    ): Color {
         val code = json.asString
-        return (if (code == "0" || code == "no") false else if (code == "1" || code == "yes") true else null)!!
+        return Color.decode(code)!!
     }
 }
