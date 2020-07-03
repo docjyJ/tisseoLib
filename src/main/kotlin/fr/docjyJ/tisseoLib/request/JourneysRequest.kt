@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.journey.JourneysResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
 
 /**
@@ -35,7 +35,7 @@ import java.time.LocalDateTime
  */
 
 @Suppress("MemberVisibilityCanBePrivate")
-class JourneysRequest(private val apiKey: String){
+class JourneysRequest(private val apiKey: String) : TisseoRequest {
     var departurePlace:String? = null
     var departurePlaceXY:String? = null
     var arrivalPlace:String? = null
@@ -91,7 +91,7 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(JourneysResponse::class.java)
+    override fun execute() = buildParams().execute(JourneysResponse::class.java)
 
     /**
      * Execute the request.
@@ -100,7 +100,7 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -108,5 +108,5 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 }

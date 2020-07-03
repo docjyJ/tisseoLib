@@ -2,27 +2,21 @@ package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
-import fr.docjyJ.tisseoLib.response.RollingStocksResponse
+import fr.docjyJ.tisseoLib.response.TisseoResponse
 
 /**
- * The class builder to do a Rolling Stocks request.
- *
- * @constructor Create new request builder with no parameters.
+ * Interface of the class builder to do a request.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class RollingStocksRequest(private val apiKey: String) : TisseoRequest {
-
-    private fun buildParams() = RequestBuilder(apiKey, "rolling_stocks")
-
+interface TisseoRequest{
     /**
      * Execute the request.
-     * @return Response of request in RollingStocksResponse object.
+     * @return Response of request in TisseoResponse object.
      * @throws TisseoServerException When the server returns an error.
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(RollingStocksResponse::class.java)
+    fun execute():TisseoResponse
 
     /**
      * Execute the request.
@@ -31,7 +25,7 @@ class RollingStocksRequest(private val apiKey: String) : TisseoRequest {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
+    fun executeAsString():String
 
     /**
      * Show the URL.
@@ -39,6 +33,5 @@ class RollingStocksRequest(private val apiKey: String) : TisseoRequest {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
+    fun getUrl():String
 }

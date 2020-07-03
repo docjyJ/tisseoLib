@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.line.LinesResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.LinesResponse
 
 /**
  * The class builder to do a Line request.
@@ -20,7 +20,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  */
 
 @Suppress("MemberVisibilityCanBePrivate")
-class LinesRequest(private val apiKey: String) {
+class LinesRequest(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var lineId:String? = null
     var shortName:String? = null
@@ -48,7 +48,7 @@ class LinesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(LinesResponse::class.java)
+    override fun execute() = buildParams().execute(LinesResponse::class.java)
 
     /**
      * Execute the request.
@@ -57,7 +57,7 @@ class LinesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -65,6 +65,6 @@ class LinesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }
