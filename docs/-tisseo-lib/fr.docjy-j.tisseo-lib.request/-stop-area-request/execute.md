@@ -2,7 +2,7 @@
 
 # execute
 
-`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L60)
+`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L61)
 
 Execute the request.
 

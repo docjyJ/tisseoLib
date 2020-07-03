@@ -2,7 +2,7 @@
 
 # StopSchedulesRequest
 
-`class StopSchedulesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L28)
+`class StopSchedulesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L29)
 
 The class builder to do a Stop Schedules request.
 
@@ -17,7 +17,7 @@ The class builder to do a Stop Schedules request.
 | Name | Summary |
 |---|---|
 | [datetime](datetime.md) | Date and time at which we request the schedules.`var datetime: LocalDateTime?` |
-| [displayRealTime](display-real-time.md) | Allows specify « theoritical » or « real time » passages time.`var displayRealTime: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
+| [displayRealTime](display-real-time.md) | Allows specify « theoretical » or « real time » passages time.`var displayRealTime: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [firstAndLastOfDay](first-and-last-of-day.md) | Will return only first and last departure of the day.`var firstAndLastOfDay: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [lineId](line-id.md) | Filters schedules of a specific line.`var lineId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [maxDays](max-days.md) | Number of days used to get “number” departures.`var maxDays: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` |
@@ -33,6 +33,6 @@ The class builder to do a Stop Schedules request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-schedules-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-schedules-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

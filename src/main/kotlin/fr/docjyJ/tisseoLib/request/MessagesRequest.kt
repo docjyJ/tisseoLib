@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.message.MessagesResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.MessagesResponse
 
 /**
  * The class builder to do a Message request.
@@ -14,8 +16,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property displayImportantOnly Displays only important messages. (found on the home page tisseo)
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class MessagesRequest(private val apiKey: String){
+class MessagesRequest(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var contentFormat:String? = null
     var displayImportantOnly:Boolean? = null
@@ -33,7 +34,7 @@ class MessagesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(MessagesResponse::class.java)
+    override fun execute() = buildParams().execute(MessagesResponse::class.java)
 
     /**
      * Execute the request.
@@ -42,7 +43,7 @@ class MessagesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -50,6 +51,6 @@ class MessagesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }

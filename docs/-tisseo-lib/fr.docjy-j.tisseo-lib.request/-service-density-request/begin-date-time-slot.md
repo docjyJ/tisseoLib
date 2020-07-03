@@ -2,10 +2,10 @@
 
 # beginDateTimeSlot
 
-`var beginDateTimeSlot: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L28)
+`var beginDateTimeSlot: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L29)
 
-Begining date and time of time slot.
+Beginning date and time of time slot.
 
 ### Property
 
-`beginDateTimeSlot` - Begining date and time of time slot.
+`beginDateTimeSlot` - Beginning date and time of time slot.

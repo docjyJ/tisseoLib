@@ -60,7 +60,9 @@ The class builder to do a Journeys request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.journey.JourneysResponse](../fr.docjy-j.tisseo-lib.model.journey/-journeys-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.JourneysResponse](../fr.docjy-j.tisseo-lib.response/-journeys-response/index.md)
+
+The response class of a journeys request.
 
 
 |
@@ -87,7 +89,9 @@ The class builder to do a Line request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.line.LinesResponse](../fr.docjy-j.tisseo-lib.model.line/-lines-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.LinesResponse](../fr.docjy-j.tisseo-lib.response/-lines-response/index.md)
+
+The response class of a lines request.
 
 
 |
@@ -114,7 +118,9 @@ The class builder to do a Message request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.message.MessagesResponse](../fr.docjy-j.tisseo-lib.model.message/-messages-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.MessagesResponse](../fr.docjy-j.tisseo-lib.response/-messages-response/index.md)
+
+The response class of a messages request.
 
 
 |
@@ -136,7 +142,9 @@ The class builder to do a Network request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse](../fr.docjy-j.tisseo-lib.model.netwotk/-networks-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.NetworksResponse](../fr.docjy-j.tisseo-lib.response/-networks-response/index.md)
+
+The response class of a networks request.
 
 
 |
@@ -188,7 +196,9 @@ The class builder to do a Line request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.place.PlacesResponse](../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.PlacesResponse](../fr.docjy-j.tisseo-lib.response/-places-response/index.md)
+
+The response class of a places request.
 
 
 |
@@ -210,7 +220,9 @@ The class builder to do a Rolling Stocks request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse](../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stocks-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.RollingStocksResponse](../fr.docjy-j.tisseo-lib.response/-rolling-stocks-response/index.md)
+
+The response class of a rolling stocks request.
 
 
 |
@@ -242,7 +254,9 @@ The class builder to do a Service Density request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse](../fr.docjy-j.tisseo-lib.model.service-density/-service-density-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.ServiceDensityResponse](../fr.docjy-j.tisseo-lib.response/-service-density-response/index.md)
+
+The response class of a service density request.
 
 
 |
@@ -284,7 +298,9 @@ The class builder to do a Stop Area request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse](../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.StopAreaResponse](../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md)
+
+The response class of a stop areas request.
 
 
 |
@@ -301,7 +317,9 @@ The class builder to do a Stop Point request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse](../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.StopPointResponse](../fr.docjy-j.tisseo-lib.response/-stop-point-response/index.md)
+
+The response class of a stop points request.
 
 
 |
@@ -313,7 +331,9 @@ The class builder to do a Stop Schedules request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse](../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-schedules-response/index.md)
+##### [fr.docjyJ.tisseoLib.response.StopSchedulesResponse](../fr.docjy-j.tisseo-lib.response/-stop-schedules-response/index.md)
+
+The response class of a stop schedules request.
 
 
 |
@@ -341,6 +361,20 @@ The class builder to do a Stop Schedules request.
 ##### [fr.docjyJ.tisseoLib.exception.TisseoClientException](../fr.docjy-j.tisseo-lib.exception/-tisseo-client-exception.md)
 
 Indicates that an error was reached during a library action.
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.request.TisseoRequest](../fr.docjy-j.tisseo-lib.request/-tisseo-request/index.md)
+
+Interface of the class builder to do a request.
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.response.TisseoResponse](../fr.docjy-j.tisseo-lib.response/-tisseo-response/index.md)
+
+The response class of a request.
 
 
 |

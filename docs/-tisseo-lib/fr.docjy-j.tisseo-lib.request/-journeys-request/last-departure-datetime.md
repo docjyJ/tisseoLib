@@ -2,7 +2,7 @@
 
 # lastDepartureDatetime
 
-`var lastDepartureDatetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L46)
+`var lastDepartureDatetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L47)
 
 Last date time of departure.
 

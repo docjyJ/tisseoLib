@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.place.PlacesResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.PlacesResponse
 
 /**
  * The class builder to do a Line request.
@@ -22,7 +24,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property displayBestPlace Returns the best result.
  * @property displayOnlyStopAreas Returns only object of className “stop”.
  * @property displayOnlyRoads Returns only object of className “road”.
- * @property displayOnlyAddresses Returns only object of className “adress”.
+ * @property displayOnlyAddresses Returns only object of className “address”.
  * @property displayOnlyPublicPlaces Returns only object of className “public_places”.
  * @property displayOnlyCities Returns only object of className “city”.
  * @property lang Choice of language.
@@ -30,8 +32,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property publicPlaceFilter List of public places to explose.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class PlacesRequest(private val apiKey: String) {
+class PlacesRequest(private val apiKey: String) : TisseoRequest {
     var term:String? = null
     var network:String? = null
     var coordinatesXY:String? = null
@@ -75,7 +76,7 @@ class PlacesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(PlacesResponse::class.java)
+    override fun execute() = buildParams().execute(PlacesResponse::class.java)
 
     /**
      * Execute the request.
@@ -84,7 +85,7 @@ class PlacesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -92,6 +93,6 @@ class PlacesRequest(private val apiKey: String) {
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }

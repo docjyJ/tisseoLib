@@ -18,11 +18,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.1'
+    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.2'
 }
 ````
 
-[Repository/Download Jar](https://bintray.com/beta/#/docjyj/maven/tisseoLib)
+[Repository/Download Jar](https://bintray.com/docjyj/maven/tisseoLib)
 
 ## Documentation
 See the Library documentation [here](docs/-tisseo-lib/index.md)
@@ -36,14 +36,14 @@ Refer to the documentation provided by Tisséo (French and English) for resource
 
 ```java
 class Exemple{
-    public StopAreaResponse stopArea() throws TisseoException {
+    public StopAreaResponse stopArea() throws TisseoServerException, TisseoClientException {
         //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
-    
+
         //Set parameters
         request.setLineId("11821949021892003");
         request.setDisplayCoordXY(true);
-    
+
         //Execute request
         return request.execute();
     }

@@ -2,7 +2,7 @@
 
 # LinesRequest
 
-`class LinesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L23)
+`class LinesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L24)
 
 The class builder to do a Line request.
 
@@ -29,6 +29,6 @@ The class builder to do a Line request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`LinesResponse`](../../fr.docjy-j.tisseo-lib.model.line/-lines-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`LinesResponse`](../../fr.docjy-j.tisseo-lib.response/-lines-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

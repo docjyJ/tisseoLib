@@ -2,7 +2,7 @@
 
 # JourneysRequest
 
-`class JourneysRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L38)
+`class JourneysRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L39)
 
 The class builder to do a Journeys request.
 
@@ -30,19 +30,19 @@ The class builder to do a Journeys request.
 | [maxTransferNumber](max-transfer-number.md) | Specifies the maximum number of matches to use.`var maxTransferNumber: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [networkList](network-list.md) | Network Transport operators number.`var networkList: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [number](number.md) | Max number of results.`var number: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` |
-| [roadMaxDistance](road-max-distance.md) | Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the begining and the end of the journey.`var roadMaxDistance: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
+| [roadMaxDistance](road-max-distance.md) | Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the beginning and the end of the journey.`var roadMaxDistance: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [roadMode](road-mode.md) | Specifies the mode in which the portions are made of any path "Transit" at the beginning (unless a "startRoadMode" different is specified) or at the end of the journey.`var roadMode: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [roadSpeed](road-speed.md) | Velocity (meter by seconds) of selected roadMode.`var roadSpeed: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`?` |
 | [rollingStockList](rolling-stock-list.md) | Rolling Stock List (Bus, Metro, Tram, ...) to take into account in the calculation.`var rollingStockList: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [srid](srid.md) | Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)`var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [startRoadMaxDistance](start-road-max-distance.md) | Maximum distance for departure road section.`var startRoadMaxDistance: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [startRoadMode](start-road-mode.md) | Conveyance with which to perform the portion of the road path at the beginning of the journey.`var startRoadMode: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-| [startRoadSpeed](start-road-speed.md) | Speed (meter by seconds) of selected roadMode.`val startRoadSpeed: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`?` |
+| [startRoadSpeed](start-road-speed.md) | Speed (meter by seconds) of selected roadMode.`var startRoadSpeed: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`?` |
 
 ### Functions
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`JourneysResponse`](../../fr.docjy-j.tisseo-lib.model.journey/-journeys-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`JourneysResponse`](../../fr.docjy-j.tisseo-lib.response/-journeys-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.journey.JourneysResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
 
 /**
@@ -22,7 +24,7 @@ import java.time.LocalDateTime
  * @property maxTransferNumber Specifies the maximum number of matches to use.
  * @property roadMode Specifies the mode in which the portions are made of any path "Transit" at the beginning (unless a "startRoadMode" different is specified) or at the end of the journey.
  * @property roadSpeed Velocity (meter by seconds) of selected roadMode.
- * @property roadMaxDistance Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the begining and the end of the journey.
+ * @property roadMaxDistance Maximum distance of all road sections (unless a different startRoadMaxDistance specified) including the beginning and the end of the journey.
  * @property startRoadMode Conveyance with which to perform the portion of the road path at the beginning of the journey.
  * @property startRoadSpeed Speed (meter by seconds) of selected roadMode.
  * @property startRoadMaxDistance Maximum distance for departure road section.
@@ -34,8 +36,7 @@ import java.time.LocalDateTime
  * @property maxApproachDistance Maximum walking distance.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class JourneysRequest(private val apiKey: String){
+class JourneysRequest(private val apiKey: String) : TisseoRequest {
     var departurePlace:String? = null
     var departurePlaceXY:String? = null
     var arrivalPlace:String? = null
@@ -50,7 +51,7 @@ class JourneysRequest(private val apiKey: String){
     var roadSpeed:Float? = null
     var roadMaxDistance:String? = null
     var startRoadMode:String? = null
-    val startRoadSpeed:Float? = null
+    var startRoadSpeed:Float? = null
     var startRoadMaxDistance:String? = null
     var rollingStockList:String? = null
     var number:Int? = null
@@ -91,7 +92,7 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(JourneysResponse::class.java)
+    override fun execute() = buildParams().execute(JourneysResponse::class.java)
 
     /**
      * Execute the request.
@@ -100,7 +101,7 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -108,5 +109,5 @@ class JourneysRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 }

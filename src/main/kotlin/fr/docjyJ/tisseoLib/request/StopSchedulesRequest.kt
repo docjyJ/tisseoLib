@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
 import java.time.LocalDateTime
 
 /**
@@ -17,15 +19,14 @@ import java.time.LocalDateTime
  * @property network Transport operator.
  * @property number Max returned results number.
  * @property lineId Filters schedules of a specific line.
- * @property displayRealTime Allows specify « theoritical » or « real time » passages time.
+ * @property displayRealTime Allows specify « theoretical » or « real time » passages time.
  * @property timetableByArea Groups the results by stop areas then couples (line, destination) ordered by time of next departure.
  * @property datetime Date and time at which we request the schedules.
  * @property maxDays Number of days used to get “number” departures.
  * @property firstAndLastOfDay Will return only first and last departure of the day.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class StopSchedulesRequest(private val apiKey: String){
+class StopSchedulesRequest(private val apiKey: String) : TisseoRequest {
     var operatorCode:String? = null
     var stopPointId:String? = null
     var stopAreaId:String? = null
@@ -62,7 +63,7 @@ class StopSchedulesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(StopSchedulesResponse::class.java)
+    override fun execute() = buildParams().execute(StopSchedulesResponse::class.java)
 
     /**
      * Execute the request.
@@ -71,7 +72,7 @@ class StopSchedulesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -79,6 +80,6 @@ class StopSchedulesRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }

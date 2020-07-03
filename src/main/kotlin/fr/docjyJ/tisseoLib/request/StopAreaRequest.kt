@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.StopAreaResponse
 
 /**
  * The class builder to do a Stop Area request.
@@ -13,7 +15,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property bbox Filters stops included in bounding box.
  * @property displayLines Adds lines of each stop.
- * @property displayCoordXY Adds centroid coordonate lines of each stop.
+ * @property displayCoordXY Adds centroid coordinate lines of each stop.
  * @property lineId Filters stops by line.
  * @property terminusId Filters on stop areas arriving and departing from this terminal only.
  * @property timeframe Number of days to calculate which lines pass through a given point.
@@ -22,8 +24,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property displayStopPoints Display stop point of stop areas.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class StopAreaRequest(private val apiKey: String){
+class StopAreaRequest(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var srid:String? = null
     var bbox:String? = null
@@ -57,7 +58,7 @@ class StopAreaRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(StopAreaResponse::class.java)
+    override fun execute() = buildParams().execute(StopAreaResponse::class.java)
 
     /**
      * Execute the request.
@@ -66,7 +67,7 @@ class StopAreaRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -74,6 +75,6 @@ class StopAreaRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }

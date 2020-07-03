@@ -1,18 +1,25 @@
-package fr.docjyJ.tisseoLib.model.serviceDensity
+package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
+import fr.docjyJ.tisseoLib.model.serviceDensity.Stop
 import java.time.LocalDateTime
+
+/**
+ * The response class of a service density request.
+ *
+ * @property expirationDate The expiration date of the content.
+ */
 
 data class ServiceDensityResponse(
     @SerializedName("distance")
     val distance: Int,
     @SerializedName("expirationDate")
-    val expirationDate: LocalDateTime,
+    override val expirationDate: LocalDateTime,
     @SerializedName("isServiceNumberReached")
     val isServiceNumberReached: Int,
     @SerializedName("serviceNumberReached")
     val serviceNumberReached: Int,
     @SerializedName("stops")
     val stops: List<Stop>
-)
+) : TisseoResponse

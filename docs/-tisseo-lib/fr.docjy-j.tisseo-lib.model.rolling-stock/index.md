@@ -9,4 +9,3 @@ Data models for the rolling stock response.
 | Name | Summary |
 |---|---|
 | [RollingStock](-rolling-stock/index.md) | `data class RollingStock` |
-| [RollingStocksResponse](-rolling-stocks-response/index.md) | `data class RollingStocksResponse` |

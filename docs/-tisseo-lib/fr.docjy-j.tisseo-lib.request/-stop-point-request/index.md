@@ -2,7 +2,7 @@
 
 # StopPointRequest
 
-`class StopPointRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L27)
+`class StopPointRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L28)
 
 The class builder to do a Stop Point request.
 
@@ -27,6 +27,6 @@ The class builder to do a Stop Point request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-point-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

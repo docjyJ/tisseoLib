@@ -13,5 +13,4 @@ Data models for the stop point response.
 | [OperatorCodeX](-operator-code-x/index.md) | `data class OperatorCodeX` |
 | [PhysicalStop](-physical-stop/index.md) | `data class PhysicalStop` |
 | [PhysicalStops](-physical-stops/index.md) | `data class PhysicalStops` |
-| [StopPointResponse](-stop-point-response/index.md) | `data class StopPointResponse` |
 | [TransportMode](-transport-mode/index.md) | `data class TransportMode` |

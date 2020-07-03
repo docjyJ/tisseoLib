@@ -2,7 +2,7 @@
 
 # MessagesRequest
 
-`class MessagesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/MessagesRequest.kt#L18)
+`class MessagesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/MessagesRequest.kt#L19)
 
 The class builder to do a Message request.
 
@@ -24,6 +24,6 @@ The class builder to do a Message request.
 
 | Name | Summary |
 |---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`MessagesResponse`](../../fr.docjy-j.tisseo-lib.model.message/-messages-response/index.md) |
+| [execute](execute.md) | Execute the request.`fun execute(): `[`MessagesResponse`](../../fr.docjy-j.tisseo-lib.response/-messages-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
 | [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

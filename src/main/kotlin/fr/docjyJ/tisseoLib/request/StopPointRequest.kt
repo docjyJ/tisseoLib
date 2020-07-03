@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.StopPointResponse
 
 /**
  * The class builder to do a Stop Point request.
@@ -23,8 +25,7 @@ import fr.docjyJ.tisseoLib.exception.TisseoServerException
  * @property displayStopsWithoutDeparture Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class StopPointRequest internal constructor(private val apiKey: String){
+class StopPointRequest internal constructor(private val apiKey: String) : TisseoRequest {
     var network:String? = null
     var srid:String? = null
     var bbox:String? = null
@@ -60,7 +61,7 @@ class StopPointRequest internal constructor(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(StopPointResponse::class.java)
+    override fun execute() = buildParams().execute(StopPointResponse::class.java)
 
     /**
      * Execute the request.
@@ -69,7 +70,7 @@ class StopPointRequest internal constructor(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -77,6 +78,6 @@ class StopPointRequest internal constructor(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }

@@ -2,7 +2,7 @@
 
 # execute
 
-`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L78)
+`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.response/-places-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L79)
 
 Execute the request.
 

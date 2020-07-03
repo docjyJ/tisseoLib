@@ -2,7 +2,7 @@
 
 # displayGeometry
 
-`var displayGeometry: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L30)
+`var displayGeometry: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L31)
 
 Return geometries in WKT. [see](http://fr.wikipedia.org/wiki/Well-known_text)
 

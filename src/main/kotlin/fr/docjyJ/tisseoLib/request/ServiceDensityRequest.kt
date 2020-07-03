@@ -1,8 +1,10 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
 import java.time.LocalDateTime
 
 /**
@@ -13,15 +15,14 @@ import java.time.LocalDateTime
  * @property centerXY Address or place of departure or arrival.
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property serviceNumber Number of distinct transport services we want to reach in the time slot .
- * @property beginDateTimeSlot Begining date and time of time slot.
+ * @property beginDateTimeSlot Beginning date and time of time slot.
  * @property endDateTimeSlot Ending date and time of time slot.
  * @property networkList Transport operators list.
  * @property rollingStockList Transport mode list.
  * @property displayServices Displays the services found in the area covered.
  */
 
-@Suppress("MemberVisibilityCanBePrivate")
-class ServiceDensityRequest(private val apiKey: String){
+class ServiceDensityRequest(private val apiKey: String) : TisseoRequest {
     var centerXY:String? = null
     var srid:String? = null
     var serviceNumber:Int? = null
@@ -52,7 +53,7 @@ class ServiceDensityRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun execute() = buildParams().execute(ServiceDensityResponse::class.java)
+    override fun execute() = buildParams().execute(ServiceDensityResponse::class.java)
 
     /**
      * Execute the request.
@@ -61,7 +62,7 @@ class ServiceDensityRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoServerException::class, TisseoClientException::class)
-    fun executeAsString() = buildParams().execute()
+    override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
@@ -69,6 +70,6 @@ class ServiceDensityRequest(private val apiKey: String){
      * @throws TisseoClientException When the library makes a mistake.
      */
     @Throws(TisseoClientException::class)
-    fun getUrl() = buildParams().getUrl()
+    override fun getUrl() = buildParams().getUrl()
 
 }
