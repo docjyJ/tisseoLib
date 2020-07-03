@@ -1,5 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.model.place.PlacesResponse
 import fr.docjyJ.tisseoLib.utils.RequestBuilder
 import fr.docjyJ.tisseoLib.utils.TisseoException
 
@@ -66,15 +67,15 @@ class PlacesRequest(private val apiKey: String) {
         addParameter("simple",simple)
         addParameter("publicPlaceFilter",publicPlaceFilter)
     }
-/*
+
     /**
      * Execute the request.
      * @return Response of request in PlacesResponse object.
      * @throws  TisseoException
      */
     @Throws(TisseoException::class)
-    TODO fun execute() = buildParams().execute(PlacesResponse::class.java)
-*/
+    fun execute() = buildParams().execute(PlacesResponse::class.java)
+
     /**
      * Execute the request.
      * @return Response of request in String object.
