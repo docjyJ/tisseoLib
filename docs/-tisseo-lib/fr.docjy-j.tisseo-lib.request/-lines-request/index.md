@@ -31,3 +31,4 @@ The class builder to do a Line request.
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`LinesResponse`](../../fr.docjy-j.tisseo-lib.model.line/-lines-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

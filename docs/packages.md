@@ -55,6 +55,6 @@ Data models for the stop schedule response.
 
 Contains all request builders
 
-# Package fr.docjyJ.tisseoLib.util
+# Package fr.docjyJ.tisseoLib.exception
 
 Contains exception.

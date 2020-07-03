@@ -42,3 +42,4 @@ It is possible to get the response string (via the executeAsString () method) an
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

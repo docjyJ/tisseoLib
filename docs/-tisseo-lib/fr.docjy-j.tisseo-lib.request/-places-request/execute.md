@@ -2,13 +2,15 @@
 
 # execute
 
-`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L77)
+`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L78)
 
 Execute the request.
 
 ### Exceptions
 
-`TisseoException` -
+`TisseoServerException` - When the server returns an error.
+
+`TisseoClientException` - When the library makes a mistake.
 
 **Return**
 Response of request in PlacesResponse object.

@@ -1,6 +1,6 @@
-[TisseoLib](../index.md) / [fr.docjyJ.tisseoLib.util](./index.md)
+[TisseoLib](../index.md) / [fr.docjyJ.tisseoLib.exception](./index.md)
 
-## Package fr.docjyJ.tisseoLib.util
+## Package fr.docjyJ.tisseoLib.exception
 
 Contains exception.
 

@@ -1,4 +1,4 @@
-[TisseoLib](../../../index.md) / [fr.docjyJ.tisseoLib.util](../../index.md) / [TisseoException](../index.md) / [TisseoError](index.md) / [url](./url.md)
+[TisseoLib](../../../index.md) / [fr.docjyJ.tisseoLib.exception](../../index.md) / [TisseoException](../index.md) / [TisseoError](index.md) / [url](./url.md)
 
 # url
 

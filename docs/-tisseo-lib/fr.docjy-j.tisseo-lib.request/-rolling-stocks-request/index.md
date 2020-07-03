@@ -18,3 +18,4 @@ The class builder to do a Rolling Stocks request.
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`RollingStocksResponse`](../../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stocks-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

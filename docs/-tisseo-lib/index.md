@@ -14,6 +14,7 @@ for the use of the parameters and the API.
 
 | Name | Summary |
 |---|---|
+| [fr.docjyJ.tisseoLib.exception](fr.docjy-j.tisseo-lib.exception/index.md) | Contains exception. |
 | [fr.docjyJ.tisseoLib.model.journey](fr.docjy-j.tisseo-lib.model.journey/index.md) | Data models for the journey response. |
 | [fr.docjyJ.tisseoLib.model.line](fr.docjy-j.tisseo-lib.model.line/index.md) | Data models for the line response. |
 | [fr.docjyJ.tisseoLib.model.message](fr.docjy-j.tisseo-lib.model.message/index.md) | Data models for the message response. |
@@ -25,7 +26,6 @@ for the use of the parameters and the API.
 | [fr.docjyJ.tisseoLib.model.stopPoint](fr.docjy-j.tisseo-lib.model.stop-point/index.md) | Data models for the stop point response. |
 | [fr.docjyJ.tisseoLib.model.stopSchedule](fr.docjy-j.tisseo-lib.model.stop-schedule/index.md) | Data models for the stop schedule response. |
 | [fr.docjyJ.tisseoLib.request](fr.docjy-j.tisseo-lib.request/index.md) | Contains all request builders |
-| [fr.docjyJ.tisseoLib.util](fr.docjy-j.tisseo-lib.util/index.md) | Contains exception. |
 
 ### Index
 
