@@ -156,9 +156,29 @@ The class builder to do a Network request.
 
 |
 
+##### [fr.docjyJ.tisseoLib.model.place.Origin](../fr.docjy-j.tisseo-lib.model.place/-origin/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.place.Place](../fr.docjy-j.tisseo-lib.model.place/-place/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.place.PlacesList](../fr.docjy-j.tisseo-lib.model.place/-places-list/index.md)
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.request.PlacesRequest](../fr.docjy-j.tisseo-lib.request/-places-request/index.md)
 
 The class builder to do a Line request.
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.place.PlacesResponse](../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md)
 
 
 |
@@ -293,7 +313,7 @@ The class builder to do a Stop Schedules request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.utils.TisseoException](../fr.docjy-j.tisseo-lib.utils/-tisseo-exception/index.md)
+##### [fr.docjyJ.tisseoLib.util.TisseoException](../fr.docjy-j.tisseo-lib.util/-tisseo-exception/index.md)
 
 Signals that an error was reached during the request to the server.
 

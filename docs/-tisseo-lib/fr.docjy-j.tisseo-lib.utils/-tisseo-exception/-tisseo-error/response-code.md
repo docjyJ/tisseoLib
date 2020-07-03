@@ -1,4 +1,4 @@
-[TisseoLib](../../../index.md) / [fr.docjyJ.tisseoLib.utils](../../index.md) / [TisseoException](../index.md) / [TisseoError](index.md) / [responseCode](./response-code.md)
+[TisseoLib](../../../index.md) / [fr.docjyJ.tisseoLib.util](../../index.md) / [TisseoException](../index.md) / [TisseoError](index.md) / [responseCode](./response-code.md)
 
 # responseCode
 

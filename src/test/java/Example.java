@@ -2,13 +2,14 @@ import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
 import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
 import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.place.PlacesResponse;
 import fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse;
 import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse;
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
 import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
 import fr.docjyJ.tisseoLib.request.*;
-import fr.docjyJ.tisseoLib.utils.TisseoException;
+import fr.docjyJ.tisseoLib.util.TisseoException;
 import java.time.LocalDateTime;
 
 public class Example {
@@ -40,7 +41,7 @@ public class Example {
         return request.execute();
     }
 
-    public String places() throws TisseoException {
+    public PlacesResponse places() throws TisseoException {
         //Create request object
         PlacesRequest request = new PlacesRequest(API_KEY);
 
@@ -48,8 +49,7 @@ public class Example {
         request.setTerm("cav");
 
         //Execute request
-        return request.executeAsString();
-        //Please note that the response object for the Place resource is not implemented.
+        return request.execute();
     }
 
     public NetworksResponse networks() throws TisseoException {
