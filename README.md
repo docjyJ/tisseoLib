@@ -1,11 +1,10 @@
 # Tisséo API Library [![download_latest-release](https://img.shields.io/github/v/release/docjyJ/TisseoLib?label=download&logo=java&style=flat-square)](https://github.com/docjyJ/TisseoLib/releases/latest)
 Library to simplify calls to the Tisséo API in Java.
 
-This library require [Kotlin Standard Library JDK 8 1.3.72](https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.72).
-
-This library require [Gson 2.8.6](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6).
-
-This library require [JTS Core 1.16.1](https://mvnrepository.com/artifact/org.locationtech.jts/jts-core/1.16.1).
+This library require
+[Kotlin Standard Library JDK 8 1.3.72](https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.72),
+[Gson 2.8.6](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6),
+[JTS Core 1.16.1](https://mvnrepository.com/artifact/org.locationtech.jts/jts-core/1.16.1).
 
 ## Information before usage
 This library is neither created nor approved by Tisséo.
