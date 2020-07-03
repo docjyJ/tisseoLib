@@ -2,7 +2,7 @@
 
 # StopPointRequest
 
-`class StopPointRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L27)
+`class StopPointRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L28)
 
 The class builder to do a Stop Point request.
 

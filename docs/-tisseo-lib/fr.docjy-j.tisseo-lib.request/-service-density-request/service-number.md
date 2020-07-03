@@ -2,7 +2,7 @@
 
 # serviceNumber
 
-`var serviceNumber: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L27)
+`var serviceNumber: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L28)
 
 Number of distinct transport services we want to reach in the time slot .
 

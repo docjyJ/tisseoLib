@@ -2,7 +2,7 @@
 
 # RollingStocksRequest
 
-`class RollingStocksRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/RollingStocksRequest.kt#L14)
+`class RollingStocksRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/RollingStocksRequest.kt#L13)
 
 The class builder to do a Rolling Stocks request.
 

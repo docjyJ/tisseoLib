@@ -2,7 +2,7 @@
 
 # datetime
 
-`var datetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L38)
+`var datetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L39)
 
 Date and time at which we request the schedules.
 

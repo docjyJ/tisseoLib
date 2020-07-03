@@ -2,7 +2,7 @@
 
 # MessagesRequest
 
-`class MessagesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/MessagesRequest.kt#L18)
+`class MessagesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/MessagesRequest.kt#L19)
 
 The class builder to do a Message request.
 

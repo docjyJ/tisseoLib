@@ -2,7 +2,7 @@
 
 # centerXY
 
-`var centerXY: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L25)
+`var centerXY: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L26)
 
 Address or place of departure or arrival.
 

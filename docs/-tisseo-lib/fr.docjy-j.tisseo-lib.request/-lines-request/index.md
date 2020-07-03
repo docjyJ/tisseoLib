@@ -2,7 +2,7 @@
 
 # LinesRequest
 
-`class LinesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L23)
+`class LinesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L24)
 
 The class builder to do a Line request.
 

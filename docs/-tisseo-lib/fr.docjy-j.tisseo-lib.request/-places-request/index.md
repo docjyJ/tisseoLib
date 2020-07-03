@@ -2,7 +2,7 @@
 
 # PlacesRequest
 
-`class PlacesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L34)
+`class PlacesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L35)
 
 The class builder to do a Line request.
 
@@ -22,7 +22,7 @@ It is possible to get the response string (via the executeAsString () method) an
 | [bbox](bbox.md) | Filters stops included in bounding box.`var bbox: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [coordinatesXY](coordinates-x-y.md) | Returns nearest adresses from given x,y coordinates sorted by distance.`var coordinatesXY: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [displayBestPlace](display-best-place.md) | Returns the best result.`var displayBestPlace: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
-| [displayOnlyAddresses](display-only-addresses.md) | Returns only object of className “adress”.`var displayOnlyAddresses: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
+| [displayOnlyAddresses](display-only-addresses.md) | Returns only object of className “address”.`var displayOnlyAddresses: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [displayOnlyCities](display-only-cities.md) | Returns only object of className “city”.`var displayOnlyCities: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [displayOnlyPublicPlaces](display-only-public-places.md) | Returns only object of className “public_places”.`var displayOnlyPublicPlaces: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [displayOnlyRoads](display-only-roads.md) | Returns only object of className “road”.`var displayOnlyRoads: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |

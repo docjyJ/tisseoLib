@@ -2,7 +2,7 @@
 
 # ServiceDensityRequest
 
-`class ServiceDensityRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L24)
+`class ServiceDensityRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L25)
 
 The class builder to do a Service Density request.
 
@@ -16,7 +16,7 @@ The class builder to do a Service Density request.
 
 | Name | Summary |
 |---|---|
-| [beginDateTimeSlot](begin-date-time-slot.md) | Begining date and time of time slot.`var beginDateTimeSlot: LocalDateTime?` |
+| [beginDateTimeSlot](begin-date-time-slot.md) | Beginning date and time of time slot.`var beginDateTimeSlot: LocalDateTime?` |
 | [centerXY](center-x-y.md) | Address or place of departure or arrival.`var centerXY: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [displayServices](display-services.md) | Displays the services found in the area covered.`var displayServices: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [endDateTimeSlot](end-date-time-slot.md) | Ending date and time of time slot.`var endDateTimeSlot: LocalDateTime?` |
