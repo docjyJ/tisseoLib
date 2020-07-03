@@ -22,7 +22,7 @@ dependencies {
 }
 ````
 
-[Repository](https://bintray.com/beta/#/docjyj/maven/tisseoLib)
+[Repository/Download Jar](https://bintray.com/beta/#/docjyj/maven/tisseoLib)
 
 ## Documentation
 See the Library documentation [here](docs/-tisseo-lib/index.md)
