@@ -1,7 +1,8 @@
-package fr.docjyJ.tisseoLib.model.message
+package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
+import fr.docjyJ.tisseoLib.model.message.Message
 import java.time.LocalDateTime
 
 data class MessagesResponse(

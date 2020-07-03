@@ -1,7 +1,8 @@
-package fr.docjyJ.tisseoLib.model.serviceDensity
+package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
+import fr.docjyJ.tisseoLib.model.serviceDensity.Stop
 import java.time.LocalDateTime
 
 data class ServiceDensityResponse(

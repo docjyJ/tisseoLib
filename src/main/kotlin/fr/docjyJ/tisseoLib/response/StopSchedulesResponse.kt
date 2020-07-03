@@ -1,12 +1,13 @@
-package fr.docjyJ.tisseoLib.model.stopSchedule
+package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
+import fr.docjyJ.tisseoLib.model.stopSchedule.Departures
 import java.time.LocalDateTime
 
 data class StopSchedulesResponse(
-    @SerializedName("departures")
+        @SerializedName("departures")
     val departures: Departures,
-    @SerializedName("expirationDate")
+        @SerializedName("expirationDate")
     val expirationDate: LocalDateTime
 )
