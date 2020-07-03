@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse
-import fr.docjyJ.tisseoLib.utils.RequestBuilder
-import fr.docjyJ.tisseoLib.utils.TisseoException
+import fr.docjyJ.tisseoLib.util.RequestBuilder
+import fr.docjyJ.tisseoLib.util.TisseoException
 import java.time.LocalDateTime
 
 /**

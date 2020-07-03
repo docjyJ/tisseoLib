@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.tisseoLib.model.message.MessagesResponse
-import fr.docjyJ.tisseoLib.utils.RequestBuilder
-import fr.docjyJ.tisseoLib.utils.TisseoException
+import fr.docjyJ.tisseoLib.util.RequestBuilder
+import fr.docjyJ.tisseoLib.util.TisseoException
 
 /**
  * The class builder to do a Message request.

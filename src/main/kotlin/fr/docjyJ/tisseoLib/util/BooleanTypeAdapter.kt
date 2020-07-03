@@ -1,4 +1,4 @@
-package fr.docjyJ.tisseoLib.utils
+package fr.docjyJ.tisseoLib.util
 
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
