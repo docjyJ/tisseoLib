@@ -47,7 +47,7 @@ class LinesRequest(private val apiKey: String) {
      * @throws TisseoServerException When the server returns an error.
      * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoServerException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun execute() = buildParams().execute(LinesResponse::class.java)
 
     /**
@@ -56,7 +56,7 @@ class LinesRequest(private val apiKey: String) {
      * @throws TisseoServerException When the server returns an error.
      * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoServerException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
 
     /**
