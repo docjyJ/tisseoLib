@@ -1,5 +1,0 @@
-[TisseoLib](../../index.md) / [fr.docjyJ.tisseoLib.model.journey](../index.md) / [JourneyPlace](index.md) / [&lt;init&gt;](./-init-.md)
-
-# &lt;init&gt;
-
-`JourneyPlace(arrivalCity: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, arrivalLatitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, arrivalLongitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, arrivalStop: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, departureCity: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, departureLatitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, departureLongitude: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, departureStop: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)`

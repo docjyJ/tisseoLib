@@ -1,12 +1,16 @@
 package fr.docjyJ.tisseoLib.model.stopSchedule
 
+
+import com.google.gson.annotations.SerializedName
 import fr.docjyJ.tisseoLib.model.line.Line
-import fr.docjyJ.tisseoLib.model.stopPoint.StopPoint
 
 data class Schedule(
-        val destination: StopPoint,
-        val journeys: List<JourneysShudle>,
-        val line: Line,
-        val stop: StopPoint
-
+    @SerializedName("destination")
+    val destination: Destination,
+    @SerializedName("journeys")
+    val journeys: List<Journey>,
+    @SerializedName("line")
+    val line: Line,
+    @SerializedName("stop")
+    val stop: Stop
 )

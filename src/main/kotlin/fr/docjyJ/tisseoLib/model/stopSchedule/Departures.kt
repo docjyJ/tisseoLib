@@ -1,11 +1,15 @@
 package fr.docjyJ.tisseoLib.model.stopSchedule
 
-import fr.docjyJ.tisseoLib.model.stopArea.StopArea
-import fr.docjyJ.tisseoLib.model.stopPoint.StopPoint
 
-data class Departures (
-        val stopAreas: List<StopArea>?,
-        val departure: List<Departure>?,
-        val stop: StopPoint?,
-        val stopArea: StopArea?
+import com.google.gson.annotations.SerializedName
+
+data class Departures(
+    @SerializedName("stopAreas")
+    val stopAreas: List<StopArea>,
+    @SerializedName("departure")
+    val departure: List<Departure>,
+    @SerializedName("stop")
+    val stop: Stop,
+    @SerializedName("stopArea")
+    val stopArea: StopArea
 )

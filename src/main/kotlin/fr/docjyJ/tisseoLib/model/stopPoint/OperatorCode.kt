@@ -1,6 +1,9 @@
 package fr.docjyJ.tisseoLib.model.stopPoint
 
+
+import com.google.gson.annotations.SerializedName
+
 data class OperatorCode(
-    val network:String,
-    val value:Int
+    @SerializedName("operatorCode")
+    val operatorCode: OperatorCodeX
 )

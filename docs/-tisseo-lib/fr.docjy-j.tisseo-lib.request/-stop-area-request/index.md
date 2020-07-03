@@ -34,3 +34,4 @@ The class builder to do a Stop Area request.
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

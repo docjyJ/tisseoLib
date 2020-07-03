@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`StopSchedulesResponse(expirationDate: LocalDateTime, departures: `[`Departures`](../-departures/index.md)`)`
+`StopSchedulesResponse(departures: `[`Departures`](../-departures/index.md)`, expirationDate: LocalDateTime)`

@@ -9,15 +9,15 @@ Data models for the journey response.
 | Name | Summary |
 |---|---|
 | [Chunk](-chunk/index.md) | `data class Chunk` |
-| [ChunkPlace](-chunk-place/index.md) | `data class ChunkPlace` |
-| [ChunkService](-chunk-service/index.md) | `data class ChunkService` |
-| [ChunkStop](-chunk-stop/index.md) | `data class ChunkStop` |
+| [ConnectionPlace](-connection-place/index.md) | `data class ConnectionPlace` |
 | [DestinationStop](-destination-stop/index.md) | `data class DestinationStop` |
 | [Journey](-journey/index.md) | `data class Journey` |
-| [JourneyPlace](-journey-place/index.md) | `data class JourneyPlace` |
-| [Journeys](-journeys/index.md) | `data class Journeys` |
 | [JourneysResponse](-journeys-response/index.md) | `data class JourneysResponse` |
+| [JourneyX](-journey-x/index.md) | `data class JourneyX` |
+| [Places](-places/index.md) | `data class Places` |
 | [Query](-query/index.md) | `data class Query` |
 | [RoutePlannerResult](-route-planner-result/index.md) | `data class RoutePlannerResult` |
+| [Service](-service/index.md) | `data class Service` |
+| [Stop](-stop/index.md) | `data class Stop` |
 | [Text](-text/index.md) | `data class Text` |
 | [TimeBounds](-time-bounds/index.md) | `data class TimeBounds` |

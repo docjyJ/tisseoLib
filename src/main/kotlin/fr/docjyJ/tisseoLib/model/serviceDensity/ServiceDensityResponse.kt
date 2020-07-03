@@ -1,11 +1,18 @@
 package fr.docjyJ.tisseoLib.model.serviceDensity
 
+
+import com.google.gson.annotations.SerializedName
 import java.time.LocalDateTime
 
-data class ServiceDensityResponse (
-    val distance: String,
+data class ServiceDensityResponse(
+    @SerializedName("distance")
+    val distance: Int,
+    @SerializedName("expirationDate")
     val expirationDate: LocalDateTime,
-    val isServiceNumberReached: Boolean,
+    @SerializedName("isServiceNumberReached")
+    val isServiceNumberReached: Int,
+    @SerializedName("serviceNumberReached")
     val serviceNumberReached: Int,
-    val stops: List<StopsServices>
+    @SerializedName("stops")
+    val stops: List<Stop>
 )

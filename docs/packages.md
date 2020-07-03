@@ -26,6 +26,10 @@ Data models for the message response.
 
 Data models for the netwotk response.
 
+# Package fr.docjyJ.tisseoLib.model.place
+
+Data models for the place response.
+
 # Package fr.docjyJ.tisseoLib.model.stopArea
 
 Data models for the stop area response.
@@ -51,6 +55,6 @@ Data models for the stop schedule response.
 
 Contains all request builders
 
-# Package fr.docjyJ.tisseoLib.utils
+# Package fr.docjyJ.tisseoLib.exception
 
 Contains exception.

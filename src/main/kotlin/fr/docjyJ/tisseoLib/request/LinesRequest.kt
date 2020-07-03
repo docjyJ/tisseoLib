@@ -1,8 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.model.line.LinesResponse
-import fr.docjyJ.tisseoLib.utils.RequestBuilder
-import fr.docjyJ.tisseoLib.utils.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 
 /**
  * The class builder to do a Line request.
@@ -44,17 +44,27 @@ class LinesRequest(private val apiKey: String) {
     /**
      * Execute the request.
      * @return Response of request in LinesResponse object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class)
     fun execute() = buildParams().execute(LinesResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class)
     fun executeAsString() = buildParams().execute()
+
+    /**
+     * Show the URL.
+     * @return The URL of request in String object.
+     * @throws TisseoClientException When the library makes a mistake.
+     */
+    @Throws(TisseoClientException::class)
+    fun getUrl() = buildParams().getUrl()
 
 }

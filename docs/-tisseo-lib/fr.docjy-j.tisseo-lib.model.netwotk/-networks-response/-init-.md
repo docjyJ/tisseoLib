@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`NetworksResponse(expirationDate: LocalDateTime, networks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Networks`](../-networks/index.md)`>)`
+`NetworksResponse(expirationDate: LocalDateTime, networks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Network`](../-network/index.md)`>)`

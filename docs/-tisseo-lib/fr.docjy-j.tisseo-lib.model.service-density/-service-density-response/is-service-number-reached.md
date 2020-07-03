@@ -2,4 +2,4 @@
 
 # isServiceNumberReached
 
-`val isServiceNumberReached: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/ServiceDensityResponse.kt#L8)
+`val isServiceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/ServiceDensityResponse.kt#L13)

@@ -1,14 +1,15 @@
 $dokka.format:gfm
 $dokka.linkExtension:md
 
+fr.docjyJ.tisseoLib.exception
 fr.docjyJ.tisseoLib.model.journey
 fr.docjyJ.tisseoLib.model.line
 fr.docjyJ.tisseoLib.model.message
 fr.docjyJ.tisseoLib.model.netwotk
+fr.docjyJ.tisseoLib.model.place
 fr.docjyJ.tisseoLib.model.rollingStock
 fr.docjyJ.tisseoLib.model.serviceDensity
 fr.docjyJ.tisseoLib.model.stopArea
 fr.docjyJ.tisseoLib.model.stopPoint
 fr.docjyJ.tisseoLib.model.stopSchedule
 fr.docjyJ.tisseoLib.request
-fr.docjyJ.tisseoLib.utils

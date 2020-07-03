@@ -1,6 +1,11 @@
 package fr.docjyJ.tisseoLib.model.journey
 
-data class RoutePlannerResult (
-        val query: Query,
-        val journeys: List<Journeys>
+
+import com.google.gson.annotations.SerializedName
+
+data class RoutePlannerResult(
+    @SerializedName("journeys")
+    val journeys: List<Journey>,
+    @SerializedName("query")
+    val query: Query
 )

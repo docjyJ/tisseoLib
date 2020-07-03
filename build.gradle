@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'fr.docjyj.tisseoLib'
-version '1.2.0'
+version '1.2.1'
 
 jar {
     manifest {
@@ -20,7 +20,9 @@ repositories {
 }
 
 dependencies {
+    compile 'org.locationtech.jts:jts-core:1.16.1'
     implementation 'com.google.code.gson:gson:2.8.6'
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

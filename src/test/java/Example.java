@@ -1,20 +1,22 @@
+import fr.docjyJ.tisseoLib.exception.TisseoClientException;
 import fr.docjyJ.tisseoLib.model.journey.JourneysResponse;
 import fr.docjyJ.tisseoLib.model.line.LinesResponse;
 import fr.docjyJ.tisseoLib.model.message.MessagesResponse;
 import fr.docjyJ.tisseoLib.model.netwotk.NetworksResponse;
+import fr.docjyJ.tisseoLib.model.place.PlacesResponse;
 import fr.docjyJ.tisseoLib.model.rollingStock.RollingStocksResponse;
 import fr.docjyJ.tisseoLib.model.serviceDensity.ServiceDensityResponse;
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreaResponse;
 import fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse;
 import fr.docjyJ.tisseoLib.model.stopSchedule.StopSchedulesResponse;
 import fr.docjyJ.tisseoLib.request.*;
-import fr.docjyJ.tisseoLib.utils.TisseoException;
+import fr.docjyJ.tisseoLib.exception.TisseoServerException;
 import java.time.LocalDateTime;
 
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
 
-    public StopAreaResponse stopArea() throws TisseoException {
+    public StopAreaResponse stopArea() throws TisseoServerException, TisseoClientException {
         //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
 
@@ -26,7 +28,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopPointResponse stopPoint() throws TisseoException {
+    public StopPointResponse stopPoint() throws TisseoServerException, TisseoClientException {
         //Create request object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
@@ -40,7 +42,7 @@ public class Example {
         return request.execute();
     }
 
-    public String places() throws TisseoException {
+    public PlacesResponse places() throws TisseoServerException, TisseoClientException {
         //Create request object
         PlacesRequest request = new PlacesRequest(API_KEY);
 
@@ -48,11 +50,10 @@ public class Example {
         request.setTerm("cav");
 
         //Execute request
-        return request.executeAsString();
-        //Please note that the response object for the Place resource is not implemented.
+        return request.execute();
     }
 
-    public NetworksResponse networks() throws TisseoException {
+    public NetworksResponse networks() throws TisseoServerException, TisseoClientException {
         //Create request object
         NetworksRequest request = new NetworksRequest(API_KEY);
 
@@ -60,7 +61,7 @@ public class Example {
         return request.execute();
     }
 
-    public LinesResponse lines() throws TisseoException {
+    public LinesResponse lines() throws TisseoServerException {
         //Create request object
         LinesRequest request = new LinesRequest(API_KEY);
 
@@ -72,7 +73,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopSchedulesResponse stopSchedules() throws TisseoException {
+    public StopSchedulesResponse stopSchedules() throws TisseoServerException, TisseoClientException {
         //Create request object
         StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
 
@@ -84,7 +85,7 @@ public class Example {
         return request.execute();
     }
 
-    public RollingStocksResponse rollingStocks() throws TisseoException {
+    public RollingStocksResponse rollingStocks() throws TisseoServerException, TisseoClientException {
         //Create request object
         RollingStocksRequest request = new RollingStocksRequest(API_KEY);
 
@@ -92,7 +93,7 @@ public class Example {
         return request.execute();
     }
 
-    public JourneysResponse journeys() throws TisseoException {
+    public JourneysResponse journeys() throws TisseoServerException, TisseoClientException {
         //Create request Object
         JourneysRequest request = new JourneysRequest(API_KEY);
 
@@ -106,7 +107,7 @@ public class Example {
 
     }
 
-    public MessagesResponse messages() throws TisseoException {
+    public MessagesResponse messages() throws TisseoServerException, TisseoClientException {
         //Create request object
         MessagesRequest request = new MessagesRequest(API_KEY);
 
@@ -114,7 +115,7 @@ public class Example {
         return request.execute();
     }
 
-    public ServiceDensityResponse serviceDensity() throws TisseoException {
+    public ServiceDensityResponse serviceDensity() throws TisseoServerException, TisseoClientException {
         //Create request Object
         ServiceDensityRequest request = new ServiceDensityRequest(API_KEY);
 

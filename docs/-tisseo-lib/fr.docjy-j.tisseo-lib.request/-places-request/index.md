@@ -2,7 +2,7 @@
 
 # PlacesRequest
 
-`class PlacesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L33)
+`class PlacesRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L34)
 
 The class builder to do a Line request.
 
@@ -40,4 +40,6 @@ It is possible to get the response string (via the executeAsString () method) an
 
 | Name | Summary |
 |---|---|
+| [execute](execute.md) | Execute the request.`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.model.place/-places-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`OperatorCode(network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`, value: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`)`
+`OperatorCode(operatorCode: `[`OperatorCodeX`](../-operator-code-x/index.md)`)`

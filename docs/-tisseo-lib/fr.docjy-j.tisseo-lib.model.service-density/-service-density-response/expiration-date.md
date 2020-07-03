@@ -2,4 +2,4 @@
 
 # expirationDate
 
-`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/ServiceDensityResponse.kt#L7)
+`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/ServiceDensityResponse.kt#L11)

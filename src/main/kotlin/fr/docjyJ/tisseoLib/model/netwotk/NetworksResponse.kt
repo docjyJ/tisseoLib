@@ -1,8 +1,12 @@
 package fr.docjyJ.tisseoLib.model.netwotk
 
+
+import com.google.gson.annotations.SerializedName
 import java.time.LocalDateTime
 
 data class NetworksResponse(
-        val expirationDate: LocalDateTime,
-        val networks: List<Networks>
+    @SerializedName("expirationDate")
+    val expirationDate: LocalDateTime,
+    @SerializedName("networks")
+    val networks: List<Network>
 )

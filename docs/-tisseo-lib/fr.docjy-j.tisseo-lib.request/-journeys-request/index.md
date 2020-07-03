@@ -45,3 +45,4 @@ The class builder to do a Journeys request.
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`JourneysResponse`](../../fr.docjy-j.tisseo-lib.model.journey/-journeys-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

@@ -2,4 +2,4 @@
 
 # expirationDate
 
-`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/StopSchedulesResponse.kt#L6)
+`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/StopSchedulesResponse.kt#L11)

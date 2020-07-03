@@ -2,7 +2,7 @@
 
 # Text
 
-`data class Text` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Text.kt#L3)
+`data class Text` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Text.kt#L6)
 
 ### Constructors
 

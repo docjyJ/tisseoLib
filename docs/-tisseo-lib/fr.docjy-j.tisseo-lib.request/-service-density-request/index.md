@@ -31,3 +31,4 @@ The class builder to do a Service Density request.
 |---|---|
 | [execute](execute.md) | Execute the request.`fun execute(): `[`ServiceDensityResponse`](../../fr.docjy-j.tisseo-lib.model.service-density/-service-density-response/index.md) |
 | [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
+| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

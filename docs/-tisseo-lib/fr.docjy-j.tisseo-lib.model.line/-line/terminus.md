@@ -2,4 +2,4 @@
 
 # terminus
 
-`val terminus: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`StopPoint`](../../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point/index.md)`>?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L15)
+`val terminus: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Terminu`](../-terminu/index.md)`>` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L30)

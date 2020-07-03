@@ -1,7 +1,8 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.utils.RequestBuilder
-import fr.docjyJ.tisseoLib.utils.TisseoException
+import fr.docjyJ.tisseoLib.exception.TisseoClientException
+import fr.docjyJ.tisseoLib.model.place.PlacesResponse
+import fr.docjyJ.tisseoLib.exception.TisseoServerException
 
 /**
  * The class builder to do a Line request.
@@ -66,21 +67,31 @@ class PlacesRequest(private val apiKey: String) {
         addParameter("simple",simple)
         addParameter("publicPlaceFilter",publicPlaceFilter)
     }
-/*
+
     /**
      * Execute the request.
      * @return Response of request in PlacesResponse object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
-    TODO fun execute() = buildParams().execute(PlacesResponse::class.java)
-*/
+    @Throws(TisseoServerException::class, TisseoClientException::class)
+    fun execute() = buildParams().execute(PlacesResponse::class.java)
+
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws  TisseoException
+     * @throws TisseoServerException When the server returns an error.
+     * @throws TisseoClientException When the library makes a mistake.
      */
-    @Throws(TisseoException::class)
+    @Throws(TisseoServerException::class, TisseoClientException::class)
     fun executeAsString() = buildParams().execute()
+
+    /**
+     * Show the URL.
+     * @return The URL of request in String object.
+     * @throws TisseoClientException When the library makes a mistake.
+     */
+    @Throws(TisseoClientException::class)
+    fun getUrl() = buildParams().getUrl()
 
 }

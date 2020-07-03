@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`Chunk(stop: `[`ChunkStop`](../-chunk-stop/index.md)`?, service: `[`ChunkService`](../-chunk-service/index.md)`?)`
+`Chunk(service: `[`Service`](../-service/index.md)`, stop: `[`Stop`](../-stop/index.md)`)`

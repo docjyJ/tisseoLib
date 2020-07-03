@@ -1,8 +1,12 @@
 package fr.docjyJ.tisseoLib.model.stopPoint
 
+
+import com.google.gson.annotations.SerializedName
 import java.time.LocalDateTime
 
-data class StopPointResponse (
-        val expirationDate: LocalDateTime,
-        val physicalStops: StopPoints
+data class StopPointResponse(
+    @SerializedName("expirationDate")
+    val expirationDate: LocalDateTime,
+    @SerializedName("physicalStops")
+    val physicalStops: PhysicalStops
 )

@@ -2,4 +2,4 @@
 
 # line
 
-`val line: `[`Line`](../../fr.docjy-j.tisseo-lib.model.line/-line/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L9)
+`val line: `[`Line`](../../fr.docjy-j.tisseo-lib.model.line/-line/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L13)

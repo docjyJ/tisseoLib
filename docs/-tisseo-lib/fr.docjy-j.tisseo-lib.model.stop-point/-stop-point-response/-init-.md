@@ -2,4 +2,4 @@
 
 # &lt;init&gt;
 
-`StopPointResponse(expirationDate: LocalDateTime, physicalStops: `[`StopPoints`](../-stop-points/index.md)`)`
+`StopPointResponse(expirationDate: LocalDateTime, physicalStops: `[`PhysicalStops`](../-physical-stops/index.md)`)`

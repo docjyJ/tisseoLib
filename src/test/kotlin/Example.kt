@@ -23,8 +23,7 @@ fun places() = PlacesRequest(API_KEY)
     .apply {//Set parameters
         term = "cav"
     }
-    .executeAsString() //Execute request
-    //Please note that the response object for the Place resource is not implemented.
+    .execute() //Execute request
 
 fun networks() = NetworksRequest(API_KEY) //Create request object
     .execute() //Execute request
