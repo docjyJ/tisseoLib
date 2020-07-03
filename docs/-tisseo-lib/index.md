@@ -18,7 +18,7 @@ for the use of the parameters and the API.
 | [fr.docjyJ.tisseoLib.model.line](fr.docjy-j.tisseo-lib.model.line/index.md) | Data models for the line response. |
 | [fr.docjyJ.tisseoLib.model.message](fr.docjy-j.tisseo-lib.model.message/index.md) | Data models for the message response. |
 | [fr.docjyJ.tisseoLib.model.netwotk](fr.docjy-j.tisseo-lib.model.netwotk/index.md) | Data models for the netwotk response. |
-| [fr.docjyJ.tisseoLib.model.place](fr.docjy-j.tisseo-lib.model.place/index.md) |  |
+| [fr.docjyJ.tisseoLib.model.place](fr.docjy-j.tisseo-lib.model.place/index.md) | Data models for the place response. |
 | [fr.docjyJ.tisseoLib.model.rollingStock](fr.docjy-j.tisseo-lib.model.rolling-stock/index.md) | Data models for the rolling stock response. |
 | [fr.docjyJ.tisseoLib.model.serviceDensity](fr.docjy-j.tisseo-lib.model.service-density/index.md) | Data models for the service density response. |
 | [fr.docjyJ.tisseoLib.model.stopArea](fr.docjy-j.tisseo-lib.model.stop-area/index.md) | Data models for the stop area response. |

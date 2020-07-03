@@ -13,17 +13,7 @@ This is the TisséoLib documentation.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.journey.ChunkPlace](../fr.docjy-j.tisseo-lib.model.journey/-chunk-place/index.md)
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.model.journey.ChunkService](../fr.docjy-j.tisseo-lib.model.journey/-chunk-service/index.md)
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.model.journey.ChunkStop](../fr.docjy-j.tisseo-lib.model.journey/-chunk-stop/index.md)
+##### [fr.docjyJ.tisseoLib.model.journey.ConnectionPlace](../fr.docjy-j.tisseo-lib.model.journey/-connection-place/index.md)
 
 
 |
@@ -38,12 +28,17 @@ This is the TisséoLib documentation.
 
 |
 
+##### [fr.docjyJ.tisseoLib.model.stopSchedule.Destination](../fr.docjy-j.tisseo-lib.model.stop-schedule/-destination/index.md)
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.model.journey.DestinationStop](../fr.docjy-j.tisseo-lib.model.journey/-destination-stop/index.md)
 
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.line.Geometry](../fr.docjy-j.tisseo-lib.model.line/-geometry/index.md)
+##### [fr.docjyJ.tisseoLib.model.line.GeometryX](../fr.docjy-j.tisseo-lib.model.line/-geometry-x/index.md)
 
 
 |
@@ -53,12 +48,7 @@ This is the TisséoLib documentation.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.journey.JourneyPlace](../fr.docjy-j.tisseo-lib.model.journey/-journey-place/index.md)
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.model.journey.Journeys](../fr.docjy-j.tisseo-lib.model.journey/-journeys/index.md)
+##### [fr.docjyJ.tisseoLib.model.stopSchedule.Journey](../fr.docjy-j.tisseo-lib.model.stop-schedule/-journey/index.md)
 
 
 |
@@ -75,7 +65,7 @@ The class builder to do a Journeys request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopSchedule.JourneysShudle](../fr.docjy-j.tisseo-lib.model.stop-schedule/-journeys-shudle/index.md)
+##### [fr.docjyJ.tisseoLib.model.journey.JourneyX](../fr.docjy-j.tisseo-lib.model.journey/-journey-x/index.md)
 
 
 |
@@ -86,11 +76,6 @@ The class builder to do a Journeys request.
 |
 
 ##### [fr.docjyJ.tisseoLib.model.line.Lines](../fr.docjy-j.tisseo-lib.model.line/-lines/index.md)
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.model.stopPoint.LineShort](../fr.docjy-j.tisseo-lib.model.stop-point/-line-short/index.md)
 
 
 |
@@ -107,12 +92,17 @@ The class builder to do a Line request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.message.Message](../fr.docjy-j.tisseo-lib.model.message/-message/index.md)
+##### [fr.docjyJ.tisseoLib.model.stopPoint.LineX](../fr.docjy-j.tisseo-lib.model.stop-point/-line-x/index.md)
 
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.message.Messages](../fr.docjy-j.tisseo-lib.model.message/-messages/index.md)
+##### [fr.docjyJ.tisseoLib.model.line.Message](../fr.docjy-j.tisseo-lib.model.line/-message/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.message.Message](../fr.docjy-j.tisseo-lib.model.message/-message/index.md)
 
 
 |
@@ -129,7 +119,12 @@ The class builder to do a Message request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.netwotk.Networks](../fr.docjy-j.tisseo-lib.model.netwotk/-networks/index.md)
+##### [fr.docjyJ.tisseoLib.model.message.MessageX](../fr.docjy-j.tisseo-lib.model.message/-message-x/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.netwotk.Network](../fr.docjy-j.tisseo-lib.model.netwotk/-network/index.md)
 
 
 |
@@ -151,7 +146,7 @@ The class builder to do a Network request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopPoint.OperatorCodes](../fr.docjy-j.tisseo-lib.model.stop-point/-operator-codes/index.md)
+##### [fr.docjyJ.tisseoLib.model.stopPoint.OperatorCodeX](../fr.docjy-j.tisseo-lib.model.stop-point/-operator-code-x/index.md)
 
 
 |
@@ -161,7 +156,22 @@ The class builder to do a Network request.
 
 |
 
+##### [fr.docjyJ.tisseoLib.model.stopPoint.PhysicalStop](../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stop/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.stopPoint.PhysicalStops](../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stops/index.md)
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.model.place.Place](../fr.docjy-j.tisseo-lib.model.place/-place/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.journey.Places](../fr.docjy-j.tisseo-lib.model.journey/-places/index.md)
 
 
 |
@@ -215,6 +225,11 @@ The class builder to do a Rolling Stocks request.
 
 |
 
+##### [fr.docjyJ.tisseoLib.model.journey.Service](../fr.docjy-j.tisseo-lib.model.journey/-service/index.md)
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.model.serviceDensity.Service](../fr.docjy-j.tisseo-lib.model.service-density/-service/index.md)
 
 
@@ -232,12 +247,32 @@ The class builder to do a Service Density request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.serviceDensity.Services](../fr.docjy-j.tisseo-lib.model.service-density/-services/index.md)
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.ServiceX](../fr.docjy-j.tisseo-lib.model.service-density/-service-x/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.journey.Stop](../fr.docjy-j.tisseo-lib.model.journey/-stop/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.Stop](../fr.docjy-j.tisseo-lib.model.service-density/-stop/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.stopSchedule.Stop](../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop/index.md)
 
 
 |
 
 ##### [fr.docjyJ.tisseoLib.model.stopArea.StopArea](../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.stopSchedule.StopArea](../fr.docjy-j.tisseo-lib.model.stop-schedule/-stop-area/index.md)
 
 
 |
@@ -259,11 +294,6 @@ The class builder to do a Stop Area request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.stopPoint.StopPoint](../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point/index.md)
-
-
-|
-
 ##### [fr.docjyJ.tisseoLib.request.StopPointRequest](../fr.docjy-j.tisseo-lib.request/-stop-point-request/index.md)
 
 The class builder to do a Stop Point request.
@@ -272,11 +302,6 @@ The class builder to do a Stop Point request.
 |
 
 ##### [fr.docjyJ.tisseoLib.model.stopPoint.StopPointResponse](../fr.docjy-j.tisseo-lib.model.stop-point/-stop-point-response/index.md)
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.model.stopPoint.StopPoints](../fr.docjy-j.tisseo-lib.model.stop-point/-stop-points/index.md)
 
 
 |
@@ -293,12 +318,12 @@ The class builder to do a Stop Schedules request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.serviceDensity.StopsService](../fr.docjy-j.tisseo-lib.model.service-density/-stops-service/index.md)
+##### [fr.docjyJ.tisseoLib.model.serviceDensity.StopX](../fr.docjy-j.tisseo-lib.model.service-density/-stop-x/index.md)
 
 
 |
 
-##### [fr.docjyJ.tisseoLib.model.serviceDensity.StopsServices](../fr.docjy-j.tisseo-lib.model.service-density/-stops-services/index.md)
+##### [fr.docjyJ.tisseoLib.model.line.Terminu](../fr.docjy-j.tisseo-lib.model.line/-terminu/index.md)
 
 
 |
@@ -321,5 +346,10 @@ Signals that an error was reached during the request to the server.
 |
 
 ##### [fr.docjyJ.tisseoLib.model.line.TransportMode](../fr.docjy-j.tisseo-lib.model.line/-transport-mode/index.md)
+
+
+|
+
+##### [fr.docjyJ.tisseoLib.model.stopPoint.TransportMode](../fr.docjy-j.tisseo-lib.model.stop-point/-transport-mode/index.md)
 
 
