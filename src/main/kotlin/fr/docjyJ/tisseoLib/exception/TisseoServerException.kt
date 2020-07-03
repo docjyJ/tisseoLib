@@ -1,4 +1,4 @@
-@file:Suppress("unused", "unused", "unused", "unused", "unused")
+@file:Suppress("MemberVisibilityCanBePrivate", "unused")
 
 package fr.docjyJ.tisseoLib.exception
 
