@@ -1,27 +1,10 @@
 plugins {
     id 'java'
-    //id 'base'
     id 'maven-publish'
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id 'org.jetbrains.dokka' version '0.10.1'
     id 'com.jfrog.bintray' version '1.8.5'
 }
-
-def GROUP_ID= 'fr.docjyJ.tisseoLib'
-def ARTIFACT_ID= 'tisseoLib'
-
-def MAVEN_REPOSITORY= 'maven'
-def USER= 'docjyj'
-
-def VERSION_NAME='1.2.2'
-
-def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
-def DESC = 'Library to simplify calls to the Tisseo API in Java / Kotlin.'
-
-
-group GROUP_ID
-version VERSION_NAME
-sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -39,6 +22,28 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+// TASK DEF
+task docPublish {
+    dependsOn 'clean'
+    dependsOn 'publish'
+}
+
+task docDocka {
+    dependsOn 'dokka'
+}
+
+def GROUP_ID= 'fr.docjyJ.tisseoLib'
+def ARTIFACT_ID= 'tisseoLib'
+
+def MAVEN_REPOSITORY= 'maven'
+def USER= 'docjyj'
+
+def VERSION_NAME='1.2.2'
+
+def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
+def DESC = 'Library to simplify calls to the Tisseo API in Java / Kotlin.'
+
+// KOTLIN COMPILE
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
@@ -46,28 +51,31 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-dokka {
-    outputFormat = 'gfm'
-    outputDirectory = "./docs/"
-    configuration {
-        includes = ['./docs/packages.md']
-        sourceLink {
-            path = "src/main/kotlin"
-            url = "https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin"
-            lineSuffix = "#L"
-        }
-    }
+
+// PROJECT INFO
+group GROUP_ID
+version VERSION_NAME
+sourceCompatibility = 1.8
+
+// PUBLISHING
+task sourcesJar(type: Jar, dependsOn: project.classes) {
+    from sourceSets.main.allSource
 }
 
-clean { }
+task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/javadoc"
+}
 
-bintrayUpload { }
+task javadocJar(type: Jar, dependsOn: dokkaJavadoc) {
+    from "$buildDir/javadoc"
+}
 
 bintray {
     user = project.property('bintrayUser')
     key = project.property('bintrayApiKey')
     publications = ['mavenJava']
-
+    publish = true
     pkg {
         repo = MAVEN_REPOSITORY
         name = ARTIFACT_ID
@@ -84,18 +92,11 @@ bintray {
             vcsTag = 'v'+VERSION_NAME
             released = new Date()
             desc = VERSION_DESC
+            gpg {
+                sign = true
+            }
         }
     }
-}
-
-
-
-task sourcesJar(type: Jar, dependsOn: project.classes) {
-    from sourceSets.main.allSource
-}
-
-task javadocJar(type: Jar, dependsOn: project.javadoc) {
-    from javadoc.destinationDir
 }
 
 artifacts {
@@ -117,3 +118,18 @@ publishing {
         }
     }
 }
+
+// GIT HUB LIB
+dokka {
+    outputFormat = 'gfm'
+    outputDirectory = './docs/'
+    configuration {
+        includes = ['./docs/packages.md']
+        sourceLink {
+            path = 'src/main/kotlin'
+            url = 'https://github.com/'+USER+'/'+ARTIFACT_ID+'/tree/master/src/main/kotlin'
+            lineSuffix = "#L"
+        }
+    }
+}
+
