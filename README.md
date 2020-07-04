@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.2'
+    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.3'
 }
 ````
 
