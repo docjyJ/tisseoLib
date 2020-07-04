@@ -2,7 +2,7 @@
 
 # Message
 
-`data class Message` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Message.kt#L6)
+`data class Message` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Message.kt#L6)
 
 ### Constructors
 

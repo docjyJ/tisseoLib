@@ -2,7 +2,7 @@
 
 # StopArea
 
-`data class StopArea` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopArea.kt#L8)
+`data class StopArea` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopArea/StopArea.kt#L8)
 
 ### Constructors
 

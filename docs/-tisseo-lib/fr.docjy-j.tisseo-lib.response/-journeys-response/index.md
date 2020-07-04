@@ -2,7 +2,7 @@
 
 # JourneysResponse
 
-`data class JourneysResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/JourneysResponse.kt#L14)
+`data class JourneysResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/JourneysResponse.kt#L15)
 
 The response class of a journeys request.
 

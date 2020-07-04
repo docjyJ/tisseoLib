@@ -2,7 +2,7 @@
 
 # RollingStocksResponse
 
-`data class RollingStocksResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/RollingStocksResponse.kt#L14)
+`data class RollingStocksResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/RollingStocksResponse.kt#L15)
 
 The response class of a rolling stocks request.
 

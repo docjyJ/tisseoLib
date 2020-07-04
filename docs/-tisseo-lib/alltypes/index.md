@@ -358,34 +358,6 @@ The response class of a stop schedules request.
 
 |
 
-##### [fr.docjyJ.tisseoLib.exception.TisseoClientException](../fr.docjy-j.tisseo-lib.exception/-tisseo-client-exception.md)
-
-Indicates that an error was reached during a library action.
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.request.TisseoRequest](../fr.docjy-j.tisseo-lib.request/-tisseo-request/index.md)
-
-Interface of the class builder to do a request.
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.response.TisseoResponse](../fr.docjy-j.tisseo-lib.response/-tisseo-response/index.md)
-
-The response class of a request.
-
-
-|
-
-##### [fr.docjyJ.tisseoLib.exception.TisseoServerException](../fr.docjy-j.tisseo-lib.exception/-tisseo-server-exception/index.md)
-
-Signals that an error was reached during the request to the server.
-
-
-|
-
 ##### [fr.docjyJ.tisseoLib.model.line.TransportMode](../fr.docjy-j.tisseo-lib.model.line/-transport-mode/index.md)
 
 

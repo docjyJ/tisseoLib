@@ -2,7 +2,7 @@
 
 # TisseoServerException
 
-`class TisseoServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/exception/TisseoServerException.kt#L17)
+`class TisseoServerException : `[`Exception`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-exception/index.html) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/exception/TisseoServerException.kt#L17)
 
 Signals that an error was reached during the request to the server.
 

@@ -2,4 +2,4 @@
 
 # line
 
-`val line: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Line`](../../fr.docjy-j.tisseo-lib.model.line/-line/index.md)`>` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Destination.kt#L15)
+`val line: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Line`](../../fr.docjy-j.tisseo-lib.model.line/-line/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Destination.kt#L15)

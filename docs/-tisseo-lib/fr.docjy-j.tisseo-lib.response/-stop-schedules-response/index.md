@@ -2,7 +2,7 @@
 
 # StopSchedulesResponse
 
-`data class StopSchedulesResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L14)
+`data class StopSchedulesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L15)
 
 The response class of a stop schedules request.
 

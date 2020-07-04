@@ -2,7 +2,7 @@
 
 # TimeBounds
 
-`data class TimeBounds` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L7)
+`data class TimeBounds` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L7)
 
 ### Constructors
 

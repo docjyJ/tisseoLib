@@ -2,4 +2,4 @@
 
 # departures
 
-`val departures: `[`Departures`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-departures/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L16)
+`val departures: `[`Departures`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-departures/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L17)

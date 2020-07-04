@@ -2,4 +2,4 @@
 
 # wkt
 
-`val wkt: Geometry` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/GeometryX.kt#L9)
+`val wkt: Geometry` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/GeometryX.kt#L9)

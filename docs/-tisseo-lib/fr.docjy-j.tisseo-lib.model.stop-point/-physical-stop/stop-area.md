@@ -2,4 +2,4 @@
 
 # stopArea
 
-`val stopArea: `[`StopArea`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/PhysicalStop.kt#L22)
+`val stopArea: `[`StopArea`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-area/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/PhysicalStop.kt#L22)

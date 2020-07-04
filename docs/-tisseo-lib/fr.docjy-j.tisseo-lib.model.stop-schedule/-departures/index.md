@@ -2,7 +2,7 @@
 
 # Departures
 
-`data class Departures` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Departures.kt#L6)
+`data class Departures` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Departures.kt#L6)
 
 ### Constructors
 

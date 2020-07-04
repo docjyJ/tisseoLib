@@ -3,8 +3,8 @@
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.exception.ClientException
+import fr.docjyJ.apiClientBuilder.exception.ServerException
 import fr.docjyJ.tisseoLib.response.StopAreaResponse
 
 /**
@@ -55,27 +55,27 @@ class StopAreaRequest(private val apiKey: String) : RequestTemplate {
     /**
      * Execute the request.
      * @return Response of request in StopAreaResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
+     * @throws ServerException When the server returns an error.
+     * @throws ClientException When the library makes a mistake.
      */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
+    @Throws(ServerException::class, ClientException::class)
     override fun execute() = buildParams().execute(StopAreaResponse::class.java)
 
     /**
      * Execute the request.
      * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
+     * @throws ServerException When the server returns an error.
+     * @throws ClientException When the library makes a mistake.
      */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
+    @Throws(ServerException::class, ClientException::class)
     override fun executeAsString() = buildParams().execute()
 
     /**
      * Show the URL.
      * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
+     * @throws ClientException When the library makes a mistake.
      */
-    @Throws(TisseoClientException::class)
+    @Throws(ClientException::class)
     override fun getUrl() = buildParams().getUrl()
 
 }

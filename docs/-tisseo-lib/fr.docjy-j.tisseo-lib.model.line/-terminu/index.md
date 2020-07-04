@@ -2,7 +2,7 @@
 
 # Terminu
 
-`data class Terminu` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Terminu.kt#L6)
+`data class Terminu` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Terminu.kt#L6)
 
 ### Constructors
 

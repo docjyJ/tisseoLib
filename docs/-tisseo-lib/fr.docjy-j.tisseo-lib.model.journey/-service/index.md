@@ -2,7 +2,7 @@
 
 # Service
 
-`data class Service` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Service.kt#L9)
+`data class Service` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Service.kt#L9)
 
 ### Constructors
 

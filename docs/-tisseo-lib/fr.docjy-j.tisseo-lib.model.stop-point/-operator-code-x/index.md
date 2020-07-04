@@ -2,7 +2,7 @@
 
 # OperatorCodeX
 
-`data class OperatorCodeX` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCodeX.kt#L6)
+`data class OperatorCodeX` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCodeX.kt#L6)
 
 ### Constructors
 

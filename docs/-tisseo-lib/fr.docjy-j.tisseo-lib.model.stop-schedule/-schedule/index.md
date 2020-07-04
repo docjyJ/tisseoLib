@@ -2,7 +2,7 @@
 
 # Schedule
 
-`data class Schedule` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L7)
+`data class Schedule` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L7)
 
 ### Constructors
 

@@ -2,7 +2,7 @@
 
 # LinesResponse
 
-`data class LinesResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/LinesResponse.kt#L14)
+`data class LinesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/LinesResponse.kt#L15)
 
 The response class of a lines request.
 

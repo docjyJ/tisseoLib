@@ -2,4 +2,4 @@
 
 # operatorCode
 
-`val operatorCode: `[`OperatorCodeX`](../-operator-code-x/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCode.kt#L8)
+`val operatorCode: `[`OperatorCodeX`](../-operator-code-x/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/OperatorCode.kt#L8)

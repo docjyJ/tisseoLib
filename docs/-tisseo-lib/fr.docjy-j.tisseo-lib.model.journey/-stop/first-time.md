@@ -2,4 +2,4 @@
 
 # firstTime
 
-`val firstTime: LocalTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Stop.kt#L15)
+`val firstTime: LocalTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Stop.kt#L15)

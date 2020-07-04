@@ -2,7 +2,7 @@
 
 # StopX
 
-`data class StopX` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/StopX.kt#L6)
+`data class StopX` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/StopX.kt#L6)
 
 ### Constructors
 

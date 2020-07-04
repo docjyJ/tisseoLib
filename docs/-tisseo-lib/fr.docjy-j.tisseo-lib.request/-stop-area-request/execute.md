@@ -2,15 +2,15 @@
 
 # execute
 
-`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L61)
+`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L62)
 
 Execute the request.
 
 ### Exceptions
 
-`TisseoServerException` - When the server returns an error.
+`ServerException` - When the server returns an error.
 
-`TisseoClientException` - When the library makes a mistake.
+`ClientException` - When the library makes a mistake.
 
 **Return**
 Response of request in StopAreaResponse object.

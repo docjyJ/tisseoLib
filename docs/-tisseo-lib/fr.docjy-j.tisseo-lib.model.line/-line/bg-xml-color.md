@@ -2,4 +2,4 @@
 
 # bgXmlColor
 
-`val bgXmlColor: `[`Color`](https://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L10)
+`val bgXmlColor: `[`Color`](https://docs.oracle.com/javase/6/docs/api/java/awt/Color.html) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L10)

@@ -2,4 +2,4 @@
 
 # message
 
-`val message: `[`MessageX`](../-message-x/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/message/Message.kt#L11)
+`val message: `[`MessageX`](../-message-x/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/message/Message.kt#L11)

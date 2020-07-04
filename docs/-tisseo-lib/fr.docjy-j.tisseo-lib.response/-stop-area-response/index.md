@@ -2,7 +2,7 @@
 
 # StopAreaResponse
 
-`data class StopAreaResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L14)
+`data class StopAreaResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L15)
 
 The response class of a stop areas request.
 

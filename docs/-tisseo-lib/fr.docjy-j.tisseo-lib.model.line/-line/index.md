@@ -2,7 +2,7 @@
 
 # Line
 
-`data class Line` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L8)
+`data class Line` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/line/Line.kt#L8)
 
 ### Constructors
 

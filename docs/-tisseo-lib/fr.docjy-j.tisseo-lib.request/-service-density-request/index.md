@@ -2,7 +2,7 @@
 
 # ServiceDensityRequest
 
-`class ServiceDensityRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L25)
+`class ServiceDensityRequest : RequestTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L26)
 
 The class builder to do a Service Density request.
 

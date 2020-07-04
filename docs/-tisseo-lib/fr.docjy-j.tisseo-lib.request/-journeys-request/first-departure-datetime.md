@@ -2,7 +2,7 @@
 
 # firstDepartureDatetime
 
-`var firstDepartureDatetime: LocalDateTime?` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L46)
+`var firstDepartureDatetime: LocalDateTime?` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L47)
 
 First date time of departure.
 
