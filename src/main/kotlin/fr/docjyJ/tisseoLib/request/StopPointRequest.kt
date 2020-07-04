@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.StopPointResponse
@@ -25,7 +26,7 @@ import fr.docjyJ.tisseoLib.response.StopPointResponse
  * @property displayStopsWithoutDeparture Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
  */
 
-class StopPointRequest internal constructor(private val apiKey: String) : TisseoRequest {
+class StopPointRequest internal constructor(private val apiKey: String) : RequestTemplate {
     var network:String? = null
     var srid:String? = null
     var bbox:String? = null

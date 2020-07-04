@@ -2,6 +2,7 @@ package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
+import fr.docjyJ.apiClientBuilder.connection.ResponseTemplate
 import fr.docjyJ.tisseoLib.model.stopArea.StopAreas
 import java.time.LocalDateTime
 
@@ -13,7 +14,7 @@ import java.time.LocalDateTime
 
 data class StopAreaResponse(
     @SerializedName("expirationDate")
-    override val expirationDate: LocalDateTime,
+    val expirationDate: LocalDateTime,
     @SerializedName("stopAreas")
     val stopAreas: StopAreas
-) : TisseoResponse
+) : ResponseTemplate

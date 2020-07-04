@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.JourneysResponse
@@ -36,7 +37,7 @@ import java.time.LocalDateTime
  * @property maxApproachDistance Maximum walking distance.
  */
 
-class JourneysRequest(private val apiKey: String) : TisseoRequest {
+class JourneysRequest(private val apiKey: String) : RequestTemplate {
     var departurePlace:String? = null
     var departurePlaceXY:String? = null
     var arrivalPlace:String? = null

@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
@@ -22,7 +23,7 @@ import java.time.LocalDateTime
  * @property displayServices Displays the services found in the area covered.
  */
 
-class ServiceDensityRequest(private val apiKey: String) : TisseoRequest {
+class ServiceDensityRequest(private val apiKey: String) : RequestTemplate {
     var centerXY:String? = null
     var srid:String? = null
     var serviceNumber:Int? = null

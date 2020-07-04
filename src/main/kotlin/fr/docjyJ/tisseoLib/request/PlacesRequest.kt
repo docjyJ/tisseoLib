@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.PlacesResponse
@@ -32,7 +33,7 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  * @property publicPlaceFilter List of public places to explose.
  */
 
-class PlacesRequest(private val apiKey: String) : TisseoRequest {
+class PlacesRequest(private val apiKey: String) : RequestTemplate {
     var term:String? = null
     var network:String? = null
     var coordinatesXY:String? = null

@@ -6,6 +6,12 @@
     <version>1.2.1</version>
 
     <dependencies>
+        <dependency>
+            <groupId>fr.docjyJ.apiClientBuilder</groupId>
+            <artifactId>apiClientBuilder</artifactId>
+            <version>1.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
         <dependency>
             <groupId>com.google.code.gson</groupId>

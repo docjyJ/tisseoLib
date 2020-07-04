@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
     jcenter()
     maven {
-        url  'https://dl.bintray.com/docjyj/docjyjMaven'
+        url  'https://dl.bintray.com/docjyj/maven'
     }
 }
 
@@ -18,8 +18,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
 
-    compile 'org.locationtech.jts:jts-core:1.16.1'
+    implementation 'org.locationtech.jts:jts-core:1.16.1'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'fr.docjyJ.apiClientBuilder:apiClientBuilder:1.0'
 
 }
 

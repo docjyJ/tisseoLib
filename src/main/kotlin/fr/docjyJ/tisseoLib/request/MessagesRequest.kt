@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.MessagesResponse
@@ -16,7 +17,7 @@ import fr.docjyJ.tisseoLib.response.MessagesResponse
  * @property displayImportantOnly Displays only important messages. (found on the home page tisseo)
  */
 
-class MessagesRequest(private val apiKey: String) : TisseoRequest {
+class MessagesRequest(private val apiKey: String) : RequestTemplate {
     var network:String? = null
     var contentFormat:String? = null
     var displayImportantOnly:Boolean? = null

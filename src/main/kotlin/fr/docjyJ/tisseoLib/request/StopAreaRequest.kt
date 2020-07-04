@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.StopAreaResponse
@@ -24,7 +25,7 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  * @property displayStopPoints Display stop point of stop areas.
  */
 
-class StopAreaRequest(private val apiKey: String) : TisseoRequest {
+class StopAreaRequest(private val apiKey: String) : RequestTemplate {
     var network:String? = null
     var srid:String? = null
     var bbox:String? = null

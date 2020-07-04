@@ -1,5 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.NetworksResponse
@@ -10,7 +11,7 @@ import fr.docjyJ.tisseoLib.response.NetworksResponse
  * @constructor Create new request builder with no parameters.
  */
 
-class NetworksRequest(private val apiKey: String) : TisseoRequest {
+class NetworksRequest(private val apiKey: String) : RequestTemplate {
     private fun buildParams() = RequestBuilder(apiKey, "networks")
 
     /**

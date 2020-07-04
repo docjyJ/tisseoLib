@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
@@ -26,7 +27,7 @@ import java.time.LocalDateTime
  * @property firstAndLastOfDay Will return only first and last departure of the day.
  */
 
-class StopSchedulesRequest(private val apiKey: String) : TisseoRequest {
+class StopSchedulesRequest(private val apiKey: String) : RequestTemplate {
     var operatorCode:String? = null
     var stopPointId:String? = null
     var stopAreaId:String? = null

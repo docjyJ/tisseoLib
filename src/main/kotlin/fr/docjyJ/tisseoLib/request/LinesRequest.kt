@@ -2,6 +2,7 @@
 
 package fr.docjyJ.tisseoLib.request
 
+import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
 import fr.docjyJ.tisseoLib.exception.TisseoClientException
 import fr.docjyJ.tisseoLib.exception.TisseoServerException
 import fr.docjyJ.tisseoLib.response.LinesResponse
@@ -21,7 +22,7 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  * @property contentFormat Format of message content.
  */
 
-class LinesRequest(private val apiKey: String) : TisseoRequest {
+class LinesRequest(private val apiKey: String) : RequestTemplate {
     var network:String? = null
     var lineId:String? = null
     var shortName:String? = null
