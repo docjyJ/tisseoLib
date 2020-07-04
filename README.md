@@ -12,9 +12,7 @@ You are responsible for requests made with this library.
 In your `build.gradle` put :
 ````groovy
 repositories {
-    maven {
-        url  "https://dl.bintray.com/docjyj/maven"
-    }
+    jcenter()
 }
 
 dependencies {
