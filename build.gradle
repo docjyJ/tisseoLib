@@ -27,7 +27,7 @@ dependencies {
 // TASK DEF
 task docPublish {
     dependsOn 'clean'
-    dependsOn 'publish'
+    dependsOn 'bintrayUpload'
 }
 
 task docDocka {
@@ -40,7 +40,7 @@ def ARTIFACT_ID= 'tisseoLib'
 def MAVEN_REPOSITORY= 'maven'
 def USER= 'docjyj'
 
-def VERSION_NAME='1.2.2'
+def VERSION_NAME='1.2.3'
 
 def VERSION_DESC = 'Update of library '+ARTIFACT_ID+' at the vertion '+VERSION_NAME
 def DESC = 'Library to simplify calls to the Tisseo API in Java / Kotlin.'
