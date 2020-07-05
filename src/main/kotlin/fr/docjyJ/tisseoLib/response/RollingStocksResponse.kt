@@ -2,7 +2,7 @@ package fr.docjyJ.tisseoLib.response
 
 
 import com.google.gson.annotations.SerializedName
-import fr.docjyJ.apiClientBuilder.connection.ResponseTemplate
+import fr.docjyJ.apiClientBuilder.ResponseTemplate
 import fr.docjyJ.tisseoLib.model.rollingStock.RollingStock
 import java.time.LocalDateTime
 

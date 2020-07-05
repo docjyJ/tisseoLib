@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
 import java.time.LocalDateTime
 
@@ -20,26 +20,26 @@ import java.time.LocalDateTime
  */
 
 class ServiceDensityRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<ServiceDensityResponse>(
         "services_density",
         ServiceDensityResponse::class.java
 ) {
-    @QueryParameter("centerXY")
+    @QueryName("centerXY")
     var centerXY:String? = null
-    @QueryParameter("srid")
+    @QueryName("srid")
     var srid:String? = null
-    @QueryParameter("serviceNumber")
+    @QueryName("serviceNumber")
     var serviceNumber:Int? = null
-    @QueryParameter("beginDateTimeSlot")
+    @QueryName("beginDateTimeSlot")
     var beginDateTimeSlot:LocalDateTime? = null
-    @QueryParameter("endDateTimeSlot")
+    @QueryName("endDateTimeSlot")
     var endDateTimeSlot:LocalDateTime? = null
-    @QueryParameter("networkList")
+    @QueryName("networkList")
     var networkList:String? = null
-    @QueryParameter("rollingStockList")
+    @QueryName("rollingStockList")
     var rollingStockList:String? = null
-    @QueryParameter("displayServices")
+    @QueryName("displayServices")
     var displayServices:Boolean? = null
 }

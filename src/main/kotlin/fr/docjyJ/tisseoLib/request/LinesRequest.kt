@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.LinesResponse
 
 /**
@@ -19,26 +19,26 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  */
 
 class LinesRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<LinesResponse>(
         "lines",
         LinesResponse::class.java
 ) {
-    @QueryParameter("network")
+    @QueryName("network")
     var network:String? = null
-    @QueryParameter("lineId")
+    @QueryName("lineId")
     var lineId:String? = null
-    @QueryParameter("shortName")
+    @QueryName("shortName")
     var shortName:String? = null
-    @QueryParameter("displayTerminus")
+    @QueryName("displayTerminus")
     var displayTerminus:Boolean? = null
-    @QueryParameter("displayMessages")
+    @QueryName("displayMessages")
     var displayMessages:Boolean? = null
-    @QueryParameter("displayOnlyDisrupted")
+    @QueryName("displayOnlyDisrupted")
     var displayOnlyDisrupted:Boolean? = null
-    @QueryParameter("displayGeometry")
+    @QueryName("displayGeometry")
     var displayGeometry:Boolean? = null
-    @QueryParameter("contentFormat")
+    @QueryName("contentFormat")
     var contentFormat:String? = null
 }

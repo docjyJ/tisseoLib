@@ -4,18 +4,16 @@ import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
-import org.locationtech.jts.geom.Geometry
-import org.locationtech.jts.io.WKTReader
 import java.lang.reflect.Type
 
 
-internal class GeometryTypeAdapter : JsonDeserializer<Geometry> {
+internal class BooleanJsonTypeAdapter : JsonDeserializer<Boolean> {
     @Throws(JsonParseException::class)
     override fun deserialize(
-        json: JsonElement, typeOfT: Type?,
-        context: JsonDeserializationContext?
-    ): Geometry {
+            json: JsonElement, typeOfT: Type?,
+            context: JsonDeserializationContext?
+    ): Boolean {
         val code = json.asString
-        return WKTReader().read(code)!!
+        return (if (code == "0" || code == "no") false else if (code == "1" || code == "yes") true else null)!!
     }
 }

@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.PlacesResponse
 
 /**
@@ -30,42 +30,42 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  */
 
 class PlacesRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<PlacesResponse>(
         "places",
         PlacesResponse::class.java
 ) {
-    @QueryParameter("term")
+    @QueryName("term")
     var term:String? = null
-    @QueryParameter("network")
+    @QueryName("network")
     var network:String? = null
-    @QueryParameter("coordinatesXY")
+    @QueryName("coordinatesXY")
     var coordinatesXY:String? = null
-    @QueryParameter("maxDistance")
+    @QueryName("maxDistance")
     var maxDistance:Boolean? = null
-    @QueryParameter("srid")
+    @QueryName("srid")
     var srid:String? = null
-    @QueryParameter("bbox")
+    @QueryName("bbox")
     var bbox:String? = null
-    @QueryParameter("number")
+    @QueryName("number")
     var number:Int? = null
-    @QueryParameter("displayBestPlace")
+    @QueryName("displayBestPlace")
     var displayBestPlace:Boolean? = null
-    @QueryParameter("displayOnlyStopAreas")
+    @QueryName("displayOnlyStopAreas")
     var displayOnlyStopAreas:Boolean? = null
-    @QueryParameter("displayOnlyRoads")
+    @QueryName("displayOnlyRoads")
     var displayOnlyRoads:Boolean? = null
-    @QueryParameter("displayOnlyAddresses")
+    @QueryName("displayOnlyAddresses")
     var displayOnlyAddresses:Boolean? = null
-    @QueryParameter("displayOnlyPublicPlaces")
+    @QueryName("displayOnlyPublicPlaces")
     var displayOnlyPublicPlaces:Boolean? = null
-    @QueryParameter("displayOnlyCities")
+    @QueryName("displayOnlyCities")
     var displayOnlyCities:Boolean? = null
-    @QueryParameter("lang")
+    @QueryName("lang")
     var lang:String? = null
-    @QueryParameter("simple")
+    @QueryName("simple")
     var simple:Boolean? = null
-    @QueryParameter("publicPlaceFilter")
+    @QueryName("publicPlaceFilter")
     var publicPlaceFilter:String? = null
 }

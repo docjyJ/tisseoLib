@@ -1,5 +1,5 @@
-import fr.docjyJ.apiClientBuilder.exception.ClientException;
-import fr.docjyJ.apiClientBuilder.exception.ServerException;
+import fr.docjyJ.apiClientBuilder.exception.ApiClientException;
+import fr.docjyJ.apiClientBuilder.exception.ApiServerException;
 import fr.docjyJ.tisseoLib.request.*;
 import fr.docjyJ.tisseoLib.response.*;
 
@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
 
-    public StopAreaResponse stopArea() throws ServerException, ClientException {
+    public StopAreaResponse stopArea() throws ApiServerException, ApiClientException {
         //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
 
@@ -20,7 +20,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopPointResponse stopPoint() throws ServerException, ClientException {
+    public StopPointResponse stopPoint() throws ApiServerException, ApiClientException {
         //Create request object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
@@ -34,7 +34,7 @@ public class Example {
         return request.execute();
     }
 
-    public PlacesResponse places() throws ServerException, ClientException {
+    public PlacesResponse places() throws ApiServerException, ApiClientException {
         //Create request object
         PlacesRequest request = new PlacesRequest(API_KEY);
 
@@ -45,7 +45,7 @@ public class Example {
         return request.execute();
     }
 
-    public NetworksResponse networks() throws ServerException, ClientException {
+    public NetworksResponse networks() throws ApiServerException, ApiClientException {
         //Create request object
         NetworksRequest request = new NetworksRequest(API_KEY);
 
@@ -53,7 +53,7 @@ public class Example {
         return request.execute();
     }
 
-    public LinesResponse lines() throws ServerException, ClientException {
+    public LinesResponse lines() throws ApiServerException, ApiClientException {
         //Create request object
         LinesRequest request = new LinesRequest(API_KEY);
 
@@ -65,7 +65,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopSchedulesResponse stopSchedules() throws ServerException, ClientException {
+    public StopSchedulesResponse stopSchedules() throws ApiServerException, ApiClientException {
         //Create request object
         StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
 
@@ -77,7 +77,7 @@ public class Example {
         return request.execute();
     }
 
-    public RollingStocksResponse rollingStocks() throws ServerException, ClientException {
+    public RollingStocksResponse rollingStocks() throws ApiServerException, ApiClientException {
         //Create request object
         RollingStocksRequest request = new RollingStocksRequest(API_KEY);
 
@@ -85,7 +85,7 @@ public class Example {
         return request.execute();
     }
 
-    public JourneysResponse journeys() throws ServerException, ClientException {
+    public JourneysResponse journeys() throws ApiServerException, ApiClientException {
         //Create request Object
         JourneysRequest request = new JourneysRequest(API_KEY);
 
@@ -99,7 +99,7 @@ public class Example {
 
     }
 
-    public MessagesResponse messages() throws ServerException, ClientException {
+    public MessagesResponse messages() throws ApiServerException, ApiClientException {
         //Create request object
         MessagesRequest request = new MessagesRequest(API_KEY);
 
@@ -107,7 +107,7 @@ public class Example {
         return request.execute();
     }
 
-    public ServiceDensityResponse serviceDensity() throws ServerException, ClientException {
+    public ServiceDensityResponse serviceDensity() throws ApiServerException, ApiClientException {
         //Create request Object
         ServiceDensityRequest request = new ServiceDensityRequest(API_KEY);
 

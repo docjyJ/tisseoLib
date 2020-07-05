@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.StopAreaResponse
 
 /**
@@ -22,32 +22,32 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  */
 
 class StopAreaRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<StopAreaResponse>(
         "stop_areas",
         StopAreaResponse::class.java
 ) {
-    @QueryParameter("network")
+    @QueryName("network")
     var network:String? = null
-    @QueryParameter("srid")
+    @QueryName("srid")
     var srid:String? = null
-    @QueryParameter("bbox")
+    @QueryName("bbox")
     var bbox:String? = null
-    @QueryParameter("displayLines")
+    @QueryName("displayLines")
     var displayLines:Boolean? = null
-    @QueryParameter("displayCoordXY")
+    @QueryName("displayCoordXY")
     var displayCoordXY:Boolean? = null
-    @QueryParameter("lineId")
+    @QueryName("lineId")
     var lineId:String? = null
-    @QueryParameter("terminusId")
+    @QueryName("terminusId")
     var terminusId:String? = null
-    @QueryParameter("timeframe")
+    @QueryName("timeframe")
     var timeframe:String? = null
-    @QueryParameter("ignoreUnservedStops")
+    @QueryName("ignoreUnservedStops")
     var ignoreUnservedStops:String? = null
-    @QueryParameter("displayArrivalOnlyLines")
+    @QueryName("displayArrivalOnlyLines")
     var displayArrivalOnlyLines:Boolean? = null
-    @QueryParameter("displayStopPoints")
+    @QueryName("displayStopPoints")
     var displayStopPoints:Boolean? = null
 }

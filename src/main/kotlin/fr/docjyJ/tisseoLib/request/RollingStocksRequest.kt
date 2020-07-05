@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.RollingStocksResponse
 
 /**
@@ -10,7 +10,7 @@ import fr.docjyJ.tisseoLib.response.RollingStocksResponse
  */
 
 class RollingStocksRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<RollingStocksResponse>(
         "rolling_stocks",

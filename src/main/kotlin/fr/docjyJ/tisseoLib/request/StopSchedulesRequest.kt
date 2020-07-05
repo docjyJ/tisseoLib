@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
 import java.time.LocalDateTime
 
@@ -24,34 +24,34 @@ import java.time.LocalDateTime
  */
 
 class StopSchedulesRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<StopSchedulesResponse>(
         "stops_schedules",
         StopSchedulesResponse::class.java
 ) {
-    @QueryParameter("operatorCode")
+    @QueryName("operatorCode")
     var operatorCode:String? = null
-    @QueryParameter("stopPointId")
+    @QueryName("stopPointId")
     var stopPointId:String? = null
-    @QueryParameter("stopAreaId")
+    @QueryName("stopAreaId")
     var stopAreaId:String? = null
-    @QueryParameter("stopsList")
+    @QueryName("stopsList")
     var stopsList:String? = null
-    @QueryParameter("network")
+    @QueryName("network")
     var network:String? = null
-    @QueryParameter("number")
+    @QueryName("number")
     var number:String? = null
-    @QueryParameter("lineId")
+    @QueryName("lineId")
     var lineId:String? = null
-    @QueryParameter("displayRealTime")
+    @QueryName("displayRealTime")
     var displayRealTime:Boolean? = null
-    @QueryParameter("timetableByArea")
+    @QueryName("timetableByArea")
     var timetableByArea:Boolean? = null
-    @QueryParameter("datetime")
+    @QueryName("datetime")
     var datetime:LocalDateTime? = null
-    @QueryParameter("maxDays")
+    @QueryName("maxDays")
     var maxDays:Int? = null
-    @QueryParameter("firstAndLastOfDay")
+    @QueryName("firstAndLastOfDay")
     var firstAndLastOfDay:Boolean? = null
 }

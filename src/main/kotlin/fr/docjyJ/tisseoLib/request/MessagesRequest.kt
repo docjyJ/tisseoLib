@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.MessagesResponse
 
 /**
@@ -14,16 +14,16 @@ import fr.docjyJ.tisseoLib.response.MessagesResponse
  */
 
 class MessagesRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<MessagesResponse>(
         "messages",
         MessagesResponse::class.java
 ) {
-    @QueryParameter("network")
+    @QueryName("network")
     var network:String? = null
-    @QueryParameter("contentFormat")
+    @QueryName("contentFormat")
     var contentFormat:String? = null
-    @QueryParameter("displayImportantOnly")
+    @QueryName("displayImportantOnly")
     var displayImportantOnly:Boolean? = null
 }

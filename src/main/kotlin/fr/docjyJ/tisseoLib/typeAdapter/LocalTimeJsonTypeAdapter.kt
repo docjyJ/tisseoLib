@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
 
 
-internal class LocalTimeTypeAdapter : JsonDeserializer<LocalTime> {
+internal class LocalTimeJsonTypeAdapter : JsonDeserializer<LocalTime> {
     @Throws(JsonParseException::class)
     override fun deserialize(
             json: JsonElement, typeOfT: Type?,

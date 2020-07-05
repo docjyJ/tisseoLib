@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
+import fr.docjyJ.apiClientBuilder.anotation.QueryName
 import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
 
@@ -34,54 +34,54 @@ import java.time.LocalDateTime
  */
 
 class JourneysRequest(
-        @QueryParameter("key")
+        @QueryName("key")
         private val apiKey: String
 ) : TisseoRequestGetBuilder<JourneysResponse>(
         "journeys",
                 JourneysResponse::class.java
 ) {
-    @QueryParameter("departurePlace")
+    @QueryName("departurePlace")
     var departurePlace:String? = null
-    @QueryParameter("departurePlaceXY")
+    @QueryName("departurePlaceXY")
     var departurePlaceXY:String? = null
-    @QueryParameter("arrivalPlace")
+    @QueryName("arrivalPlace")
     var arrivalPlace:String? = null
-    @QueryParameter("arrivalPlaceXY")
+    @QueryName("arrivalPlaceXY")
     var arrivalPlaceXY:String? = null
-    @QueryParameter("srid")
+    @QueryName("srid")
     var srid:String? = null
-    @QueryParameter("networkList")
+    @QueryName("networkList")
     var networkList:String? = null
-    @QueryParameter("firstDepartureDatetime")
+    @QueryName("firstDepartureDatetime")
     var firstDepartureDatetime:LocalDateTime? = null
-    @QueryParameter("lastDepartureDatetime")
+    @QueryName("lastDepartureDatetime")
     var lastDepartureDatetime:LocalDateTime? = null
-    @QueryParameter("maxTransferDuration")
+    @QueryName("maxTransferDuration")
     var maxTransferDuration:String? = null
-    @QueryParameter("maxTransferNumber")
+    @QueryName("maxTransferNumber")
     var maxTransferNumber:String? = null
-    @QueryParameter("roadMode")
+    @QueryName("roadMode")
     var roadMode:String? = null
-    @QueryParameter("roadSpeed")
+    @QueryName("roadSpeed")
     var roadSpeed:Float? = null
-    @QueryParameter("roadMaxDistance")
+    @QueryName("roadMaxDistance")
     var roadMaxDistance:String? = null
-    @QueryParameter("startRoadMode")
+    @QueryName("startRoadMode")
     var startRoadMode:String? = null
-    @QueryParameter("startRoadSpeed")
+    @QueryName("startRoadSpeed")
     var startRoadSpeed:Float? = null
-    @QueryParameter("startRoadMaxDistance")
+    @QueryName("startRoadMaxDistance")
     var startRoadMaxDistance:String? = null
-    @QueryParameter("rollingStockList")
+    @QueryName("rollingStockList")
     var rollingStockList:String? = null
-    @QueryParameter("number")
+    @QueryName("number")
     var number:Int? = null
-    @QueryParameter("displayResultTable")
+    @QueryName("displayResultTable")
     var displayResultTable:Boolean? = null
-    @QueryParameter("displayWording")
+    @QueryName("displayWording")
     var displayWording:Boolean? = null
-    @QueryParameter("displayMessages")
+    @QueryName("displayMessages")
     var displayMessages:Boolean? = null
-    @QueryParameter("maxApproachDistance")
+    @QueryName("maxApproachDistance")
     var maxApproachDistance:String? = null
 }
