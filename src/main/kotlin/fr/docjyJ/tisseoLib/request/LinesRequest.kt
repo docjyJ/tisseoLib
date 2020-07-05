@@ -1,9 +1,6 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.LinesResponse
 
 /**
@@ -11,6 +8,7 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property lineId Filter on a single line by its ID.
  * @property shortName Filter on a single line by line number.
@@ -21,51 +19,27 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  * @property contentFormat Format of message content.
  */
 
-class LinesRequest(private val apiKey: String) : TisseoRequest {
+class LinesRequest(
+        @QueryName("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<LinesResponse>(
+        "lines",
+        LinesResponse::class.java
+) {
+    @QueryName("network")
     var network:String? = null
+    @QueryName("lineId")
     var lineId:String? = null
+    @QueryName("shortName")
     var shortName:String? = null
+    @QueryName("displayTerminus")
     var displayTerminus:Boolean? = null
+    @QueryName("displayMessages")
     var displayMessages:Boolean? = null
+    @QueryName("displayOnlyDisrupted")
     var displayOnlyDisrupted:Boolean? = null
+    @QueryName("displayGeometry")
     var displayGeometry:Boolean? = null
+    @QueryName("contentFormat")
     var contentFormat:String? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "lines").apply {
-        addParameter("network",network)
-        addParameter("lineId",lineId)
-        addParameter("shortName",shortName)
-        addParameter("displayTerminus",displayTerminus)
-        addParameter("displayMessages",displayMessages)
-        addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
-        addParameter("displayGeometry",displayGeometry)
-        addParameter("contentFormat",contentFormat)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in LinesResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(LinesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

@@ -2,7 +2,7 @@
 
 # TisseoRequest
 
-`interface TisseoRequest` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/TisseoRequest.kt#L11)
+`interface TisseoRequest` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/TisseoRequest.kt#L11)
 
 Interface of the class builder to do a request.
 

@@ -2,7 +2,7 @@
 
 # ServiceDensityRequest
 
-`class ServiceDensityRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L25)
+`class ServiceDensityRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`ServiceDensityResponse`](../../fr.docjy-j.tisseo-lib.response/-service-density-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L23)
 
 The class builder to do a Service Density request.
 
@@ -24,11 +24,3 @@ The class builder to do a Service Density request.
 | [rollingStockList](rolling-stock-list.md) | Transport mode list.`var rollingStockList: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [serviceNumber](service-number.md) | Number of distinct transport services we want to reach in the time slot .`var serviceNumber: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`?` |
 | [srid](srid.md) | Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)`var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`ServiceDensityResponse`](../../fr.docjy-j.tisseo-lib.response/-service-density-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

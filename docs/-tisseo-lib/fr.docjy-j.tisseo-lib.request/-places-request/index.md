@@ -2,7 +2,7 @@
 
 # PlacesRequest
 
-`class PlacesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L35)
+`class PlacesRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.response/-places-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/PlacesRequest.kt#L33)
 
 The class builder to do a Line request.
 
@@ -35,11 +35,3 @@ It is possible to get the response string (via the executeAsString () method) an
 | [simple](simple.md) | Formatting the json output for jquery.`var simple: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
 | [srid](srid.md) | Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)`var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [term](term.md) | Text string. (3 characters minimum)`var term: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`PlacesResponse`](../../fr.docjy-j.tisseo-lib.response/-places-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

@@ -2,7 +2,7 @@
 
 # LinesResponse
 
-`data class LinesResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/LinesResponse.kt#L14)
+`data class LinesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/LinesResponse.kt#L16)
 
 The response class of a lines request.
 
@@ -17,4 +17,4 @@ The response class of a lines request.
 | Name | Summary |
 |---|---|
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |
-| [lines](lines.md) | `val lines: `[`Lines`](../../fr.docjy-j.tisseo-lib.model.line/-lines/index.md) |
+| [lines](lines.md) | Contains Lines.`val lines: `[`Lines`](../../fr.docjy-j.tisseo-lib.model.line/-lines/index.md) |

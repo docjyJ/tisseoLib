@@ -2,7 +2,7 @@
 
 # &lt;init&gt;
 
-`ServiceDensityResponse(distance: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, expirationDate: LocalDateTime, isServiceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, serviceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, stops: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Stop`](../../fr.docjy-j.tisseo-lib.model.service-density/-stop/index.md)`>)`
+`ServiceDensityResponse(distance: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, expirationDate: LocalDateTime, isServiceNumberReached: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, serviceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, stops: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Stop`](../../fr.docjy-j.tisseo-lib.model.service-density/-stop/index.md)`>)`
 
 The response class of a service density request.
 

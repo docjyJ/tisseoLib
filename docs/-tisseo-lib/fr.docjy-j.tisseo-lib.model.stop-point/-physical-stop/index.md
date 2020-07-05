@@ -2,7 +2,7 @@
 
 # PhysicalStop
 
-`data class PhysicalStop` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/PhysicalStop.kt#L8)
+`data class PhysicalStop` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopPoint/PhysicalStop.kt#L8)
 
 ### Constructors
 

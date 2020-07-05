@@ -2,7 +2,7 @@
 
 # Stop
 
-`data class Stop` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/Stop.kt#L6)
+`data class Stop` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/Stop.kt#L6)
 
 ### Constructors
 

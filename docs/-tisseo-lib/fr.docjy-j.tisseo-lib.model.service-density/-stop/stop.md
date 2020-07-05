@@ -2,4 +2,4 @@
 
 # stop
 
-`val stop: `[`StopX`](../-stop-x/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/Stop.kt#L8)
+`val stop: `[`StopX`](../-stop-x/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/serviceDensity/Stop.kt#L8)

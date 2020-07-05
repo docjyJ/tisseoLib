@@ -2,7 +2,7 @@
 
 # LinesRequest
 
-`class LinesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L24)
+`class LinesRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`LinesResponse`](../../fr.docjy-j.tisseo-lib.response/-lines-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/LinesRequest.kt#L22)
 
 The class builder to do a Line request.
 
@@ -24,11 +24,3 @@ The class builder to do a Line request.
 | [lineId](line-id.md) | Filter on a single line by its ID.`var lineId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [network](network.md) | Transport operator.`var network: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [shortName](short-name.md) | Filter on a single line by line number.`var shortName: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`LinesResponse`](../../fr.docjy-j.tisseo-lib.response/-lines-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

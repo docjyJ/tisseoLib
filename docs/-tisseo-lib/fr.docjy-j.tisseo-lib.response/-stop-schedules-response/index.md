@@ -2,7 +2,7 @@
 
 # StopSchedulesResponse
 
-`data class StopSchedulesResponse : `[`TisseoResponse`](../-tisseo-response/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L14)
+`data class StopSchedulesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopSchedulesResponse.kt#L16)
 
 The response class of a stop schedules request.
 
@@ -16,5 +16,5 @@ The response class of a stop schedules request.
 
 | Name | Summary |
 |---|---|
-| [departures](departures.md) | `val departures: `[`Departures`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-departures/index.md) |
+| [departures](departures.md) | Contains Departures.`val departures: `[`Departures`](../../fr.docjy-j.tisseo-lib.model.stop-schedule/-departures/index.md) |
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |

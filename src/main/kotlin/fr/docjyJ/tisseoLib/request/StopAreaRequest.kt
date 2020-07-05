@@ -1,9 +1,6 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.StopAreaResponse
 
 /**
@@ -11,6 +8,7 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property bbox Filters stops included in bounding box.
@@ -24,57 +22,33 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  * @property displayStopPoints Display stop point of stop areas.
  */
 
-class StopAreaRequest(private val apiKey: String) : TisseoRequest {
+class StopAreaRequest(
+        @QueryName("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<StopAreaResponse>(
+        "stop_areas",
+        StopAreaResponse::class.java
+) {
+    @QueryName("network")
     var network:String? = null
+    @QueryName("srid")
     var srid:String? = null
+    @QueryName("bbox")
     var bbox:String? = null
+    @QueryName("displayLines")
     var displayLines:Boolean? = null
+    @QueryName("displayCoordXY")
     var displayCoordXY:Boolean? = null
+    @QueryName("lineId")
     var lineId:String? = null
+    @QueryName("terminusId")
     var terminusId:String? = null
+    @QueryName("timeframe")
     var timeframe:String? = null
+    @QueryName("ignoreUnservedStops")
     var ignoreUnservedStops:String? = null
+    @QueryName("displayArrivalOnlyLines")
     var displayArrivalOnlyLines:Boolean? = null
+    @QueryName("displayStopPoints")
     var displayStopPoints:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "stop_areas").apply {
-        addParameter("network",network)
-        addParameter("srid",srid)
-        addParameter("bbox",bbox)
-        addParameter("displayLines",displayLines)
-        addParameter("displayCoordXY",displayCoordXY)
-        addParameter("lineId",lineId)
-        addParameter("terminusId",terminusId)
-        addParameter("timeframe",timeframe)
-        addParameter("ignoreUnservedStops",ignoreUnservedStops)
-        addParameter("displayArrivalOnlyLines",displayArrivalOnlyLines)
-        addParameter("displayStopPoints",displayStopPoints)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in StopAreaResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(StopAreaResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

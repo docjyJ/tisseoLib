@@ -2,4 +2,4 @@
 
 # maxDepartureHour
 
-`val maxDepartureHour: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L9)
+`val maxDepartureHour: LocalDateTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L9)

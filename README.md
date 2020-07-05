@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.2'
+    implementation 'fr.docjyJ.tisseoLib:tisseoLib:1.2.3'
 }
 ````
 
@@ -34,7 +34,7 @@ Refer to the documentation provided by Tisséo (French and English) for resource
 
 ```java
 class Exemple{
-    public StopAreaResponse stopArea() throws TisseoServerException, TisseoClientException {
+    public StopAreaResponse stopArea() throws ServerException, ClientException {
         //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
 

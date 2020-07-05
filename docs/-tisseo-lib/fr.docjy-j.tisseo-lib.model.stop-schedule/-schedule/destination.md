@@ -2,4 +2,4 @@
 
 # destination
 
-`val destination: `[`Destination`](../-destination/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L9)
+`val destination: `[`Destination`](../-destination/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Schedule.kt#L9)

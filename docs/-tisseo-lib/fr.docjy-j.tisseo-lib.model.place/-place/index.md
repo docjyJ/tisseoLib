@@ -2,7 +2,7 @@
 
 # Place
 
-`data class Place` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/place/Place.kt#L6)
+`data class Place` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/place/Place.kt#L6)
 
 ### Constructors
 

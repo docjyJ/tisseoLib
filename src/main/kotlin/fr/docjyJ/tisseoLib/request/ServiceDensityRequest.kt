@@ -1,9 +1,6 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
 import java.time.LocalDateTime
 
@@ -12,6 +9,7 @@ import java.time.LocalDateTime
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property centerXY Address or place of departure or arrival.
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property serviceNumber Number of distinct transport services we want to reach in the time slot .
@@ -22,54 +20,27 @@ import java.time.LocalDateTime
  * @property displayServices Displays the services found in the area covered.
  */
 
-class ServiceDensityRequest(private val apiKey: String) : TisseoRequest {
+class ServiceDensityRequest(
+        @QueryName("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<ServiceDensityResponse>(
+        "services_density",
+        ServiceDensityResponse::class.java
+) {
+    @QueryName("centerXY")
     var centerXY:String? = null
+    @QueryName("srid")
     var srid:String? = null
+    @QueryName("serviceNumber")
     var serviceNumber:Int? = null
+    @QueryName("beginDateTimeSlot")
     var beginDateTimeSlot:LocalDateTime? = null
+    @QueryName("endDateTimeSlot")
     var endDateTimeSlot:LocalDateTime? = null
+    @QueryName("networkList")
     var networkList:String? = null
+    @QueryName("rollingStockList")
     var rollingStockList:String? = null
+    @QueryName("displayServices")
     var displayServices:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(
-        apiKey,
-        "services_density"
-    ).apply {
-        addParameter("centerXY",centerXY)
-        addParameter("srid",srid)
-        addParameter("serviceNumber",serviceNumber)
-        addParameter("beginDateTimeSlot",beginDateTimeSlot)
-        addParameter("endDateTimeSlot",endDateTimeSlot)
-        addParameter("networkList",networkList)
-        addParameter("rollingStockList",rollingStockList)
-        addParameter("displayServices",displayServices)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in ServiceDensityResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(ServiceDensityResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

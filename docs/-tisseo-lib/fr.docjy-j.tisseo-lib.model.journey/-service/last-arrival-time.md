@@ -2,4 +2,4 @@
 
 # lastArrivalTime
 
-`val lastArrivalTime: LocalTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Service.kt#L21)
+`val lastArrivalTime: LocalTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/Service.kt#L21)

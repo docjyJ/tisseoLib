@@ -1,9 +1,6 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.MessagesResponse
 
 /**
@@ -11,46 +8,23 @@ import fr.docjyJ.tisseoLib.response.MessagesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property contentFormat Format message contents.
  * @property displayImportantOnly Displays only important messages. (found on the home page tisseo)
  */
 
-class MessagesRequest(private val apiKey: String) : TisseoRequest {
+class MessagesRequest(
+        @QueryName("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<MessagesResponse>(
+        "messages",
+        MessagesResponse::class.java
+) {
+    @QueryName("network")
     var network:String? = null
+    @QueryName("contentFormat")
     var contentFormat:String? = null
+    @QueryName("displayImportantOnly")
     var displayImportantOnly:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "messages").apply {
-        addParameter("network",network)
-        addParameter("contentFormat",contentFormat)
-        addParameter("displayImportantOnly",displayImportantOnly)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in MessagesResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(MessagesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

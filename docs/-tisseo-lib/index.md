@@ -14,7 +14,6 @@ for the use of the parameters and the API.
 
 | Name | Summary |
 |---|---|
-| [fr.docjyJ.tisseoLib.exception](fr.docjy-j.tisseo-lib.exception/index.md) | Contains exception. |
 | [fr.docjyJ.tisseoLib.model.journey](fr.docjy-j.tisseo-lib.model.journey/index.md) | Data models for the journey response. |
 | [fr.docjyJ.tisseoLib.model.line](fr.docjy-j.tisseo-lib.model.line/index.md) | Data models for the line response. |
 | [fr.docjyJ.tisseoLib.model.message](fr.docjy-j.tisseo-lib.model.message/index.md) | Data models for the message response. |

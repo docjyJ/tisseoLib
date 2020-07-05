@@ -2,7 +2,7 @@
 
 # Destination
 
-`data class Destination` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Destination.kt#L7)
+`data class Destination` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/stopSchedule/Destination.kt#L7)
 
 ### Constructors
 

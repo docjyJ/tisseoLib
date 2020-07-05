@@ -2,7 +2,7 @@
 
 # JourneysRequest
 
-`class JourneysRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L39)
+`class JourneysRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`JourneysResponse`](../../fr.docjy-j.tisseo-lib.response/-journeys-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/JourneysRequest.kt#L37)
 
 The class builder to do a Journeys request.
 
@@ -38,11 +38,3 @@ The class builder to do a Journeys request.
 | [startRoadMaxDistance](start-road-max-distance.md) | Maximum distance for departure road section.`var startRoadMaxDistance: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [startRoadMode](start-road-mode.md) | Conveyance with which to perform the portion of the road path at the beginning of the journey.`var startRoadMode: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [startRoadSpeed](start-road-speed.md) | Speed (meter by seconds) of selected roadMode.`var startRoadSpeed: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`JourneysResponse`](../../fr.docjy-j.tisseo-lib.response/-journeys-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

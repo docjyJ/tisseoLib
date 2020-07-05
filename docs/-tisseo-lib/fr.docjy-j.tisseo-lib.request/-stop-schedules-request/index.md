@@ -2,7 +2,7 @@
 
 # StopSchedulesRequest
 
-`class StopSchedulesRequest : `[`TisseoRequest`](../-tisseo-request/index.md) [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L29)
+`class StopSchedulesRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-schedules-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopSchedulesRequest.kt#L27)
 
 The class builder to do a Stop Schedules request.
 
@@ -28,11 +28,3 @@ The class builder to do a Stop Schedules request.
 | [stopPointId](stop-point-id.md) | Is the number of physical stop point.`var stopPointId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [stopsList](stops-list.md) | A list of stop areas or stop points (or both) separated by commas. Allows you to filter them in each argument by business line or direction.`var stopsList: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [timetableByArea](timetable-by-area.md) | Groups the results by stop areas then couples (line, destination) ordered by time of next departure.`var timetableByArea: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopSchedulesResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-schedules-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

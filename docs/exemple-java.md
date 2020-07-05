@@ -3,7 +3,7 @@ Example.java [(source)](https://github.com/docjyJ/TisseoLib/blob/master/src/test
 public class Example {
     private static final String API_KEY = "null-api-key"; // Insert your api key
 
-    public StopAreaResponse stopArea() throws TisseoServerException, TisseoClientException {
+    public StopAreaResponse stopArea() throws ServerException, ClientException {
         //Create request object
         StopAreaRequest request = new StopAreaRequest(API_KEY);
 
@@ -15,7 +15,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopPointResponse stopPoint() throws TisseoServerException, TisseoClientException {
+    public StopPointResponse stopPoint() throws ServerException, ClientException {
         //Create request object
         StopPointRequest request = new StopPointRequest(API_KEY);
 
@@ -29,7 +29,7 @@ public class Example {
         return request.execute();
     }
 
-    public PlacesResponse places() throws TisseoServerException, TisseoClientException {
+    public PlacesResponse places() throws ServerException, ClientException {
         //Create request object
         PlacesRequest request = new PlacesRequest(API_KEY);
 
@@ -40,7 +40,7 @@ public class Example {
         return request.execute();
     }
 
-    public NetworksResponse networks() throws TisseoServerException, TisseoClientException {
+    public NetworksResponse networks() throws ServerException, ClientException {
         //Create request object
         NetworksRequest request = new NetworksRequest(API_KEY);
 
@@ -48,7 +48,7 @@ public class Example {
         return request.execute();
     }
 
-    public LinesResponse lines() throws TisseoServerException, TisseoClientException {
+    public LinesResponse lines() throws ServerException, ClientException {
         //Create request object
         LinesRequest request = new LinesRequest(API_KEY);
 
@@ -60,7 +60,7 @@ public class Example {
         return request.execute();
     }
 
-    public StopSchedulesResponse stopSchedules() throws TisseoServerException, TisseoClientException {
+    public StopSchedulesResponse stopSchedules() throws ServerException, ClientException {
         //Create request object
         StopSchedulesRequest request = new StopSchedulesRequest(API_KEY);
 
@@ -72,7 +72,7 @@ public class Example {
         return request.execute();
     }
 
-    public RollingStocksResponse rollingStocks() throws TisseoServerException, TisseoClientException {
+    public RollingStocksResponse rollingStocks() throws ServerException, ClientException {
         //Create request object
         RollingStocksRequest request = new RollingStocksRequest(API_KEY);
 
@@ -80,7 +80,7 @@ public class Example {
         return request.execute();
     }
 
-    public JourneysResponse journeys() throws TisseoServerException, TisseoClientException {
+    public JourneysResponse journeys() throws ServerException, ClientException {
         //Create request Object
         JourneysRequest request = new JourneysRequest(API_KEY);
 
@@ -94,7 +94,7 @@ public class Example {
 
     }
 
-    public MessagesResponse messages() throws TisseoServerException, TisseoClientException {
+    public MessagesResponse messages() throws ServerException, ClientException {
         //Create request object
         MessagesRequest request = new MessagesRequest(API_KEY);
 
@@ -102,7 +102,7 @@ public class Example {
         return request.execute();
     }
 
-    public ServiceDensityResponse serviceDensity() throws TisseoServerException, TisseoClientException {
+    public ServiceDensityResponse serviceDensity() throws ServerException, ClientException {
         //Create request Object
         ServiceDensityRequest request = new ServiceDensityRequest(API_KEY);
 

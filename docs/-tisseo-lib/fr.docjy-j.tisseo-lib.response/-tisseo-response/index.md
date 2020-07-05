@@ -2,7 +2,7 @@
 
 # TisseoResponse
 
-`interface TisseoResponse` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/TisseoResponse.kt#L11)
+`interface TisseoResponse` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/TisseoResponse.kt#L11)
 
 The response class of a request.
 

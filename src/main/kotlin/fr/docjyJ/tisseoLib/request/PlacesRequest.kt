@@ -1,9 +1,6 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.tisseoLib.exception.TisseoClientException
-import fr.docjyJ.tisseoLib.exception.TisseoServerException
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.PlacesResponse
 
 /**
@@ -14,6 +11,7 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property term Text string. (3 characters minimum)
  * @property network Transport operator.
  * @property coordinatesXY Returns nearest adresses from given x,y coordinates sorted by distance.
@@ -32,67 +30,43 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  * @property publicPlaceFilter List of public places to explose.
  */
 
-class PlacesRequest(private val apiKey: String) : TisseoRequest {
+class PlacesRequest(
+        @QueryName("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<PlacesResponse>(
+        "places",
+        PlacesResponse::class.java
+) {
+    @QueryName("term")
     var term:String? = null
+    @QueryName("network")
     var network:String? = null
+    @QueryName("coordinatesXY")
     var coordinatesXY:String? = null
+    @QueryName("maxDistance")
     var maxDistance:Boolean? = null
+    @QueryName("srid")
     var srid:String? = null
+    @QueryName("bbox")
     var bbox:String? = null
+    @QueryName("number")
     var number:Int? = null
+    @QueryName("displayBestPlace")
     var displayBestPlace:Boolean? = null
+    @QueryName("displayOnlyStopAreas")
     var displayOnlyStopAreas:Boolean? = null
+    @QueryName("displayOnlyRoads")
     var displayOnlyRoads:Boolean? = null
+    @QueryName("displayOnlyAddresses")
     var displayOnlyAddresses:Boolean? = null
+    @QueryName("displayOnlyPublicPlaces")
     var displayOnlyPublicPlaces:Boolean? = null
+    @QueryName("displayOnlyCities")
     var displayOnlyCities:Boolean? = null
+    @QueryName("lang")
     var lang:String? = null
+    @QueryName("simple")
     var simple:Boolean? = null
+    @QueryName("publicPlaceFilter")
     var publicPlaceFilter:String? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "places").apply {
-        addParameter("term",term)
-        addParameter("network",network)
-        addParameter("coordinatesXY",coordinatesXY)
-        addParameter("maxDistance",maxDistance)
-        addParameter("srid",srid)
-        addParameter("bbox",bbox)
-        addParameter("number",number)
-        addParameter("displayBestPlace",displayBestPlace)
-        addParameter("displayOnlyStopAreas",displayOnlyStopAreas)
-        addParameter("displayOnlyRoads",displayOnlyRoads)
-        addParameter("displayOnlyAddresses",displayOnlyAddresses)
-        addParameter("displayOnlyPublicPlaces",displayOnlyPublicPlaces)
-        addParameter("displayOnlyCities",displayOnlyCities)
-        addParameter("lang",lang)
-        addParameter("simple",simple)
-        addParameter("publicPlaceFilter",publicPlaceFilter)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in PlacesResponse object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun execute() = buildParams().execute(PlacesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws TisseoServerException When the server returns an error.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoServerException::class, TisseoClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws TisseoClientException When the library makes a mistake.
-     */
-    @Throws(TisseoClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

@@ -2,4 +2,4 @@
 
 # minArrivalHour
 
-`val minArrivalHour: LocalDateTime` [(source)](https://github.com/docjyJ/TisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L11)
+`val minArrivalHour: LocalDateTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/model/journey/TimeBounds.kt#L11)
