@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.StopPointResponse
 
 /**
@@ -26,59 +23,35 @@ import fr.docjyJ.tisseoLib.response.StopPointResponse
  * @property displayStopsWithoutDeparture Filters only stops for which there is no departure (and lines / if destinations is requested). For example, without this setting no line is returned.
  */
 
-class StopPointRequest internal constructor(private val apiKey: String) : RequestTemplate {
+class StopPointRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<StopPointResponse>(StopPointResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/stop_points.json"
+
+    @QueryParameter("network")
     var network:String? = null
+    @QueryParameter("srid")
     var srid:String? = null
+    @QueryParameter("bbox")
     var bbox:String? = null
+    @QueryParameter("number")
     var number:Int? = null
+    @QueryParameter("sortByDistance")
     var sortByDistance:Boolean? = null
+    @QueryParameter("displayDestinations")
     var displayDestinations:Boolean? = null
+    @QueryParameter("displayLines")
     var displayLines:Boolean? = null
+    @QueryParameter("displayCoordXY")
     var displayCoordXY:Boolean? = null
+    @QueryParameter("lineId")
     var lineId:String? = null
+    @QueryParameter("stopAreaId")
     var stopAreaId:String? = null
+    @QueryParameter("timeframe")
     var timeframe:String? = null
+    @QueryParameter("displayStopsWithoutDeparture")
     var displayStopsWithoutDeparture:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "stop_points").apply {
-        addParameter("network",network)
-        addParameter("srid",srid)
-        addParameter("bbox",bbox)
-        addParameter("number", number)
-        addParameter("sortByDistance",sortByDistance)
-        addParameter("displayDestinations",displayDestinations)
-        addParameter("displayLines",displayLines)
-        addParameter("displayCoordXY",displayCoordXY)
-        addParameter("lineId",lineId)
-        addParameter("stopAreaId",stopAreaId)
-        addParameter("timeframe",timeframe)
-        addParameter("displayStopsWithoutDeparture",displayStopsWithoutDeparture)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in StopPointResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(StopPointResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

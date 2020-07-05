@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
 import java.time.LocalDateTime
 
@@ -27,60 +24,36 @@ import java.time.LocalDateTime
  * @property firstAndLastOfDay Will return only first and last departure of the day.
  */
 
-class StopSchedulesRequest(private val apiKey: String) : RequestTemplate {
+class StopSchedulesRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<StopSchedulesResponse>(StopSchedulesResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/stops_schedules.json"
+
+    @QueryParameter("operatorCode")
     var operatorCode:String? = null
+    @QueryParameter("stopPointId")
     var stopPointId:String? = null
+    @QueryParameter("stopAreaId")
     var stopAreaId:String? = null
+    @QueryParameter("stopsList")
     var stopsList:String? = null
+    @QueryParameter("network")
     var network:String? = null
+    @QueryParameter("number")
     var number:String? = null
+    @QueryParameter("lineId")
     var lineId:String? = null
+    @QueryParameter("displayRealTime")
     var displayRealTime:Boolean? = null
+    @QueryParameter("timetableByArea")
     var timetableByArea:Boolean? = null
+    @QueryParameter("datetime")
     var datetime:LocalDateTime? = null
+    @QueryParameter("maxDays")
     var maxDays:Int? = null
+    @QueryParameter("firstAndLastOfDay")
     var firstAndLastOfDay:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "stops_schedules")
-        .apply {
-        addParameter("operatorCode",operatorCode)
-        addParameter("stopPointId",stopPointId)
-        addParameter("stopAreaId",stopAreaId)
-        addParameter("stopsList",stopsList)
-        addParameter("network",network)
-        addParameter("number",number)
-        addParameter("lineId",lineId)
-        addParameter("displayRealTime",displayRealTime)
-        addParameter("timetableByArea",timetableByArea)
-        addParameter("datetime",datetime)
-        addParameter("maxDays",maxDays)
-        addParameter("firstAndLastOfDay",firstAndLastOfDay)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in StopSchedulesResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(StopSchedulesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
 
 }

@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
 import java.time.LocalDateTime
 
@@ -23,54 +20,27 @@ import java.time.LocalDateTime
  * @property displayServices Displays the services found in the area covered.
  */
 
-class ServiceDensityRequest(private val apiKey: String) : RequestTemplate {
+class ServiceDensityRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<ServiceDensityResponse>(ServiceDensityResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/services_density.json"
+
+    @QueryParameter("centerXY")
     var centerXY:String? = null
+    @QueryParameter("srid")
     var srid:String? = null
+    @QueryParameter("serviceNumber")
     var serviceNumber:Int? = null
+    @QueryParameter("beginDateTimeSlot")
     var beginDateTimeSlot:LocalDateTime? = null
+    @QueryParameter("endDateTimeSlot")
     var endDateTimeSlot:LocalDateTime? = null
+    @QueryParameter("networkList")
     var networkList:String? = null
+    @QueryParameter("rollingStockList")
     var rollingStockList:String? = null
+    @QueryParameter("displayServices")
     var displayServices:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(
-        apiKey,
-        "services_density"
-    ).apply {
-        addParameter("centerXY",centerXY)
-        addParameter("srid",srid)
-        addParameter("serviceNumber",serviceNumber)
-        addParameter("beginDateTimeSlot",beginDateTimeSlot)
-        addParameter("endDateTimeSlot",endDateTimeSlot)
-        addParameter("networkList",networkList)
-        addParameter("rollingStockList",rollingStockList)
-        addParameter("displayServices",displayServices)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in ServiceDensityResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(ServiceDensityResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.PlacesResponse
 
 /**
@@ -33,67 +30,43 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  * @property publicPlaceFilter List of public places to explose.
  */
 
-class PlacesRequest(private val apiKey: String) : RequestTemplate {
+class PlacesRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<PlacesResponse>(PlacesResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/places.json"
+
+    @QueryParameter("term")
     var term:String? = null
+    @QueryParameter("network")
     var network:String? = null
+    @QueryParameter("coordinatesXY")
     var coordinatesXY:String? = null
+    @QueryParameter("maxDistance")
     var maxDistance:Boolean? = null
+    @QueryParameter("srid")
     var srid:String? = null
+    @QueryParameter("bbox")
     var bbox:String? = null
+    @QueryParameter("number")
     var number:Int? = null
+    @QueryParameter("displayBestPlace")
     var displayBestPlace:Boolean? = null
+    @QueryParameter("displayOnlyStopAreas")
     var displayOnlyStopAreas:Boolean? = null
+    @QueryParameter("displayOnlyRoads")
     var displayOnlyRoads:Boolean? = null
+    @QueryParameter("displayOnlyAddresses")
     var displayOnlyAddresses:Boolean? = null
+    @QueryParameter("displayOnlyPublicPlaces")
     var displayOnlyPublicPlaces:Boolean? = null
+    @QueryParameter("displayOnlyCities")
     var displayOnlyCities:Boolean? = null
+    @QueryParameter("lang")
     var lang:String? = null
+    @QueryParameter("simple")
     var simple:Boolean? = null
+    @QueryParameter("publicPlaceFilter")
     var publicPlaceFilter:String? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "places").apply {
-        addParameter("term",term)
-        addParameter("network",network)
-        addParameter("coordinatesXY",coordinatesXY)
-        addParameter("maxDistance",maxDistance)
-        addParameter("srid",srid)
-        addParameter("bbox",bbox)
-        addParameter("number",number)
-        addParameter("displayBestPlace",displayBestPlace)
-        addParameter("displayOnlyStopAreas",displayOnlyStopAreas)
-        addParameter("displayOnlyRoads",displayOnlyRoads)
-        addParameter("displayOnlyAddresses",displayOnlyAddresses)
-        addParameter("displayOnlyPublicPlaces",displayOnlyPublicPlaces)
-        addParameter("displayOnlyCities",displayOnlyCities)
-        addParameter("lang",lang)
-        addParameter("simple",simple)
-        addParameter("publicPlaceFilter",publicPlaceFilter)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in PlacesResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(PlacesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

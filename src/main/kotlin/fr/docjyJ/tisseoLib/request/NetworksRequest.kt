@@ -15,5 +15,5 @@ class NetworksRequest(
         private val apiKey: String
 ) : TisseoRequestGetBuilder<NetworksResponse>(NetworksResponse::class.java) {
     @EndpointURL
-    val endpointURL = "https://api.tisseo.fr/v1/networks.json"
+    private val endpointURL = "https://api.tisseo.fr/v1/networks.json"
 }

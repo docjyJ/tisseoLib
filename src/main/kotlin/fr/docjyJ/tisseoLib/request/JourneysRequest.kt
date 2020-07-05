@@ -1,5 +1,3 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
 import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
@@ -41,7 +39,7 @@ class JourneysRequest(
         private val apiKey: String
 ) : TisseoRequestGetBuilder<JourneysResponse>(JourneysResponse::class.java) {
     @EndpointURL
-    val endpointURL = "https://api.tisseo.fr/v1/journeys.json"
+    private val endpointURL = "https://api.tisseo.fr/v1/journeys.json"
 
     @QueryParameter("departurePlace")
     var departurePlace:String? = null

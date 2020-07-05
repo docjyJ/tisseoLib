@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.StopAreaResponse
 
 /**
@@ -25,57 +22,33 @@ import fr.docjyJ.tisseoLib.response.StopAreaResponse
  * @property displayStopPoints Display stop point of stop areas.
  */
 
-class StopAreaRequest(private val apiKey: String) : RequestTemplate {
+class StopAreaRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<StopAreaResponse>(StopAreaResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/stop_areas.json"
+
+    @QueryParameter("network")
     var network:String? = null
+    @QueryParameter("srid")
     var srid:String? = null
+    @QueryParameter("bbox")
     var bbox:String? = null
+    @QueryParameter("displayLines")
     var displayLines:Boolean? = null
+    @QueryParameter("displayCoordXY")
     var displayCoordXY:Boolean? = null
+    @QueryParameter("lineId")
     var lineId:String? = null
+    @QueryParameter("terminusId")
     var terminusId:String? = null
+    @QueryParameter("timeframe")
     var timeframe:String? = null
+    @QueryParameter("ignoreUnservedStops")
     var ignoreUnservedStops:String? = null
+    @QueryParameter("displayArrivalOnlyLines")
     var displayArrivalOnlyLines:Boolean? = null
+    @QueryParameter("displayStopPoints")
     var displayStopPoints:Boolean? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "stop_areas").apply {
-        addParameter("network",network)
-        addParameter("srid",srid)
-        addParameter("bbox",bbox)
-        addParameter("displayLines",displayLines)
-        addParameter("displayCoordXY",displayCoordXY)
-        addParameter("lineId",lineId)
-        addParameter("terminusId",terminusId)
-        addParameter("timeframe",timeframe)
-        addParameter("ignoreUnservedStops",ignoreUnservedStops)
-        addParameter("displayArrivalOnlyLines",displayArrivalOnlyLines)
-        addParameter("displayStopPoints",displayStopPoints)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in StopAreaResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(StopAreaResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }

@@ -1,10 +1,7 @@
-@file:Suppress("MemberVisibilityCanBePrivate")
-
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.LinesResponse
 
 /**
@@ -22,51 +19,27 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  * @property contentFormat Format of message content.
  */
 
-class LinesRequest(private val apiKey: String) : RequestTemplate {
+class LinesRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<LinesResponse>(LinesResponse::class.java) {
+    @EndpointURL
+    private val endpointURL = "https://api.tisseo.fr/v1/lines.json"
+
+    @QueryParameter("network")
     var network:String? = null
+    @QueryParameter("lineId")
     var lineId:String? = null
+    @QueryParameter("shortName")
     var shortName:String? = null
+    @QueryParameter("displayTerminus")
     var displayTerminus:Boolean? = null
+    @QueryParameter("displayMessages")
     var displayMessages:Boolean? = null
+    @QueryParameter("displayOnlyDisrupted")
     var displayOnlyDisrupted:Boolean? = null
+    @QueryParameter("displayGeometry")
     var displayGeometry:Boolean? = null
+    @QueryParameter("contentFormat")
     var contentFormat:String? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "lines").apply {
-        addParameter("network",network)
-        addParameter("lineId",lineId)
-        addParameter("shortName",shortName)
-        addParameter("displayTerminus",displayTerminus)
-        addParameter("displayMessages",displayMessages)
-        addParameter("displayOnlyDisrupted", displayOnlyDisrupted)
-        addParameter("displayGeometry",displayGeometry)
-        addParameter("contentFormat",contentFormat)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in LinesResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(LinesResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
-
 }
