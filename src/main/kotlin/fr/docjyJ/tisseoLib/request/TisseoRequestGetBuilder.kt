@@ -1,7 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
 import com.google.gson.GsonBuilder
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.connection.RequestGetBuilder
 import fr.docjyJ.apiClientBuilder.connection.ResponseTemplate
 import fr.docjyJ.tisseoLib.typeAdapter.*
@@ -12,7 +11,13 @@ import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
-abstract class TisseoRequestGetBuilder<T:ResponseTemplate>(classof:Class<T>):RequestGetBuilder<T>(classof) {
+abstract class TisseoRequestGetBuilder<T:ResponseTemplate>(
+        endpoint: String,
+        classof:Class<T>
+):RequestGetBuilder<T>(
+        "https://api.tisseo.fr/v1/$endpoint.json",
+        classof
+) {
 
     override fun HttpURLConnection.connectionApply() = this
 

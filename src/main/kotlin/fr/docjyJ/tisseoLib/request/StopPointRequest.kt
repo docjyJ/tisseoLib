@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.StopPointResponse
 
@@ -26,10 +25,10 @@ import fr.docjyJ.tisseoLib.response.StopPointResponse
 class StopPointRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<StopPointResponse>(StopPointResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/stop_points.json"
-
+) : TisseoRequestGetBuilder<StopPointResponse>(
+        "stop_points",
+        StopPointResponse::class.java
+) {
     @QueryParameter("network")
     var network:String? = null
     @QueryParameter("srid")

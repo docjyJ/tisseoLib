@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.ServiceDensityResponse
 import java.time.LocalDateTime
@@ -23,10 +22,10 @@ import java.time.LocalDateTime
 class ServiceDensityRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<ServiceDensityResponse>(ServiceDensityResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/services_density.json"
-
+) : TisseoRequestGetBuilder<ServiceDensityResponse>(
+        "services_density",
+        ServiceDensityResponse::class.java
+) {
     @QueryParameter("centerXY")
     var centerXY:String? = null
     @QueryParameter("srid")

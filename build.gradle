@@ -20,7 +20,7 @@ dependencies {
 
     implementation 'org.locationtech.jts:jts-core:1.16.1'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'fr.docjyJ.apiClientBuilder:apiClientBuilder:2.0-PRE3'
+    implementation 'fr.docjyJ.apiClientBuilder:apiClientBuilder:2.0-PRE4'
 
 }
 

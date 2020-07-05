@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.PlacesResponse
 
@@ -33,10 +32,10 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
 class PlacesRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<PlacesResponse>(PlacesResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/places.json"
-
+) : TisseoRequestGetBuilder<PlacesResponse>(
+        "places",
+        PlacesResponse::class.java
+) {
     @QueryParameter("term")
     var term:String? = null
     @QueryParameter("network")

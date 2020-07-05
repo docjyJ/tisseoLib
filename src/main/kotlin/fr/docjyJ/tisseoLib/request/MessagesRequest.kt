@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.MessagesResponse
 
@@ -17,10 +16,10 @@ import fr.docjyJ.tisseoLib.response.MessagesResponse
 class MessagesRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<MessagesResponse>(MessagesResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/messages.json"
-
+) : TisseoRequestGetBuilder<MessagesResponse>(
+        "messages",
+        MessagesResponse::class.java
+) {
     @QueryParameter("network")
     var network:String? = null
     @QueryParameter("contentFormat")

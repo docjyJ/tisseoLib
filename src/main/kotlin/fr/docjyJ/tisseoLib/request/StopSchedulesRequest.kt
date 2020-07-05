@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
 import java.time.LocalDateTime
@@ -27,10 +26,10 @@ import java.time.LocalDateTime
 class StopSchedulesRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<StopSchedulesResponse>(StopSchedulesResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/stops_schedules.json"
-
+) : TisseoRequestGetBuilder<StopSchedulesResponse>(
+        "stops_schedules",
+        StopSchedulesResponse::class.java
+) {
     @QueryParameter("operatorCode")
     var operatorCode:String? = null
     @QueryParameter("stopPointId")
@@ -55,5 +54,4 @@ class StopSchedulesRequest(
     var maxDays:Int? = null
     @QueryParameter("firstAndLastOfDay")
     var firstAndLastOfDay:Boolean? = null
-
 }

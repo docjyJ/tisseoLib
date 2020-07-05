@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
@@ -37,10 +36,10 @@ import java.time.LocalDateTime
 class JourneysRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<JourneysResponse>(JourneysResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/journeys.json"
-
+) : TisseoRequestGetBuilder<JourneysResponse>(
+        "journeys",
+                JourneysResponse::class.java
+) {
     @QueryParameter("departurePlace")
     var departurePlace:String? = null
     @QueryParameter("departurePlaceXY")

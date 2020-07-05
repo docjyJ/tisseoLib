@@ -1,6 +1,5 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
 import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.LinesResponse
 
@@ -22,10 +21,10 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
 class LinesRequest(
         @QueryParameter("key")
         private val apiKey: String
-) : TisseoRequestGetBuilder<LinesResponse>(LinesResponse::class.java) {
-    @EndpointURL
-    private val endpointURL = "https://api.tisseo.fr/v1/lines.json"
-
+) : TisseoRequestGetBuilder<LinesResponse>(
+        "lines",
+        LinesResponse::class.java
+) {
     @QueryParameter("network")
     var network:String? = null
     @QueryParameter("lineId")
