@@ -29,10 +29,8 @@ abstract class TisseoRequestGetBuilder<T:ResponseTemplate>(classof:Class<T>):Req
         return when(this){
             is String -> this
             is Boolean -> if(this) "1" else "0"
-            is Int -> this.toString()
-            is Float -> this.toString()
             is LocalDateTime -> DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(this)
-            else -> throw Exception()
+            else -> this.toString()
         }
     }
 
