@@ -2,9 +2,8 @@
 
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.connection.RequestTemplate
-import fr.docjyJ.apiClientBuilder.exception.ClientException
-import fr.docjyJ.apiClientBuilder.exception.ServerException
+import fr.docjyJ.apiClientBuilder.anotation.EndpointURL
+import fr.docjyJ.apiClientBuilder.anotation.QueryParameter
 import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
 
@@ -37,78 +36,55 @@ import java.time.LocalDateTime
  * @property maxApproachDistance Maximum walking distance.
  */
 
-class JourneysRequest(private val apiKey: String) : RequestTemplate {
+class JourneysRequest(
+        @QueryParameter("key")
+        private val apiKey: String
+) : TisseoRequestGetBuilder<JourneysResponse>(JourneysResponse::class.java) {
+    @EndpointURL
+    val endpointURL = "https://api.tisseo.fr/v1/journeys.json"
+
+    @QueryParameter("departurePlace")
     var departurePlace:String? = null
+    @QueryParameter("departurePlaceXY")
     var departurePlaceXY:String? = null
+    @QueryParameter("arrivalPlace")
     var arrivalPlace:String? = null
+    @QueryParameter("arrivalPlaceXY")
     var arrivalPlaceXY:String? = null
+    @QueryParameter("srid")
     var srid:String? = null
+    @QueryParameter("networkList")
     var networkList:String? = null
+    @QueryParameter("firstDepartureDatetime")
     var firstDepartureDatetime:LocalDateTime? = null
+    @QueryParameter("lastDepartureDatetime")
     var lastDepartureDatetime:LocalDateTime? = null
+    @QueryParameter("maxTransferDuration")
     var maxTransferDuration:String? = null
+    @QueryParameter("maxTransferNumber")
     var maxTransferNumber:String? = null
+    @QueryParameter("roadMode")
     var roadMode:String? = null
+    @QueryParameter("roadSpeed")
     var roadSpeed:Float? = null
+    @QueryParameter("roadMaxDistance")
     var roadMaxDistance:String? = null
+    @QueryParameter("startRoadMode")
     var startRoadMode:String? = null
+    @QueryParameter("startRoadSpeed")
     var startRoadSpeed:Float? = null
+    @QueryParameter("startRoadMaxDistance")
     var startRoadMaxDistance:String? = null
+    @QueryParameter("rollingStockList")
     var rollingStockList:String? = null
+    @QueryParameter("number")
     var number:Int? = null
+    @QueryParameter("displayResultTable")
     var displayResultTable:Boolean? = null
+    @QueryParameter("displayWording")
     var displayWording:Boolean? = null
+    @QueryParameter("displayMessages")
     var displayMessages:Boolean? = null
+    @QueryParameter("maxApproachDistance")
     var maxApproachDistance:String? = null
-
-    private fun buildParams() = RequestBuilder(apiKey, "journeys").apply {
-        addParameter("departurePlace",departurePlace)
-        addParameter("departurePlaceXY",departurePlaceXY)
-        addParameter("arrivalPlace",arrivalPlace)
-        addParameter("arrivalPlaceXY",arrivalPlaceXY)
-        addParameter("srid",srid)
-        addParameter("networkList",networkList)
-        addParameter("firstDepartureDatetime",firstDepartureDatetime)
-        addParameter("lastDepartureDatetime",lastDepartureDatetime)
-        addParameter("maxTransferDuration",maxTransferDuration)
-        addParameter("maxTransferNumber",maxTransferNumber)
-        addParameter("roadMode",roadMode)
-        addParameter("roadSpeed",roadSpeed)
-        addParameter("roadMaxDistance",roadMaxDistance)
-        addParameter("startRoadMode",startRoadMode)
-        addParameter("startRoadSpeed", startRoadSpeed)
-        addParameter("startRoadMaxDistance",startRoadMaxDistance)
-        addParameter("rollingStockList",rollingStockList)
-        addParameter("number",number)
-        addParameter("displayResultTable",displayResultTable)
-        addParameter("displayWording",displayWording)
-        addParameter("displayMessages",displayMessages)
-        addParameter("maxApproachDistance",maxApproachDistance)
-    }
-
-    /**
-     * Execute the request.
-     * @return Response of request in JourneysResponse object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun execute() = buildParams().execute(JourneysResponse::class.java)
-
-    /**
-     * Execute the request.
-     * @return Response of request in String object.
-     * @throws ServerException When the server returns an error.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ServerException::class, ClientException::class)
-    override fun executeAsString() = buildParams().execute()
-
-    /**
-     * Show the URL.
-     * @return The URL of request in String object.
-     * @throws ClientException When the library makes a mistake.
-     */
-    @Throws(ClientException::class)
-    override fun getUrl() = buildParams().getUrl()
 }
