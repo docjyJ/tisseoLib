@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.StopPointResponse
 
 /**
@@ -8,6 +8,7 @@ import fr.docjyJ.tisseoLib.response.StopPointResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property srid Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)
  * @property bbox Filters stops included in bounding box.

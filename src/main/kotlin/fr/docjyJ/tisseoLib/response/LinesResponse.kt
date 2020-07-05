@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a lines request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property lines Contains Lines.
  */
 
 data class LinesResponse(

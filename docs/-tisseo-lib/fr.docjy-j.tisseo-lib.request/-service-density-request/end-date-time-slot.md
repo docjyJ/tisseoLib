@@ -2,7 +2,7 @@
 
 # endDateTimeSlot
 
-`var endDateTimeSlot: LocalDateTime?` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L31)
+`var endDateTimeSlot: LocalDateTime?` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/ServiceDensityRequest.kt#L39)
 
 Ending date and time of time slot.
 

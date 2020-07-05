@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.JourneysResponse
 import java.time.LocalDateTime
 
@@ -9,6 +9,7 @@ import java.time.LocalDateTime
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property departurePlace Departure address or stop name.
  * @property departurePlaceXY Departure coordinates.
  * @property arrivalPlace Arrival address or stop name.

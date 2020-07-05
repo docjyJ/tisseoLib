@@ -6,6 +6,10 @@
 
 Create new request builder with no parameters.
 
+### Parameters
+
+`apiKey` - REQUIRED The Tisseo Api Key.
+
 **Constructor**
 Create new request builder with no parameters.
 

@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a places request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property placesList Contains Places.
  */
 
 data class PlacesResponse(

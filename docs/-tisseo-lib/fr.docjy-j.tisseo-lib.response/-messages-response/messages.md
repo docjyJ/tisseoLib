@@ -2,4 +2,4 @@
 
 # messages
 
-`val messages: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Message`](../../fr.docjy-j.tisseo-lib.model.message/-message/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/MessagesResponse.kt#L19)
+`val messages: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Message`](../../fr.docjy-j.tisseo-lib.model.message/-message/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/MessagesResponse.kt#L20)

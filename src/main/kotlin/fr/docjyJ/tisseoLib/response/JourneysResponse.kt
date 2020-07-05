@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a journeys request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property routePlannerResult Contains Route.
  */
 
 data class JourneysResponse(

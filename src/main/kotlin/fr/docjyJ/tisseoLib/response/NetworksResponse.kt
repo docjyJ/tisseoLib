@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a networks request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property networks Contains Networks.
  */
 
 data class NetworksResponse(

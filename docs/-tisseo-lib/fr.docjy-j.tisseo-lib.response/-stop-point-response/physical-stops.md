@@ -2,4 +2,10 @@
 
 # physicalStops
 
-`val physicalStops: `[`PhysicalStops`](../../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stops/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopPointResponse.kt#L19)
+`val physicalStops: `[`PhysicalStops`](../../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stops/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopPointResponse.kt#L20)
+
+Contains Stops.
+
+### Property
+
+`physicalStops` - Contains Stops.

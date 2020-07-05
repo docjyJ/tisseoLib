@@ -2,9 +2,15 @@
 
 # StopPointRequest
 
-`class StopPointRequest : RequestTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L29)
+`class StopPointRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-point-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopPointRequest.kt#L26)
 
 The class builder to do a Stop Point request.
+
+### Constructors
+
+| Name | Summary |
+|---|---|
+| [&lt;init&gt;](-init-.md) | Create new request builder with no parameters.`StopPointRequest(apiKey: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`)` |
 
 ### Properties
 
@@ -22,11 +28,3 @@ The class builder to do a Stop Point request.
 | [srid](srid.md) | Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)`var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [stopAreaId](stop-area-id.md) | Filters only on the id stop zone.`var stopAreaId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [timeframe](timeframe.md) | Number of days covering research, the day time interval is a single day by default.`var timeframe: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopPointResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-point-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

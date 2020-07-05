@@ -358,6 +358,13 @@ The response class of a stop schedules request.
 
 |
 
+##### [fr.docjyJ.tisseoLib.request.TisseoRequestGetBuilder](../fr.docjy-j.tisseo-lib.request/-tisseo-request-get-builder.md)
+
+Superclass for all Request.
+
+
+|
+
 ##### [fr.docjyJ.tisseoLib.model.line.TransportMode](../fr.docjy-j.tisseo-lib.model.line/-transport-mode/index.md)
 
 

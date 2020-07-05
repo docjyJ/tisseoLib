@@ -2,4 +2,10 @@
 
 # serviceNumberReached
 
-`val serviceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/ServiceDensityResponse.kt#L23)
+`val serviceNumberReached: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/ServiceDensityResponse.kt#L27)
+
+Number reached.
+
+### Property
+
+`serviceNumberReached` - Number reached.

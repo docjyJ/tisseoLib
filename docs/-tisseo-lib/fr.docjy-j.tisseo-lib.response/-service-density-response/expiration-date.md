@@ -2,7 +2,7 @@
 
 # expirationDate
 
-`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/ServiceDensityResponse.kt#L19)
+`val expirationDate: LocalDateTime` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/ServiceDensityResponse.kt#L23)
 
 The expiration date of the content.
 

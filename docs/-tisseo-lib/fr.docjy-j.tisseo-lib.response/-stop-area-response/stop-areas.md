@@ -2,4 +2,10 @@
 
 # stopAreas
 
-`val stopAreas: `[`StopAreas`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-areas/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L19)
+`val stopAreas: `[`StopAreas`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-areas/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L20)
+
+Contains Stop Areas.
+
+### Property
+
+`stopAreas` - Contains Stop Areas.

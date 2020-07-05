@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a stop schedules request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property departures Contains Departures.
  */
 
 data class StopSchedulesResponse (

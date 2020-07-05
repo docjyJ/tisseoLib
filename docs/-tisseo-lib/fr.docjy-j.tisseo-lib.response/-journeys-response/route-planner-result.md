@@ -2,4 +2,10 @@
 
 # routePlannerResult
 
-`val routePlannerResult: `[`RoutePlannerResult`](../../fr.docjy-j.tisseo-lib.model.journey/-route-planner-result/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/JourneysResponse.kt#L19)
+`val routePlannerResult: `[`RoutePlannerResult`](../../fr.docjy-j.tisseo-lib.model.journey/-route-planner-result/index.md) [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/JourneysResponse.kt#L20)
+
+Contains Route.
+
+### Property
+
+`routePlannerResult` - Contains Route.

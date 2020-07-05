@@ -2,7 +2,7 @@
 
 # RollingStocksResponse
 
-`data class RollingStocksResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/RollingStocksResponse.kt#L15)
+`data class RollingStocksResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/RollingStocksResponse.kt#L16)
 
 The response class of a rolling stocks request.
 
@@ -17,4 +17,4 @@ The response class of a rolling stocks request.
 | Name | Summary |
 |---|---|
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |
-| [rollingStocks](rolling-stocks.md) | `val rollingStocks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`RollingStock`](../../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stock/index.md)`>` |
+| [rollingStocks](rolling-stocks.md) | Contains Rolling Stocks.`val rollingStocks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`RollingStock`](../../fr.docjy-j.tisseo-lib.model.rolling-stock/-rolling-stock/index.md)`>` |

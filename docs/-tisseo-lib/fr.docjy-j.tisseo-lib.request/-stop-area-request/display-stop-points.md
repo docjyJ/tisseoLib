@@ -2,7 +2,7 @@
 
 # displayStopPoints
 
-`var displayStopPoints: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L39)
+`var displayStopPoints: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`?` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L53)
 
 Display stop point of stop areas.
 

@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a messages request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property lines Contains Messages.
  */
 
 data class MessagesResponse(

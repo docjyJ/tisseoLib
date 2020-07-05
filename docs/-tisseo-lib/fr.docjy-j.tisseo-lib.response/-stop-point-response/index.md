@@ -2,7 +2,7 @@
 
 # StopPointResponse
 
-`data class StopPointResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopPointResponse.kt#L15)
+`data class StopPointResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopPointResponse.kt#L16)
 
 The response class of a stop points request.
 
@@ -17,4 +17,4 @@ The response class of a stop points request.
 | Name | Summary |
 |---|---|
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |
-| [physicalStops](physical-stops.md) | `val physicalStops: `[`PhysicalStops`](../../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stops/index.md) |
+| [physicalStops](physical-stops.md) | Contains Stops.`val physicalStops: `[`PhysicalStops`](../../fr.docjy-j.tisseo-lib.model.stop-point/-physical-stops/index.md) |

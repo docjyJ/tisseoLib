@@ -10,6 +10,10 @@ import java.time.LocalDateTime
  * The response class of a service density request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property distance The distance with the point.
+ * @property isServiceNumberReached If is number reached.
+ * @property serviceNumberReached Number reached.
+ * @property stops List of Stop.
  */
 
 data class ServiceDensityResponse(
@@ -18,7 +22,7 @@ data class ServiceDensityResponse(
     @SerializedName("expirationDate")
     val expirationDate: LocalDateTime,
     @SerializedName("isServiceNumberReached")
-    val isServiceNumberReached: Int,
+    val isServiceNumberReached: Boolean,
     @SerializedName("serviceNumberReached")
     val serviceNumberReached: Int,
     @SerializedName("stops")

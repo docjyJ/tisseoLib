@@ -2,7 +2,7 @@
 
 # MessagesResponse
 
-`data class MessagesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/MessagesResponse.kt#L15)
+`data class MessagesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/MessagesResponse.kt#L16)
 
 The response class of a messages request.
 

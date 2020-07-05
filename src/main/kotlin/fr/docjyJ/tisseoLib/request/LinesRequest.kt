@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.LinesResponse
 
 /**
@@ -8,6 +8,7 @@ import fr.docjyJ.tisseoLib.response.LinesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property lineId Filter on a single line by its ID.
  * @property shortName Filter on a single line by line number.

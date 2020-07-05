@@ -2,7 +2,7 @@
 
 # StopAreaResponse
 
-`data class StopAreaResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L15)
+`data class StopAreaResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/StopAreaResponse.kt#L16)
 
 The response class of a stop areas request.
 
@@ -17,4 +17,4 @@ The response class of a stop areas request.
 | Name | Summary |
 |---|---|
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |
-| [stopAreas](stop-areas.md) | `val stopAreas: `[`StopAreas`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-areas/index.md) |
+| [stopAreas](stop-areas.md) | Contains Stop Areas.`val stopAreas: `[`StopAreas`](../../fr.docjy-j.tisseo-lib.model.stop-area/-stop-areas/index.md) |

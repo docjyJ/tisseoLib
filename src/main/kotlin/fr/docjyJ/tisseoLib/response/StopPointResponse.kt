@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a stop points request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property physicalStops Contains Stops.
  */
 
 data class StopPointResponse(

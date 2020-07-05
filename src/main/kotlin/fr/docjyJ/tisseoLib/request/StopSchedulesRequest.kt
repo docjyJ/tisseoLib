@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.StopSchedulesResponse
 import java.time.LocalDateTime
 
@@ -9,6 +9,7 @@ import java.time.LocalDateTime
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property operatorCode Operator code. (id used by transport operator)
  * @property stopPointId Is the number of physical stop point.
  * @property stopAreaId Is the number of logical stop point. (zone)

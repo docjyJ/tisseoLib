@@ -2,4 +2,10 @@
 
 # networks
 
-`val networks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Network`](../../fr.docjy-j.tisseo-lib.model.netwotk/-network/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/NetworksResponse.kt#L19)
+`val networks: `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`Network`](../../fr.docjy-j.tisseo-lib.model.netwotk/-network/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/NetworksResponse.kt#L20)
+
+Contains Networks.
+
+### Property
+
+`networks` - Contains Networks.

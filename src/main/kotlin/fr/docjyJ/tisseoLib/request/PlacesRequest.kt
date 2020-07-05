@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.PlacesResponse
 
 /**
@@ -11,6 +11,7 @@ import fr.docjyJ.tisseoLib.response.PlacesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property term Text string. (3 characters minimum)
  * @property network Transport operator.
  * @property coordinatesXY Returns nearest adresses from given x,y coordinates sorted by distance.

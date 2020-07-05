@@ -2,7 +2,7 @@
 
 # PlacesResponse
 
-`data class PlacesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/PlacesResponse.kt#L15)
+`data class PlacesResponse : ResponseTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/response/PlacesResponse.kt#L16)
 
 The response class of a places request.
 
@@ -17,4 +17,4 @@ The response class of a places request.
 | Name | Summary |
 |---|---|
 | [expirationDate](expiration-date.md) | The expiration date of the content.`val expirationDate: LocalDateTime` |
-| [placesList](places-list.md) | `val placesList: `[`PlacesList`](../../fr.docjy-j.tisseo-lib.model.place/-places-list/index.md) |
+| [placesList](places-list.md) | Contains Places.`val placesList: `[`PlacesList`](../../fr.docjy-j.tisseo-lib.model.place/-places-list/index.md) |

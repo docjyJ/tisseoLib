@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a stop areas request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property stopAreas Contains Stop Areas.
  */
 
 data class StopAreaResponse(

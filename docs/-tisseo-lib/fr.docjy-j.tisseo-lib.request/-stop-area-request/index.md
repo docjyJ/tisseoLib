@@ -2,7 +2,7 @@
 
 # StopAreaRequest
 
-`class StopAreaRequest : RequestTemplate` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L28)
+`class StopAreaRequest : `[`TisseoRequestGetBuilder`](../-tisseo-request-get-builder.md)`<`[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md)`>` [(source)](https://github.com/docjyj/tisseoLib/tree/master/src/main/kotlin/fr/docjyJ/tisseoLib/request/StopAreaRequest.kt#L25)
 
 The class builder to do a Stop Area request.
 
@@ -27,11 +27,3 @@ The class builder to do a Stop Area request.
 | [srid](srid.md) | Spatial reference number projection. [see](https://en.wikipedia.org/wiki/SRID)`var srid: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [terminusId](terminus-id.md) | Filters on stop areas arriving and departing from this terminal only.`var terminusId: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
 | [timeframe](timeframe.md) | Number of days to calculate which lines pass through a given point.`var timeframe: `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)`?` |
-
-### Functions
-
-| Name | Summary |
-|---|---|
-| [execute](execute.md) | Execute the request.`fun execute(): `[`StopAreaResponse`](../../fr.docjy-j.tisseo-lib.response/-stop-area-response/index.md) |
-| [executeAsString](execute-as-string.md) | Execute the request.`fun executeAsString(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |
-| [getUrl](get-url.md) | Show the URL.`fun getUrl(): `[`String`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html) |

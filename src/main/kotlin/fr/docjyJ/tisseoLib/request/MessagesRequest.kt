@@ -1,6 +1,6 @@
 package fr.docjyJ.tisseoLib.request
 
-import fr.docjyJ.apiClientBuilder.anotation.QueryName
+import fr.docjyJ.apiClientBuilder.annotation.QueryName
 import fr.docjyJ.tisseoLib.response.MessagesResponse
 
 /**
@@ -8,6 +8,7 @@ import fr.docjyJ.tisseoLib.response.MessagesResponse
  *
  * @constructor Create new request builder with no parameters.
  *
+ * @param apiKey REQUIRED The Tisseo Api Key.
  * @property network Transport operator.
  * @property contentFormat Format message contents.
  * @property displayImportantOnly Displays only important messages. (found on the home page tisseo)

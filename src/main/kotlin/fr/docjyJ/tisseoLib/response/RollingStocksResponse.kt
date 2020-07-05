@@ -10,6 +10,7 @@ import java.time.LocalDateTime
  * The response class of a rolling stocks request.
  *
  * @property expirationDate The expiration date of the content.
+ * @property rollingStocks Contains Rolling Stocks.
  */
 
 data class RollingStocksResponse(
