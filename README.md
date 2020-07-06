@@ -23,7 +23,7 @@ dependencies {
 [Repository/Download Jar](https://bintray.com/docjyj/maven/tisseoLib)
 
 ## Documentation
-See the Library documentation [here](docs/-tisseo-lib/index.md)
+See the Library documentation [here](docs/tisseo-lib/index.md)
 
 Refer to the documentation provided by Tisséo (French and English) for resources, parameters, responses and as well as how to obtain a key.
 
